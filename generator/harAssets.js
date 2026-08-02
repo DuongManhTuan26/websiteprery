@@ -33,6 +33,20 @@ function isDocumentResponse(mimeType) {
   return mimeType === 'text/html';
 }
 
+const NEXT_IMAGE_SOURCE_PARAM = /\/_next\/image\?url=([^&]+)/;
+
+// Next.js's image optimizer serves many differently-sized/formatted variants
+// of the same source image (?url=<source>&w=<width>&q=<quality>). The browser
+// only ever requests the one variant it actually needs, so the HAR rarely has
+// every width the real markup's srcset references — but any variant it does
+// have is 100% real bytes of the same source image, just not the exact
+// requested size. Substituting one is still non-fabricated (real image, real
+// origin, just a different resolution) and strictly better than a 404.
+function nextImageSourceOf(url) {
+  const match = url.match(NEXT_IMAGE_SOURCE_PARAM);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
 // Loads capture/raw/har/preny.har (recorded with mode:'full' by capture/har.js)
 // and returns a Map<absoluteUrl, {buffer, mimeType}> for every entry that has
 // a real captured response body — this is the only source of real asset bytes
@@ -67,6 +81,22 @@ function loadHarContentMap() {
   }
 
   return map;
+}
+
+// Secondary index for the same-source-variant fallback described above:
+// Map<decoded source image URL, {buffer, mimeType, url}> keyed off the first
+// captured _next/image variant seen for that source.
+function buildNextImageSourceIndex(harMap) {
+  const index = new Map();
+
+  for (const [url, hit] of harMap) {
+    const source = nextImageSourceOf(url);
+    if (source && !index.has(source)) {
+      index.set(source, { ...hit, url });
+    }
+  }
+
+  return index;
 }
 
 function extForMime(mimeType, fallbackUrl) {
@@ -108,6 +138,7 @@ function toSameOriginRelative(absoluteUrl) {
 
 function createAssetLocalizer(outputDir) {
   const harMap = loadHarContentMap();
+  const nextImageSourceIndex = buildNextImageSourceIndex(harMap);
   const assetsDir = path.join(outputDir, 'public', 'assets');
   ensureDir(assetsDir);
 
@@ -140,8 +171,18 @@ function createAssetLocalizer(outputDir) {
     const hit = harMap.get(absolute);
 
     if (hit && hit.mimeType !== 'text/css' && !isDocumentResponse(hit.mimeType)) {
-      manifest.push({ url: absolute, found: true, localPath: null });
+      manifest.push({ url: absolute, found: true, via: 'exact', localPath: null });
       const localPath = writeBinary(hit.buffer, hit.mimeType, absolute);
+      manifest[manifest.length - 1].localPath = localPath;
+      return localPath;
+    }
+
+    const source = nextImageSourceOf(absolute);
+    const variant = source && nextImageSourceIndex.get(source);
+
+    if (variant) {
+      manifest.push({ url: absolute, found: true, via: 'same-source-variant', localPath: null });
+      const localPath = writeBinary(variant.buffer, variant.mimeType, variant.url);
       manifest[manifest.length - 1].localPath = localPath;
       return localPath;
     }

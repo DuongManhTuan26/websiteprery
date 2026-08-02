@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-02T11:39:14.463Z",
+  "generatedAt": "2026-08-02T12:50:39.793Z",
   "source": {
     "captureReport": {
       "target": "https://preny.ai",
@@ -73409,10 +73409,10 @@
     }
   },
   "analysis": {
-    "generatedAt": "2026-08-02T11:39:14.450Z",
+    "generatedAt": "2026-08-02T12:50:39.780Z",
     "version": "1.0.0",
     "layout": {
-      "generatedAt": "2026-08-02T11:39:14.346Z",
+      "generatedAt": "2026-08-02T12:50:39.646Z",
       "totalNodes": 1566,
       "maxDepth": 23,
       "displayCounts": {
@@ -73925,7 +73925,7 @@
       "layoutModel": "flexbox-dominant"
     },
     "components": {
-      "generatedAt": "2026-08-02T11:39:14.355Z",
+      "generatedAt": "2026-08-02T12:50:39.657Z",
       "totalNodes": 1566,
       "totalComponents": 342,
       "tagStatistics": {
@@ -75775,7 +75775,7 @@
       ]
     },
     "design": {
-      "generatedAt": "2026-08-02T11:39:14.366Z",
+      "generatedAt": "2026-08-02T12:50:39.678Z",
       "totalElements": 1960,
       "palette": [
         {
@@ -75943,7 +75943,7 @@
       ]
     },
     "interaction": {
-      "generatedAt": "2026-08-02T11:39:14.372Z",
+      "generatedAt": "2026-08-02T12:50:39.687Z",
       "clickable": 84,
       "forms": 1,
       "inputs": 5,
@@ -76942,7 +76942,7 @@
       ]
     },
     "vision": {
-      "generatedAt": "2026-08-02T11:39:14.373Z",
+      "generatedAt": "2026-08-02T12:50:39.688Z",
       "screenshotAvailable": true,
       "screenshot": {
         "path": "/home/user/websiteprery/capture/raw/screenshots/home.png",
@@ -76979,7 +76979,7 @@
     }
   },
   "tokens": {
-    "generatedAt": "2026-08-02T11:39:14.462Z",
+    "generatedAt": "2026-08-02T12:50:39.792Z",
     "colors": [
       {
         "name": "primary",

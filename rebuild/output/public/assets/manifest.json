@@ -1,34 +1,39 @@
 {
-  "generatedAt": "2026-08-02T11:39:15.911Z",
+  "generatedAt": "2026-08-02T12:50:40.685Z",
   "origin": "https://preny.ai",
   "harEntriesAvailable": 134,
   "referencedTotal": 221,
-  "localized": 64,
-  "notCaptured": 157,
+  "localized": 76,
+  "notCaptured": 145,
   "entries": [
     {
       "url": "https://preny.ai/images/why-us.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/2af7f32420272b1e.svg"
     },
     {
       "url": "https://preny.ai/images/why-us-hover.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/990c5a9a738057e5.svg"
     },
     {
       "url": "https://preny.ai/images/module.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/6ab68c640f48d5a7.svg"
     },
     {
       "url": "https://preny.ai/images/bg-removal.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/0f11e42b46b52918.svg"
     },
     {
       "url": "https://preny.ai/svg/baner-home-desktop.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/e8f772c7230e07cf.svg"
     },
     {
@@ -54,16 +59,19 @@
     {
       "url": "https://preny.ai/_next/static/media/df0a9ae256c0569c-s.p.woff2",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/77e00e9f1cfba13e.woff2"
     },
     {
       "url": "https://preny.ai/_next/static/media/8e9860b6e62d6359-s.woff2",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/a394704209066914.woff2"
     },
     {
       "url": "https://preny.ai/_next/static/media/e4af272ccee01ff0-s.woff2",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/63740184a0787d22.woff2"
     },
     {
@@ -94,6 +102,7 @@
     {
       "url": "https://preny.ai/_next/static/media/df0a9ae256c0569c-s.p.woff2",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/77e00e9f1cfba13e.woff2"
     },
     {
@@ -104,6 +113,7 @@
     {
       "url": "https://preny.ai/images/logo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/ae3fc17617b9c084.svg"
     },
     {
@@ -144,82 +154,98 @@
     {
       "url": "https://preny.ai/images/bot-demo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/35782372b2f79f7e.svg"
     },
     {
       "url": "https://preny.ai/images/mars.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/d80c608a966801f7.svg"
     },
     {
       "url": "https://preny.ai/images/cube.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/0f390af91b601b96.svg"
     },
     {
       "url": "https://preny.ai/images/chartbar.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/1fa0bfdd2aed8656.svg"
     },
     {
       "url": "https://preny.ai/images/bot-zalo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/fdb6f9cad5bb95ab.svg"
     },
     {
       "url": "https://preny.ai/images/venus.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/377833ccdf58e427.svg"
     },
     {
       "url": "https://preny.ai/images/cube.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/0f390af91b601b96.svg"
     },
     {
       "url": "https://preny.ai/images/notification.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/f6e1d14f22f615c6.svg"
     },
     {
       "url": "https://preny.ai/images/bot-demo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/35782372b2f79f7e.svg"
     },
     {
       "url": "https://preny.ai/images/mars.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/d80c608a966801f7.svg"
     },
     {
       "url": "https://preny.ai/images/bot-message.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/e5fe9bc65365f657.svg"
     },
     {
       "url": "https://preny.ai/images/lock.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/ddf6105f8c2eb768.svg"
     },
     {
       "url": "https://preny.ai/images/stats.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/96ff53d968e116bc.svg"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/4aa4a70678891cb9.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=256&q=100",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/4aa4a70678891cb9.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/4aa4a70678891cb9.avif"
     },
     {
       "url": "https://preny.ai/#left-card-connector-path-card-1-:Rjm57n7nkva:",
@@ -228,42 +254,50 @@
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/077519ddb6d1d199.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=32&q=75",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/077519ddb6d1d199.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/077519ddb6d1d199.avif"
     },
     {
       "url": "https://preny.ai/images/zalo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/22c07728bac7cfeb.svg"
     },
     {
       "url": "https://preny.ai/images/website.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/5c9deb9a352a560c.svg"
     },
     {
       "url": "https://preny.ai/images/instagram.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/66c345ec67a1cbbf.svg"
     },
     {
       "url": "https://preny.ai/images/facebook.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/cafb5c5a3f6f2d9f.svg"
     },
     {
       "url": "https://preny.ai/images/tiktok-logo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/884860a4fcc784a4.svg"
     },
     {
@@ -273,18 +307,21 @@
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/4aa4a70678891cb9.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=256&q=100",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/4aa4a70678891cb9.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/4aa4a70678891cb9.avif"
     },
     {
       "url": "https://preny.ai/#left-card-connector-path-card-1-:R4n57n7nkva:",
@@ -293,42 +330,50 @@
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/077519ddb6d1d199.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=32&q=75",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/077519ddb6d1d199.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/077519ddb6d1d199.avif"
     },
     {
       "url": "https://preny.ai/images/zalo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/22c07728bac7cfeb.svg"
     },
     {
       "url": "https://preny.ai/images/website.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/5c9deb9a352a560c.svg"
     },
     {
       "url": "https://preny.ai/images/instagram.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/66c345ec67a1cbbf.svg"
     },
     {
       "url": "https://preny.ai/images/facebook.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/cafb5c5a3f6f2d9f.svg"
     },
     {
       "url": "https://preny.ai/images/tiktok-logo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/884860a4fcc784a4.svg"
     },
     {
@@ -339,56 +384,67 @@
     {
       "url": "https://preny.ai/images/bot-demo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/35782372b2f79f7e.svg"
     },
     {
       "url": "https://preny.ai/images/mars.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/d80c608a966801f7.svg"
     },
     {
       "url": "https://preny.ai/images/cube.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/0f390af91b601b96.svg"
     },
     {
       "url": "https://preny.ai/images/chartbar.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/1fa0bfdd2aed8656.svg"
     },
     {
       "url": "https://preny.ai/images/bot-zalo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/fdb6f9cad5bb95ab.svg"
     },
     {
       "url": "https://preny.ai/images/venus.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/377833ccdf58e427.svg"
     },
     {
       "url": "https://preny.ai/images/cube.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/0f390af91b601b96.svg"
     },
     {
       "url": "https://preny.ai/images/notification.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/f6e1d14f22f615c6.svg"
     },
     {
       "url": "https://preny.ai/images/bot-demo.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/35782372b2f79f7e.svg"
     },
     {
       "url": "https://preny.ai/images/mars.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/d80c608a966801f7.svg"
     },
     {
       "url": "https://preny.ai/images/bot-message.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/e5fe9bc65365f657.svg"
     },
     {
@@ -404,6 +460,7 @@
     {
       "url": "https://preny.ai/images/lock.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/ddf6105f8c2eb768.svg"
     },
     {
@@ -414,26 +471,31 @@
     {
       "url": "https://preny.ai/images/stats.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/96ff53d968e116bc.svg"
     },
     {
       "url": "https://preny.ai/images/why-us.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/2af7f32420272b1e.svg"
     },
     {
       "url": "https://preny.ai/images/why-us-hover.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/990c5a9a738057e5.svg"
     },
     {
       "url": "https://preny.ai/images/module.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/6ab68c640f48d5a7.svg"
     },
     {
       "url": "https://preny.ai/images/phone-bg.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/60c16c6cb4381b09.svg"
     },
     {
@@ -539,6 +601,7 @@
     {
       "url": "https://preny.ai/images/phone-bg.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/60c16c6cb4381b09.svg"
     },
     {
@@ -649,6 +712,7 @@
     {
       "url": "https://preny.ai/images/bg-removal.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/0f11e42b46b52918.svg"
     },
     {
@@ -868,18 +932,21 @@
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_chat-messenger.png&w=96&q=75",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/38e982f12cb6151c.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_chat-messenger.png&w=48&q=75",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/38e982f12cb6151c.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_chat-messenger.png&w=96&q=75",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/38e982f12cb6151c.avif"
     },
     {
       "url": "https://zalo.me/3555063027984707015",
@@ -888,18 +955,21 @@
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_zalo.png&w=96&q=75",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/e3847d97b5bf578a.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_zalo.png&w=48&q=75",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/e3847d97b5bf578a.avif"
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_zalo.png&w=96&q=75",
-      "found": false,
-      "localPath": null
+      "found": true,
+      "via": "same-source-variant",
+      "localPath": "/assets/e3847d97b5bf578a.avif"
     },
     {
       "url": "https://preny.ai/preny-tang-2000-tin-nhan-zalo-mien-phi",
@@ -909,11 +979,13 @@
     {
       "url": "https://preny.ai/svg/baner-home-desktop.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/e8f772c7230e07cf.svg"
     },
     {
       "url": "https://preny.ai/svg/baner-home-mobile.svg",
       "found": true,
+      "via": "exact",
       "localPath": "/assets/57c0cf60b6482d1a.svg"
     },
     {
