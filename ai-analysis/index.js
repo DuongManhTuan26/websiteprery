@@ -124,6 +124,32 @@ function sectionText(allNodes, section) {
   return candidates[0] || null;
 }
 
+function sectionImage(containedComponents) {
+  const withImage = containedComponents.find(c => c.tag === 'IMG' && c.src);
+  return withImage ? { src: withImage.src, alt: withImage.alt || null } : null;
+}
+
+function extractBranding(layout, components, allNodes) {
+  const titleNode = (allNodes || []).find(n => n.tag === 'TITLE');
+  const header = (layout?.semanticSections || []).find(s => s.tag === 'HEADER');
+  let logo = null;
+
+  if (header) {
+    const headerComponents = (components.components || [])
+      .filter(c => c.index > header.index && c.index < header.endIndex);
+    const logoImg = headerComponents.find(c => c.tag === 'IMG' && c.src);
+
+    if (logoImg) {
+      logo = { src: logoImg.src, alt: logoImg.alt || null };
+    }
+  }
+
+  return {
+    title: titleNode?.text || null,
+    logo
+  };
+}
+
 function extractContentSections(layout, components, allNodes) {
   const allComponents = components.components || [];
   const bodySections = findTopLevelBodySections(layout?.semanticSections);
@@ -134,7 +160,8 @@ function extractContentSections(layout, components, allNodes) {
     return {
       type: classifySection(contained),
       tag: section.tag,
-      text: sectionText(allNodes, section)
+      text: sectionText(allNodes, section),
+      image: sectionImage(contained)
     };
   });
 }
@@ -149,10 +176,13 @@ async function analyzeSemantic() {
   const pageType = detectPageType(text, analysis.components);
   const features = detectFeatures(analysis.components, analysis.interaction, text);
   const userFlows = mapUserFlows(features, analysis.interaction);
-  const contentSections = extractContentSections(analysis.layout, analysis.components, dataset.normalize.dom?.nodes || []);
+  const allNodes = dataset.normalize.dom?.nodes || [];
+  const contentSections = extractContentSections(analysis.layout, analysis.components, allNodes);
+  const branding = extractBranding(analysis.layout, analysis.components, allNodes);
 
   const semantic = {
     generatedAt: new Date().toISOString(),
+    branding,
     pageType,
     language: detectLanguage(text),
     features,

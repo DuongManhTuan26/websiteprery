@@ -28,6 +28,8 @@ function buildTokens(cssData, designData) {
   return {
     generatedAt: new Date().toISOString(),
     colors,
+    accentColor: designData.accentColor,
+    textColor: designData.textColors?.[0]?.value || null,
     typography: {
       fonts,
       fontSizes,

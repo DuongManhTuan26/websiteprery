@@ -1,5 +1,12 @@
 {
-  "generatedAt": "2026-08-02T07:40:53.556Z",
+  "generatedAt": "2026-08-02T11:17:26.597Z",
+  "branding": {
+    "title": "AI chatbot Preny tăng 50% tỷ lệ mua hàng",
+    "logo": {
+      "src": "/images/logo.svg",
+      "alt": "Preny Logo"
+    }
+  },
   "pageType": "saas-ai-landing",
   "language": "vi",
   "features": [
@@ -51,47 +58,68 @@
     {
       "type": "section",
       "tag": "SECTION",
-      "text": "AI bán hàng mạnh mẽ, giúp tăng hiệu quả chốt đơn lên đến 50%"
+      "text": "AI bán hàng mạnh mẽ, giúp tăng hiệu quả chốt đơn lên đến 50%",
+      "image": null
     },
     {
       "type": "card",
       "tag": "SECTION",
-      "text": "Dữ liệu không chia sẻ - không phụ thuộc nền tảng ngoài"
+      "text": "Dữ liệu không chia sẻ - không phụ thuộc nền tảng ngoài",
+      "image": {
+        "src": "/images/bot-demo.svg",
+        "alt": "Truong Nguyen"
+      }
     },
     {
       "type": "card",
       "tag": "SECTION",
-      "text": "Tập trung toàn bộ hội thoại bán hàng từ , , , , , ... vào một giao diện duy nhất. AI theo sát từng khách hàng, không bỏ sót cơ hội chốt đơn."
+      "text": "Tập trung toàn bộ hội thoại bán hàng từ , , , , , ... vào một giao diện duy nhất. AI theo sát từng khách hàng, không bỏ sót cơ hội chốt đơn.",
+      "image": {
+        "src": "/images/why-us.svg",
+        "alt": "Platform Icons Background"
+      }
     },
     {
       "type": "section",
       "tag": "SECTION",
-      "text": "Mọi thông tin khách hàng được tự động ghi nhận và đồng bộ vào mini CRM ngay trong lúc chat, giúp đội ngũ bán hàng theo sát khách hơn và tăng tỷ lệ chuyển đổi."
+      "text": "Mọi thông tin khách hàng được tự động ghi nhận và đồng bộ vào mini CRM ngay trong lúc chat, giúp đội ngũ bán hàng theo sát khách hơn và tăng tỷ lệ chuyển đổi.",
+      "image": {
+        "src": "/images/module.svg",
+        "alt": "Background"
+      }
     },
     {
       "type": "card",
       "tag": "SECTION",
-      "text": "AI Chatbot tư vấn sản phẩm trực quan qua hình ảnh 2 chiều, khách gửi AI tư vấn được ảnh và khách yêu cầu xem ảnh AI cũng sẽ gửi, giúp khách dễ hình dung và ra quyết định nhanh hơn."
+      "text": "AI Chatbot tư vấn sản phẩm trực quan qua hình ảnh 2 chiều, khách gửi AI tư vấn được ảnh và khách yêu cầu xem ảnh AI cũng sẽ gửi, giúp khách dễ hình dung và ra quyết định nhanh hơn.",
+      "image": {
+        "src": "/images/bg-removal.svg",
+        "alt": null
+      }
     },
     {
       "type": "section",
       "tag": "SECTION",
-      "text": "Những góc nhìn và đánh giá từ các đơn vị báo chí uy tín"
+      "text": "Những góc nhìn và đánh giá từ các đơn vị báo chí uy tín",
+      "image": null
     },
     {
       "type": "section",
       "tag": "SECTION",
-      "text": "Nhận tư vấn từ chuyên gia AI để tối ưu tương tác và tăng trưởng doanh nghiệp"
+      "text": "Nhận tư vấn từ chuyên gia AI để tối ưu tương tác và tăng trưởng doanh nghiệp",
+      "image": null
     },
     {
       "type": "section",
       "tag": "SECTION",
-      "text": "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp (Live Chat)? Quy trình chuyển đổi diễn ra như thế nào?"
+      "text": "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp (Live Chat)? Quy trình chuyển đổi diễn ra như thế nào?",
+      "image": null
     },
     {
       "type": "section",
       "tag": "SECTION",
-      "text": null
+      "text": null,
+      "image": null
     }
   ],
   "recommendations": {

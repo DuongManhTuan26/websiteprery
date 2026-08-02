@@ -46,9 +46,11 @@ function parseHtmlToNodes(html) {
       text: directText,
       role: attribs.role || null,
       href: attribs.href || null,
+      src: attribs.src || null,
       type: attribs.type || null,
       name: attribs.name || null,
-      ariaLabel: attribs['aria-label'] || null
+      ariaLabel: attribs['aria-label'] || null,
+      alt: attribs.alt || null
     });
 
     for (const child of element.children || []) {

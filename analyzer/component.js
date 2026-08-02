@@ -68,7 +68,9 @@ async function analyzeComponents() {
         id: node.id,
         class: node.class,
         depth: node.depth,
-        text: node.text
+        text: node.text,
+        src: node.src,
+        alt: node.alt
       });
     }
   }

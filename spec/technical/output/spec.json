@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T07:40:53.604Z",
+  "generatedAt": "2026-08-02T11:17:26.646Z",
   "version": "1.0.0",
   "stack": {
     "framework": "static-html",
@@ -17,53 +17,53 @@
       "colors": [
         {
           "name": "primary",
-          "value": "rgb(3,7,18)",
-          "usage": 1218
+          "value": "rgb(255,255,255)",
+          "usage": 31
         },
         {
           "name": "secondary",
-          "value": "rgb(39,39,39)",
-          "usage": 115
+          "value": "rgb(238,231,249)",
+          "usage": 18
         },
         {
           "name": "color-3",
-          "value": "rgb(138,148,166)",
-          "usage": 110
+          "value": "rgba(255,255,255,0.7)",
+          "usage": 11
         },
         {
           "name": "color-4",
-          "value": "rgb(255,255,255)",
-          "usage": 88
+          "value": "rgba(233,213,255,0.7)",
+          "usage": 6
         },
         {
           "name": "color-5",
-          "value": "rgb(94,31,183)",
-          "usage": 74
+          "value": "rgb(243,244,246)",
+          "usage": 6
         },
         {
           "name": "color-6",
-          "value": "rgb(0,0,0)",
-          "usage": 61
+          "value": "rgba(255,255,255,0.15)",
+          "usage": 6
         },
         {
           "name": "color-7",
-          "value": "rgb(168,85,247)",
-          "usage": 30
+          "value": "rgb(255,240,246)",
+          "usage": 4
         },
         {
           "name": "color-8",
-          "value": "rgb(228,231,236)",
-          "usage": 24
+          "value": "rgb(77,0,178)",
+          "usage": 4
         },
         {
           "name": "color-9",
-          "value": "rgb(47,47,47)",
-          "usage": 19
+          "value": "rgba(209,213,219,0.6)",
+          "usage": 4
         },
         {
           "name": "color-10",
-          "value": "rgb(238,231,249)",
-          "usage": 18
+          "value": "rgba(255,255,255,0.05)",
+          "usage": 3
         }
       ],
       "typography": {
@@ -131,11 +131,11 @@
     },
     "primaryFont": "ui-sans-serif",
     "dominantColors": [
-      "rgb(3,7,18)",
-      "rgb(39,39,39)",
-      "rgb(138,148,166)",
       "rgb(255,255,255)",
-      "rgb(94,31,183)"
+      "rgb(238,231,249)",
+      "rgba(255,255,255,0.7)",
+      "rgba(233,213,255,0.7)",
+      "rgb(243,244,246)"
     ]
   },
   "components": {

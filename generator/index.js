@@ -13,12 +13,40 @@ function escapeHtml(text) {
     .replace(/"/g, '&quot;');
 }
 
+function resolveUrl(src, baseUrl) {
+  if (!src) return null;
+
+  try {
+    return new URL(src, baseUrl || undefined).href;
+  } catch {
+    return null;
+  }
+}
+
+function buildImageHtml(image, baseUrl, className) {
+  const resolvedSrc = resolveUrl(image?.src, baseUrl);
+
+  if (!resolvedSrc) {
+    return '';
+  }
+
+  return `<img src="${escapeHtml(resolvedSrc)}" alt="${escapeHtml(image.alt || '')}" class="${className}" loading="lazy">`;
+}
+
 function buildTokensCss(tokens) {
   const lines = [':root {'];
 
   tokens.colors.forEach(color => {
     lines.push(`  --${color.name}: ${color.value};`);
   });
+
+  if (tokens.accentColor) {
+    lines.push(`  --accent: ${tokens.accentColor};`);
+  }
+
+  if (tokens.textColor) {
+    lines.push(`  --text-primary: ${tokens.textColor};`);
+  }
 
   if (tokens.typography.primaryFont) {
     lines.push(`  --font-primary: "${tokens.typography.primaryFont}", system-ui, sans-serif;`);
@@ -39,8 +67,8 @@ function buildMainCss() {
 
 body {
   font-family: var(--font-primary, system-ui, sans-serif);
-  color: var(--primary, #111);
-  background: var(--secondary, #fff);
+  color: var(--text-primary, #111);
+  background: var(--primary, #fff);
   line-height: 1.6;
 }
 
@@ -92,11 +120,32 @@ body {
   margin: 0 auto 2rem;
 }
 
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2rem auto 0;
+  display: block;
+}
+
+.logo-image {
+  max-height: 40px;
+  width: auto;
+  display: block;
+}
+
+.section-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  background: var(--primary, #6366f1);
+  background: var(--accent, #6366f1);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
@@ -152,7 +201,12 @@ body {
 `.trim();
 }
 
-function buildHeaderSection(semantic, interaction) {
+function buildHeaderSection(semantic, interaction, ctaHref, baseUrl) {
+  const logo = semantic.branding?.logo;
+  const logoHtml = logo
+    ? buildImageHtml(logo, baseUrl, 'logo-image')
+    : '<strong>Rebuilt</strong>';
+
   const seenText = new Set();
   const navLinks = (interaction.elements || [])
     .filter(el => el.tag === 'A' && el.href && el.text && el.text.length <= 40)
@@ -171,29 +225,30 @@ function buildHeaderSection(semantic, interaction) {
   </nav>`
     : '';
 
+  const ctaHtml = ctaHref ? `<a href="${ctaHref}" class="btn">Get Started</a>` : '';
+
   return `
 <header class="site-header container">
-  <a href="/" class="logo"><strong>Rebuilt</strong></a>
+  <a href="/" class="logo">${logoHtml}</a>
   ${navHtml}
-  <a href="#cta" class="btn">Get Started</a>
+  ${ctaHtml}
 </header>`.trim();
 }
 
-function buildHeroSection(text) {
-  const words = text.trim().split(/\s+/).filter(Boolean).slice(0, 30).join(' ');
-
-  if (!words) {
+function buildHeroSection(section, baseUrl, ctaHref) {
+  if (!section || !section.text) {
     return '';
   }
 
-  const title = words.length > 80 ? words.slice(0, 80) + '...' : words;
+  const imageHtml = buildImageHtml(section.image, baseUrl, 'hero-image');
+  const ctaHtml = ctaHref ? `<a href="${ctaHref}" class="btn">Learn More</a>` : '';
 
   return `
 <section class="hero" id="hero">
   <div class="container">
-    <h1>${escapeHtml(title)}</h1>
-    <p>Rebuilt from captured website data using the capture-rebuild pipeline.</p>
-    <a href="#cta" class="btn">Learn More</a>
+    <h1>${escapeHtml(section.text)}</h1>
+    ${ctaHtml}
+    ${imageHtml}
   </div>
 </section>`.trim();
 }
@@ -205,9 +260,9 @@ const SECTION_HEADINGS = {
   testimonial: 'Testimonials'
 };
 
-function buildBodySections(semantic) {
-  const sections = (semantic.contentSections || [])
-    .filter(s => s.type !== 'header' && s.type !== 'footer' && s.type !== 'hero')
+function buildBodySections(bodySections, baseUrl) {
+  const sections = bodySections
+    .filter(s => s.type !== 'header' && s.type !== 'footer')
     .filter(s => s.text);
 
   let genericCount = 0;
@@ -224,22 +279,27 @@ function buildBodySections(semantic) {
       heading = s.type.charAt(0).toUpperCase() + s.type.slice(1);
     }
 
+    const imageHtml = buildImageHtml(s.image, baseUrl, 'section-image');
+
     return `
 <section class="section" id="${s.type}-${i}">
   <div class="container">
     <h2>${escapeHtml(heading)}</h2>
     <p>${escapeHtml(s.text)}</p>
+    ${imageHtml}
   </div>
 </section>`.trim();
   });
 }
 
-function buildFormSection(interaction) {
-  const fields = (interaction.elements || [])
+function getFormFields(interaction) {
+  return (interaction.elements || [])
     .filter(el => el.tag === 'INPUT' || el.tag === 'TEXTAREA')
     .filter(el => !['hidden', 'submit', 'button'].includes(el.type))
     .slice(0, 8);
+}
 
+function buildFormSection(interaction, fields) {
   if (!interaction.forms || interaction.forms === 0 || fields.length === 0) {
     return '';
   }
@@ -275,13 +335,13 @@ function buildFooterSection() {
 </footer>`.trim();
 }
 
-function buildIndexHtml(sections) {
+function buildIndexHtml(sections, title) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rebuilt Site</title>
+  <title>${escapeHtml(title || 'Rebuilt Site')}</title>
   <link rel="stylesheet" href="/styles/tokens.css">
   <link rel="stylesheet" href="/styles/main.css">
 </head>
@@ -329,18 +389,23 @@ async function generateCode() {
   const dataset = readJson(paths.collector.dataset);
   const semantic = readJson(paths.aiAnalysis.semantic);
   const tokens = readJson(paths.styleExtraction.tokens);
-  const text = dataset.normalize.text?.text || '';
   const interaction = dataset.analysis?.interaction || { elements: [], forms: 0 };
+  const baseUrl = dataset.source?.target || null;
+
+  const contentSections = semantic.contentSections || [];
+  const [heroSection, ...restSections] = contentSections;
+  const fields = getFormFields(interaction);
+  const ctaHref = (interaction.forms > 0 && fields.length > 0) ? '#contact' : null;
 
   const sections = [
-    buildHeaderSection(semantic, interaction),
-    buildHeroSection(text),
-    ...buildBodySections(semantic),
-    buildFormSection(interaction),
+    buildHeaderSection(semantic, interaction, ctaHref, baseUrl),
+    buildHeroSection(heroSection, baseUrl, ctaHref),
+    ...buildBodySections(restSections, baseUrl),
+    buildFormSection(interaction, fields),
     buildFooterSection()
   ].filter(Boolean);
 
-  fs.writeFileSync(path.join(outputDir, 'index.html'), buildIndexHtml(sections));
+  fs.writeFileSync(path.join(outputDir, 'index.html'), buildIndexHtml(sections, semantic.branding?.title));
   fs.writeFileSync(path.join(outputDir, 'styles', 'tokens.css'), buildTokensCss(tokens));
   fs.writeFileSync(path.join(outputDir, 'styles', 'main.css'), buildMainCss());
   fs.writeFileSync(path.join(outputDir, 'package.json'), JSON.stringify(buildPackageJson(), null, 2));

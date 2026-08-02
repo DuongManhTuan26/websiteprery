@@ -2,8 +2,8 @@
 
 body {
   font-family: var(--font-primary, system-ui, sans-serif);
-  color: var(--primary, #111);
-  background: var(--secondary, #fff);
+  color: var(--text-primary, #111);
+  background: var(--primary, #fff);
   line-height: 1.6;
 }
 
@@ -55,11 +55,32 @@ body {
   margin: 0 auto 2rem;
 }
 
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2rem auto 0;
+  display: block;
+}
+
+.logo-image {
+  max-height: 40px;
+  width: auto;
+  display: block;
+}
+
+.section-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  background: var(--primary, #6366f1);
+  background: var(--accent, #6366f1);
   color: #fff;
   text-decoration: none;
   font-weight: 600;

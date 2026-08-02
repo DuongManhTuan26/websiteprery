@@ -1,6 +1,6 @@
 # Technical Specification
 
-**Generated:** 2026-08-02T07:40:53.604Z
+**Generated:** 2026-08-02T11:17:26.646Z
 
 ## Stack
 
@@ -19,16 +19,16 @@
 Primary font: ui-sans-serif
 
 Colors:
-- primary: rgb(3,7,18)
-- secondary: rgb(39,39,39)
-- color-3: rgb(138,148,166)
-- color-4: rgb(255,255,255)
-- color-5: rgb(94,31,183)
-- color-6: rgb(0,0,0)
-- color-7: rgb(168,85,247)
-- color-8: rgb(228,231,236)
-- color-9: rgb(47,47,47)
-- color-10: rgb(238,231,249)
+- primary: rgb(255,255,255)
+- secondary: rgb(238,231,249)
+- color-3: rgba(255,255,255,0.7)
+- color-4: rgba(233,213,255,0.7)
+- color-5: rgb(243,244,246)
+- color-6: rgba(255,255,255,0.15)
+- color-7: rgb(255,240,246)
+- color-8: rgb(77,0,178)
+- color-9: rgba(209,213,219,0.6)
+- color-10: rgba(255,255,255,0.05)
 
 ## Components
 

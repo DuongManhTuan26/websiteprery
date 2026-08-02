@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-02T07:40:53.472Z",
+  "generatedAt": "2026-08-02T11:17:26.507Z",
   "version": "1.0.0",
   "layout": {
-    "generatedAt": "2026-08-02T07:40:53.358Z",
+    "generatedAt": "2026-08-02T11:17:26.387Z",
     "totalNodes": 1566,
     "maxDepth": 23,
     "displayCounts": {
@@ -515,7 +515,7 @@
     "layoutModel": "flexbox-dominant"
   },
   "components": {
-    "generatedAt": "2026-08-02T07:40:53.368Z",
+    "generatedAt": "2026-08-02T11:17:26.398Z",
     "totalNodes": 1566,
     "totalComponents": 342,
     "tagStatistics": {
@@ -569,7 +569,9 @@
         "id": null,
         "class": "fixed left-0 right-0 top-0 z-50 p-3 sm:p-4",
         "depth": 3,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 35,
@@ -578,7 +580,9 @@
         "id": null,
         "class": "glass-header mx-auto flex h-[64px] w-full max-w-[1400px] items-center justify-between rounded-[12px] bg-white px-3 py-2 backdrop-blur-[100px] sm:px-[13px] sm:py-[10px]",
         "depth": 4,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 37,
@@ -587,7 +591,9 @@
         "id": null,
         "class": "flex items-center space-x-2",
         "depth": 6,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 38,
@@ -596,7 +602,9 @@
         "id": null,
         "class": null,
         "depth": 7,
-        "text": null
+        "text": null,
+        "src": "/images/logo.svg",
+        "alt": "Preny Logo"
       },
       {
         "index": 39,
@@ -605,7 +613,9 @@
         "id": null,
         "class": "hidden items-center space-x-6 pl-[40px] md:flex lg:space-x-10 lg:pl-[80px]",
         "depth": 6,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 40,
@@ -614,7 +624,9 @@
         "id": null,
         "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 font-[600] text-purple-600",
         "depth": 7,
-        "text": "Trang chủ"
+        "text": "Trang chủ",
+        "src": null,
+        "alt": null
       },
       {
         "index": 41,
@@ -623,7 +635,9 @@
         "id": null,
         "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
         "depth": 7,
-        "text": "Hướng dẫn"
+        "text": "Hướng dẫn",
+        "src": null,
+        "alt": null
       },
       {
         "index": 42,
@@ -632,7 +646,9 @@
         "id": null,
         "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
         "depth": 7,
-        "text": "Tính năng"
+        "text": "Tính năng",
+        "src": null,
+        "alt": null
       },
       {
         "index": 43,
@@ -641,7 +657,9 @@
         "id": null,
         "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
         "depth": 7,
-        "text": "Bảng giá"
+        "text": "Bảng giá",
+        "src": null,
+        "alt": null
       },
       {
         "index": 44,
@@ -650,7 +668,9 @@
         "id": null,
         "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
         "depth": 7,
-        "text": "Tuyển dụng"
+        "text": "Tuyển dụng",
+        "src": null,
+        "alt": null
       },
       {
         "index": 46,
@@ -659,7 +679,9 @@
         "id": null,
         "class": "flex items-center justify-between whitespace-nowrap rounded-md border border-input px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 h-11 w-[92px] bg-white",
         "depth": 7,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 48,
@@ -668,7 +690,9 @@
         "id": null,
         "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-[#5E1FB7] transition-colors hover:text-purple-600 lg:w-[120px]",
         "depth": 7,
-        "text": "Đăng nhập"
+        "text": "Đăng nhập",
+        "src": null,
+        "alt": null
       },
       {
         "index": 49,
@@ -677,7 +701,9 @@
         "id": null,
         "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-white transition-colors hover:text-purple-300 lg:w-[120px]",
         "depth": 7,
-        "text": "Đăng ký"
+        "text": "Đăng ký",
+        "src": null,
+        "alt": null
       },
       {
         "index": 50,
@@ -686,7 +712,9 @@
         "id": null,
         "class": "inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 md:hidden",
         "depth": 6,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 53,
@@ -695,7 +723,9 @@
         "id": null,
         "class": "bg-[rgba(238, 231, 249, 1)] min-h-screen",
         "depth": 4,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 54,
@@ -704,7 +734,9 @@
         "id": null,
         "class": "relative px-4 pb-16 pt-[120px] sm:px-6 sm:pb-20 md:pt-[140px] lg:px-8",
         "depth": 5,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 63,
@@ -713,7 +745,9 @@
         "id": null,
         "class": "flex h-[44px] min-w-[180px] cursor-pointer items-center justify-center rounded-[8px] bg-[#EEE7F9] px-4 py-[10px] font-medium text-primary transition-all hover:bg-purple-200 sm:w-auto",
         "depth": 8,
-        "text": "Xem demo"
+        "text": "Xem demo",
+        "src": null,
+        "alt": null
       },
       {
         "index": 64,
@@ -722,7 +756,9 @@
         "id": null,
         "class": "flex h-[44px] w-full cursor-pointer items-center justify-center gap-1 rounded-[8px] px-0 font-medium text-white transition-all hover:opacity-90 sm:w-auto sm:min-w-[200px] md:gap-3 md:px-4",
         "depth": 8,
-        "text": "Dùng thử miễn phí"
+        "text": "Dùng thử miễn phí",
+        "src": null,
+        "alt": null
       },
       {
         "index": 65,
@@ -731,7 +767,9 @@
         "id": null,
         "class": "relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8",
         "depth": 5,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 69,
@@ -740,7 +778,9 @@
         "id": null,
         "class": "banner-orb absolute inset-0",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 77,
@@ -749,7 +789,9 @@
         "id": null,
         "class": "glow-border bg-banner min-w-[350px] overflow-hidden rounded-[20px] border border-[#9D6AF4] bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 py-6 pl-[15px] pr-[15px] shadow-[0_6px_40px_0px_rgba(94,31,183,0.35)] backdrop-blur-sm",
         "depth": 14,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 81,
@@ -758,7 +800,9 @@
         "id": null,
         "class": "card-crm min-w-[329px] overflow-hidden glow-border",
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 84,
@@ -767,7 +811,9 @@
         "id": null,
         "class": null,
         "depth": 19,
-        "text": null
+        "text": null,
+        "src": "/images/bot-demo.svg",
+        "alt": "Truong Nguyen"
       },
       {
         "index": 90,
@@ -776,7 +822,9 @@
         "id": null,
         "class": null,
         "depth": 22,
-        "text": null
+        "text": null,
+        "src": "/images/mars.svg",
+        "alt": "male"
       },
       {
         "index": 92,
@@ -785,7 +833,9 @@
         "id": null,
         "class": "text-purple-500 transition-colors hover:text-purple-700",
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 101,
@@ -794,7 +844,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/cube.svg",
+        "alt": "Đã gửi đơn hàng"
       },
       {
         "index": 104,
@@ -803,7 +855,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/chartbar.svg",
+        "alt": "Hoàn tất 2 đơn hàng"
       },
       {
         "index": 106,
@@ -812,7 +866,9 @@
         "id": null,
         "class": "card-crm min-w-[329px] overflow-hidden",
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 109,
@@ -821,7 +877,9 @@
         "id": null,
         "class": null,
         "depth": 19,
-        "text": null
+        "text": null,
+        "src": "/images/bot-zalo.svg",
+        "alt": "Van Tran"
       },
       {
         "index": 115,
@@ -830,7 +888,9 @@
         "id": null,
         "class": null,
         "depth": 22,
-        "text": null
+        "text": null,
+        "src": "/images/venus.svg",
+        "alt": "female"
       },
       {
         "index": 117,
@@ -839,7 +899,9 @@
         "id": null,
         "class": "text-purple-500 transition-colors hover:text-purple-700",
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 125,
@@ -848,7 +910,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/cube.svg",
+        "alt": "Khách đã thanh toán trước"
       },
       {
         "index": 128,
@@ -857,7 +921,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/notification.svg",
+        "alt": "Có lịch hẹn tư vấn"
       },
       {
         "index": 130,
@@ -866,7 +932,9 @@
         "id": null,
         "class": "card-crm min-w-[329px] overflow-hidden",
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 133,
@@ -875,7 +943,9 @@
         "id": null,
         "class": null,
         "depth": 19,
-        "text": null
+        "text": null,
+        "src": "/images/bot-demo.svg",
+        "alt": "Trung Kien"
       },
       {
         "index": 139,
@@ -884,7 +954,9 @@
         "id": null,
         "class": null,
         "depth": 22,
-        "text": null
+        "text": null,
+        "src": "/images/mars.svg",
+        "alt": "male"
       },
       {
         "index": 141,
@@ -893,7 +965,9 @@
         "id": null,
         "class": "text-purple-500 transition-colors hover:text-purple-700",
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 148,
@@ -902,7 +976,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/bot-message.svg",
+        "alt": "Đã mua 5 đơn gần đây"
       },
       {
         "index": 155,
@@ -911,7 +987,9 @@
         "id": null,
         "class": "card-seq relative z-10 rounded-[12px] border border-white/60 bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 backdrop-blur-sm sm:p-4",
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 188,
@@ -920,7 +998,9 @@
         "id": null,
         "class": "card-seq relative z-10 space-y-3 rounded-[12px] border bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 sm:p-4",
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 194,
@@ -929,7 +1009,9 @@
         "id": null,
         "class": null,
         "depth": 19,
-        "text": null
+        "text": null,
+        "src": "/images/lock.svg",
+        "alt": "lock"
       },
       {
         "index": 198,
@@ -938,7 +1020,9 @@
         "id": null,
         "class": "via-[#F6F0FF]/200 to-[#FFF7F3]/200 card-seq relative z-10 rounded-[12px] border border-white/60 bg-gradient-to-br from-white p-3 sm:p-4",
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 201,
@@ -947,7 +1031,9 @@
         "id": null,
         "class": null,
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": "/images/stats.svg",
+        "alt": null
       },
       {
         "index": 207,
@@ -956,7 +1042,9 @@
         "id": null,
         "class": "h-full rounded-[9.6px] backdrop-blur-sm card-seq",
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 218,
@@ -965,7 +1053,9 @@
         "id": null,
         "class": "w-full rounded-[12px] object-cover",
         "depth": 21,
-        "text": null
+        "text": null,
+        "src": "/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
+        "alt": "AI Chatbot"
       },
       {
         "index": 225,
@@ -974,7 +1064,9 @@
         "id": null,
         "class": "h-full rounded-[9.6px] backdrop-blur-sm py-3 sm:py-4 px-4 sm:px-5 card-seq bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 border",
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 230,
@@ -983,7 +1075,9 @@
         "id": null,
         "class": null,
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
+        "alt": "Lazada"
       },
       {
         "index": 233,
@@ -992,7 +1086,9 @@
         "id": null,
         "class": null,
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/zalo.svg",
+        "alt": "Zalo"
       },
       {
         "index": 236,
@@ -1001,7 +1097,9 @@
         "id": null,
         "class": null,
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/website.svg",
+        "alt": "Website"
       },
       {
         "index": 239,
@@ -1010,7 +1108,9 @@
         "id": null,
         "class": null,
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/instagram.svg",
+        "alt": "Instagram"
       },
       {
         "index": 242,
@@ -1019,7 +1119,9 @@
         "id": null,
         "class": null,
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/facebook.svg",
+        "alt": "Facebook"
       },
       {
         "index": 245,
@@ -1028,7 +1130,9 @@
         "id": null,
         "class": null,
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/tiktok-logo.svg",
+        "alt": "TikTok"
       },
       {
         "index": 249,
@@ -1037,7 +1141,9 @@
         "id": null,
         "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 250,
@@ -1046,7 +1152,9 @@
         "id": null,
         "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 251,
@@ -1055,7 +1163,9 @@
         "id": null,
         "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 255,
@@ -1064,7 +1174,9 @@
         "id": null,
         "class": "relative overflow-visible banner-soft-float banner-tilt min-h-[315px] w-full lg:max-w-[249px] xl:max-w-[260px]",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 257,
@@ -1073,7 +1185,9 @@
         "id": null,
         "class": "h-full rounded-[9.6px] backdrop-blur-sm card-seq banner-shimmer",
         "depth": 12,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 268,
@@ -1082,7 +1196,9 @@
         "id": null,
         "class": "w-full rounded-[12px] object-cover",
         "depth": 17,
-        "text": null
+        "text": null,
+        "src": "/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
+        "alt": "AI Chatbot"
       },
       {
         "index": 274,
@@ -1091,7 +1207,9 @@
         "id": null,
         "class": "relative overflow-visible banner-soft-float variant-slower w-full rounded-[12px] pt-[60px] lg:h-[146px] lg:max-w-[240px] xl:max-w-[250px]",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 276,
@@ -1100,7 +1218,9 @@
         "id": null,
         "class": "h-full rounded-[9.6px] backdrop-blur-sm py-[15px] pr-[20px] xl:pr-[24px] pl-[16px] card-seq banner-shimmer bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 border transition-transform duration-300 ease-out hover:translate-y-[-1px]",
         "depth": 12,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 281,
@@ -1109,7 +1229,9 @@
         "id": null,
         "class": null,
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": "/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
+        "alt": "Lazada"
       },
       {
         "index": 284,
@@ -1118,7 +1240,9 @@
         "id": null,
         "class": null,
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": "/images/zalo.svg",
+        "alt": "Zalo"
       },
       {
         "index": 287,
@@ -1127,7 +1251,9 @@
         "id": null,
         "class": null,
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": "/images/website.svg",
+        "alt": "Website"
       },
       {
         "index": 290,
@@ -1136,7 +1262,9 @@
         "id": null,
         "class": null,
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": "/images/instagram.svg",
+        "alt": "Instagram"
       },
       {
         "index": 293,
@@ -1145,7 +1273,9 @@
         "id": null,
         "class": null,
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": "/images/facebook.svg",
+        "alt": "Facebook"
       },
       {
         "index": 296,
@@ -1154,7 +1284,9 @@
         "id": null,
         "class": null,
         "depth": 16,
-        "text": null
+        "text": null,
+        "src": "/images/tiktok-logo.svg",
+        "alt": "TikTok"
       },
       {
         "index": 300,
@@ -1163,7 +1295,9 @@
         "id": null,
         "class": "motion-safe:animate-float glow-border bg-banner banner-shimmer w-full overflow-hidden rounded-[20px] border border-[#9D6AF4] bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-5 shadow-[0_6px_40px_0px_rgba(94,31,183,0.45)] backdrop-blur-sm lg:min-w-[340px] lg:p-[18px] xl:min-w-[361px] xl:p-[20px]",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 304,
@@ -1172,7 +1306,9 @@
         "id": null,
         "class": "card-crm min-w-[329px] overflow-hidden glow-border",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 307,
@@ -1181,7 +1317,9 @@
         "id": null,
         "class": null,
         "depth": 14,
-        "text": null
+        "text": null,
+        "src": "/images/bot-demo.svg",
+        "alt": "Truong Nguyen"
       },
       {
         "index": 313,
@@ -1190,7 +1328,9 @@
         "id": null,
         "class": null,
         "depth": 17,
-        "text": null
+        "text": null,
+        "src": "/images/mars.svg",
+        "alt": "male"
       },
       {
         "index": 315,
@@ -1199,7 +1339,9 @@
         "id": null,
         "class": "text-purple-500 transition-colors hover:text-purple-700",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 324,
@@ -1208,7 +1350,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/cube.svg",
+        "alt": "Đã gửi đơn hàng"
       },
       {
         "index": 327,
@@ -1217,7 +1361,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/chartbar.svg",
+        "alt": "Hoàn tất 2 đơn hàng"
       },
       {
         "index": 329,
@@ -1226,7 +1372,9 @@
         "id": null,
         "class": "card-crm min-w-[329px] overflow-hidden",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 332,
@@ -1235,7 +1383,9 @@
         "id": null,
         "class": null,
         "depth": 14,
-        "text": null
+        "text": null,
+        "src": "/images/bot-zalo.svg",
+        "alt": "Van Tran"
       },
       {
         "index": 338,
@@ -1244,7 +1394,9 @@
         "id": null,
         "class": null,
         "depth": 17,
-        "text": null
+        "text": null,
+        "src": "/images/venus.svg",
+        "alt": "female"
       },
       {
         "index": 340,
@@ -1253,7 +1405,9 @@
         "id": null,
         "class": "text-purple-500 transition-colors hover:text-purple-700",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 348,
@@ -1262,7 +1416,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/cube.svg",
+        "alt": "Khách đã thanh toán trước"
       },
       {
         "index": 351,
@@ -1271,7 +1427,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/notification.svg",
+        "alt": "Có lịch hẹn tư vấn"
       },
       {
         "index": 353,
@@ -1280,7 +1438,9 @@
         "id": null,
         "class": "card-crm min-w-[329px] overflow-hidden",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 356,
@@ -1289,7 +1449,9 @@
         "id": null,
         "class": null,
         "depth": 14,
-        "text": null
+        "text": null,
+        "src": "/images/bot-demo.svg",
+        "alt": "Trung Kien"
       },
       {
         "index": 362,
@@ -1298,7 +1460,9 @@
         "id": null,
         "class": null,
         "depth": 17,
-        "text": null
+        "text": null,
+        "src": "/images/mars.svg",
+        "alt": "male"
       },
       {
         "index": 364,
@@ -1307,7 +1471,9 @@
         "id": null,
         "class": "text-purple-500 transition-colors hover:text-purple-700",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 371,
@@ -1316,7 +1482,9 @@
         "id": null,
         "class": "shrink-0",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/bot-message.svg",
+        "alt": "Đã mua 5 đơn gần đây"
       },
       {
         "index": 374,
@@ -1325,7 +1493,9 @@
         "id": null,
         "class": "banner-soft-float banner-tilt relative delay-200 duration-700 ease-out motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-right-6 lg:left-[70px] xl:left-[105px]",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 376,
@@ -1334,7 +1504,9 @@
         "id": null,
         "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px]",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 377,
@@ -1343,7 +1515,9 @@
         "id": null,
         "class": "card-seq relative z-10 w-full rounded-[12px] border border-white/60 bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 backdrop-blur-sm lg:min-w-[300px] lg:p-[10px] xl:min-w-[315px]",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 408,
@@ -1352,7 +1526,9 @@
         "id": null,
         "class": "banner-soft-float variant-slower banner-tilt relative my-[60px] lg:ml-12 xl:ml-20",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 409,
@@ -1361,7 +1537,9 @@
         "id": null,
         "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px]",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 410,
@@ -1370,7 +1548,9 @@
         "id": null,
         "class": "card-seq relative z-10 space-y-3 rounded-[12px] border bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 lg:p-[10px]",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 416,
@@ -1379,7 +1559,9 @@
         "id": null,
         "class": null,
         "depth": 14,
-        "text": null
+        "text": null,
+        "src": "/images/lock.svg",
+        "alt": "lock"
       },
       {
         "index": 418,
@@ -1388,7 +1570,9 @@
         "id": null,
         "class": "banner-soft-float banner-tilt relative w-full lg:ml-[100px] lg:min-w-[280px] xl:ml-[130px] xl:min-w-[300px]",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 419,
@@ -1397,7 +1581,9 @@
         "id": null,
         "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px] shadow-[0_12px_34px_rgba(109,40,217,0.16)]",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 420,
@@ -1406,7 +1592,9 @@
         "id": null,
         "class": "card-seq relative z-10 rounded-[12px] border border-white/60 bg-gradient-to-br from-white via-[#F6F0FF]/100 to-[#FFF7F3]/100 p-3 lg:p-[10px]",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 423,
@@ -1415,7 +1603,9 @@
         "id": null,
         "class": null,
         "depth": 13,
-        "text": null
+        "text": null,
+        "src": "/images/stats.svg",
+        "alt": null
       },
       {
         "index": 424,
@@ -1424,7 +1614,9 @@
         "id": null,
         "class": "relative overflow-hidden px-4 pb-16 sm:px-6 sm:pb-20",
         "depth": 5,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 437,
@@ -1433,7 +1625,9 @@
         "id": null,
         "class": "whyus-card min-h-[316px] rounded-[20px] p-[16px] sm:p-[20px] lg:col-span-6",
         "depth": 8,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 438,
@@ -1442,7 +1636,9 @@
         "id": null,
         "class": "whyus-bg whyus-bg-default",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": "/images/why-us.svg",
+        "alt": "Platform Icons Background"
       },
       {
         "index": 439,
@@ -1451,7 +1647,9 @@
         "id": null,
         "class": "whyus-bg whyus-bg-hover",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": "/images/why-us-hover.svg",
+        "alt": "Platform Icons Background Hover"
       },
       {
         "index": 450,
@@ -1460,7 +1658,9 @@
         "id": null,
         "class": "feature-card relative min-w-[217px] rounded-[20px] bg-gradient-to-tr from-purple-100 via-white to-purple-200 lg:col-span-3",
         "depth": 8,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 452,
@@ -1469,7 +1669,9 @@
         "id": null,
         "class": "glass-card min-h-[230px] max-w-[309px] rounded-[14px] p-[10px] sm:min-h-[248px]",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 461,
@@ -1478,7 +1680,9 @@
         "id": null,
         "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 470,
@@ -1487,7 +1691,9 @@
         "id": null,
         "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 480,
@@ -1496,7 +1702,9 @@
         "id": null,
         "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
         "depth": 9,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 490,
@@ -1505,7 +1713,9 @@
         "id": null,
         "class": "px-4 py-10 sm:px-6 sm:py-12 md:py-14 lg:px-8 lg:py-16 xl:py-20",
         "depth": 5,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 493,
@@ -1514,7 +1724,9 @@
         "id": null,
         "class": "object-cover opacity-50 sm:opacity-60",
         "depth": 8,
-        "text": null
+        "text": null,
+        "src": "/images/module.svg",
+        "alt": "Background"
       },
       {
         "index": 540,
@@ -1523,7 +1735,9 @@
         "id": null,
         "class": "w-full rounded-[12px] object-cover",
         "depth": 23,
-        "text": null
+        "text": null,
+        "src": "/_next/image?url=%2Fimages%2FPicture1.png&w=2048&q=75",
+        "alt": "Chatbot greeting"
       },
       {
         "index": 556,
@@ -1532,7 +1746,9 @@
         "id": null,
         "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none",
         "depth": 19,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 557,
@@ -1541,7 +1757,9 @@
         "id": null,
         "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25",
         "depth": 19,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 558,
@@ -1550,7 +1768,9 @@
         "id": null,
         "class": null,
         "depth": 20,
-        "text": null
+        "text": null,
+        "src": "/images/send.svg",
+        "alt": "Send"
       },
       {
         "index": 559,
@@ -1559,7 +1779,9 @@
         "id": null,
         "class": "h-auto w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px]",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/group-message.svg",
+        "alt": "Group Messages"
       },
       {
         "index": 576,
@@ -1568,7 +1790,9 @@
         "id": null,
         "class": "h-auto w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px]",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/dashboard.svg",
+        "alt": "AI Mini CRM Interface"
       },
       {
         "index": 597,
@@ -1577,7 +1801,9 @@
         "id": null,
         "class": "h-auto w-full max-w-[340px] sm:max-w-[400px] md:max-w-[480px]",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/multichannel-mockup.svg",
+        "alt": "Multi-channel Chat Interface"
       },
       {
         "index": 599,
@@ -1586,7 +1812,9 @@
         "id": null,
         "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 600,
@@ -1595,7 +1823,9 @@
         "id": null,
         "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 601,
@@ -1604,7 +1834,9 @@
         "id": null,
         "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
         "depth": 10,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 640,
@@ -1613,7 +1845,9 @@
         "id": null,
         "class": "w-full rounded-[12px] object-cover",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": "/_next/image?url=%2Fimages%2FPicture1.png&w=2048&q=75",
+        "alt": "Chatbot greeting"
       },
       {
         "index": 656,
@@ -1622,7 +1856,9 @@
         "id": null,
         "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none",
         "depth": 14,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 657,
@@ -1631,7 +1867,9 @@
         "id": null,
         "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25",
         "depth": 14,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 658,
@@ -1640,7 +1878,9 @@
         "id": null,
         "class": null,
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/send.svg",
+        "alt": "Send"
       },
       {
         "index": 660,
@@ -1649,7 +1889,9 @@
         "id": null,
         "class": "h-auto w-full max-w-[320px] lg:max-w-[360px] xl:max-w-[400px]",
         "depth": 12,
-        "text": null
+        "text": null,
+        "src": "/images/group-message.svg",
+        "alt": "Group Messages"
       },
       {
         "index": 663,
@@ -1658,7 +1900,9 @@
         "id": null,
         "class": "mx-auto h-auto w-full max-w-[600px] lg:max-w-full",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": "/images/dashboard.svg",
+        "alt": "AI Mini CRM Interface"
       },
       {
         "index": 696,
@@ -1667,7 +1911,9 @@
         "id": null,
         "class": "mx-auto h-auto w-full max-w-[600px] lg:max-w-full",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": "/images/multichannel-mockup.svg",
+        "alt": "Multi-channel Chat Interface"
       },
       {
         "index": 697,
@@ -1676,7 +1922,9 @@
         "id": null,
         "class": "px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8",
         "depth": 5,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 708,
@@ -1685,7 +1933,9 @@
         "id": ":Rb7n7nkva:-fashion-tab",
         "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tl-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 711,
@@ -1694,7 +1944,9 @@
         "id": ":Rb7n7nkva:-education-tab",
         "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tr-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 714,
@@ -1703,7 +1955,9 @@
         "id": ":Rb7n7nkva:-dental-tab",
         "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#5E1FB7]",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 717,
@@ -1712,7 +1966,9 @@
         "id": ":Rb7n7nkva:-restaurant-tab",
         "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 720,
@@ -1721,7 +1977,9 @@
         "id": ":Rb7n7nkva:-cosmetics-tab",
         "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
         "depth": 11,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 737,
@@ -1730,7 +1988,9 @@
         "id": null,
         "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
         "depth": 14,
-        "text": "Nhắn thử ngay"
+        "text": "Nhắn thử ngay",
+        "src": null,
+        "alt": null
       },
       {
         "index": 743,
@@ -1739,7 +1999,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 747,
@@ -1748,7 +2010,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 751,
@@ -1757,7 +2021,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 755,
@@ -1766,7 +2032,9 @@
         "id": null,
         "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 763,
@@ -1775,7 +2043,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 767,
@@ -1784,7 +2054,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 771,
@@ -1793,7 +2065,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 775,
@@ -1802,7 +2076,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 779,
@@ -1811,7 +2087,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 783,
@@ -1820,7 +2098,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 787,
@@ -1829,7 +2109,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 791,
@@ -1838,7 +2120,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 795,
@@ -1847,7 +2131,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 799,
@@ -1856,7 +2142,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 803,
@@ -1865,7 +2153,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 807,
@@ -1874,7 +2164,9 @@
         "id": null,
         "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 815,
@@ -1883,7 +2175,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 819,
@@ -1892,7 +2186,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 823,
@@ -1901,7 +2197,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 827,
@@ -1910,7 +2208,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 831,
@@ -1919,7 +2219,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 835,
@@ -1928,7 +2230,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 839,
@@ -1937,7 +2241,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 843,
@@ -1946,7 +2252,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 848,
@@ -1955,7 +2263,9 @@
         "id": null,
         "class": "object-contain object-center lg:object-right-bottom",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/bg-removal.svg",
+        "alt": null
       },
       {
         "index": 858,
@@ -1964,7 +2274,9 @@
         "id": null,
         "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
         "depth": 14,
-        "text": "Nhắn thử ngay"
+        "text": "Nhắn thử ngay",
+        "src": null,
+        "alt": null
       },
       {
         "index": 864,
@@ -1973,7 +2285,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 868,
@@ -1982,7 +2296,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 872,
@@ -1991,7 +2307,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 876,
@@ -2000,7 +2318,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 880,
@@ -2009,7 +2329,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 884,
@@ -2018,7 +2340,9 @@
         "id": null,
         "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 892,
@@ -2027,7 +2351,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 896,
@@ -2036,7 +2362,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 900,
@@ -2045,7 +2373,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 904,
@@ -2054,7 +2384,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 908,
@@ -2063,7 +2395,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 912,
@@ -2072,7 +2406,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 916,
@@ -2081,7 +2417,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 920,
@@ -2090,7 +2428,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 924,
@@ -2099,7 +2439,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 928,
@@ -2108,7 +2450,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 932,
@@ -2117,7 +2461,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 936,
@@ -2126,7 +2472,9 @@
         "id": null,
         "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 944,
@@ -2135,7 +2483,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 948,
@@ -2144,7 +2494,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 952,
@@ -2153,7 +2505,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 956,
@@ -2162,7 +2516,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 960,
@@ -2171,7 +2527,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 964,
@@ -2180,7 +2538,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 969,
@@ -2189,7 +2549,9 @@
         "id": null,
         "class": "object-contain object-center lg:object-right-bottom",
         "depth": 15,
-        "text": null
+        "text": null,
+        "src": "/images/bg-removal-6.svg",
+        "alt": null
       },
       {
         "index": 979,
@@ -2198,7 +2560,9 @@
         "id": null,
         "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
         "depth": 14,
-        "text": "Nhắn thử ngay"
+        "text": "Nhắn thử ngay",
+        "src": null,
+        "alt": null
       },
       {
         "index": 985,
@@ -2207,7 +2571,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 989,
@@ -2216,7 +2582,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 993,
@@ -2225,7 +2593,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 997,
@@ -2234,7 +2604,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1001,
@@ -2243,7 +2615,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1005,
@@ -2252,7 +2626,9 @@
         "id": null,
         "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1013,
@@ -2261,7 +2637,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1017,
@@ -2270,7 +2648,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1021,
@@ -2279,7 +2659,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1025,
@@ -2288,7 +2670,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1029,
@@ -2297,7 +2681,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1033,
@@ -2306,7 +2692,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1037,
@@ -2315,7 +2703,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1041,
@@ -2324,7 +2714,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1045,
@@ -2333,7 +2725,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1049,
@@ -2342,7 +2736,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1053,
@@ -2351,7 +2747,9 @@
         "id": null,
         "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       },
       {
         "index": 1057,
@@ -2360,14 +2758,78 @@
         "id": null,
         "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
         "depth": 18,
-        "text": null
+        "text": null,
+        "src": null,
+        "alt": null
       }
     ]
   },
   "design": {
-    "generatedAt": "2026-08-02T07:40:53.388Z",
+    "generatedAt": "2026-08-02T11:17:26.421Z",
     "totalElements": 1960,
     "palette": [
+      {
+        "value": "rgb(255,255,255)",
+        "count": 31
+      },
+      {
+        "value": "rgb(238,231,249)",
+        "count": 18
+      },
+      {
+        "value": "rgba(255,255,255,0.7)",
+        "count": 11
+      },
+      {
+        "value": "rgba(233,213,255,0.7)",
+        "count": 6
+      },
+      {
+        "value": "rgb(243,244,246)",
+        "count": 6
+      },
+      {
+        "value": "rgba(255,255,255,0.15)",
+        "count": 6
+      },
+      {
+        "value": "rgb(255,240,246)",
+        "count": 4
+      },
+      {
+        "value": "rgb(77,0,178)",
+        "count": 4
+      },
+      {
+        "value": "rgba(209,213,219,0.6)",
+        "count": 4
+      },
+      {
+        "value": "rgba(255,255,255,0.05)",
+        "count": 3
+      },
+      {
+        "value": "rgb(233,213,255)",
+        "count": 2
+      },
+      {
+        "value": "rgb(209,213,219)",
+        "count": 2
+      },
+      {
+        "value": "rgba(77,0,178,0.8)",
+        "count": 2
+      },
+      {
+        "value": "rgba(255,255,255,0.784)",
+        "count": 1
+      },
+      {
+        "value": "rgba(255,255,255,0.5)",
+        "count": 1
+      }
+    ],
+    "textColors": [
       {
         "value": "rgb(3,7,18)",
         "count": 1218
@@ -2381,54 +2843,15 @@
         "count": 110
       },
       {
-        "value": "rgb(255,255,255)",
-        "count": 88
-      },
-      {
         "value": "rgb(94,31,183)",
-        "count": 74
+        "count": 73
       },
       {
         "value": "rgb(0,0,0)",
         "count": 61
-      },
-      {
-        "value": "rgb(168,85,247)",
-        "count": 30
-      },
-      {
-        "value": "rgb(228,231,236)",
-        "count": 24
-      },
-      {
-        "value": "rgb(47,47,47)",
-        "count": 19
-      },
-      {
-        "value": "rgb(238,231,249)",
-        "count": 18
-      },
-      {
-        "value": "rgb(107,114,128)",
-        "count": 16
-      },
-      {
-        "value": "rgb(17,24,39)",
-        "count": 15
-      },
-      {
-        "value": "rgb(29,41,57)",
-        "count": 14
-      },
-      {
-        "value": "rgb(15,24,40)",
-        "count": 12
-      },
-      {
-        "value": "rgba(255,255,255,0.7)",
-        "count": 11
       }
     ],
+    "accentColor": "rgb(94,31,183)",
     "typography": {
       "fonts": [
         {
@@ -2525,15 +2948,15 @@
     ],
     "primaryFont": "ui-sans-serif",
     "dominantColors": [
-      "rgb(3,7,18)",
-      "rgb(39,39,39)",
-      "rgb(138,148,166)",
       "rgb(255,255,255)",
-      "rgb(94,31,183)"
+      "rgb(238,231,249)",
+      "rgba(255,255,255,0.7)",
+      "rgba(233,213,255,0.7)",
+      "rgb(243,244,246)"
     ]
   },
   "interaction": {
-    "generatedAt": "2026-08-02T07:40:53.396Z",
+    "generatedAt": "2026-08-02T11:17:26.428Z",
     "clickable": 84,
     "forms": 1,
     "inputs": 5,
@@ -3532,7 +3955,7 @@
     ]
   },
   "vision": {
-    "generatedAt": "2026-08-02T07:40:53.396Z",
+    "generatedAt": "2026-08-02T11:17:26.430Z",
     "screenshotAvailable": true,
     "screenshot": {
       "path": "/Users/mac/capture/capture/raw/screenshots/home.png",
