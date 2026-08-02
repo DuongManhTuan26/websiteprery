@@ -1,0 +1,142 @@
+[
+  {
+    "name": "_gcl_au",
+    "value": "1.1.1591503103.1785576840",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1793352840,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.921412614.1785576841",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1820136847.404292,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga_JZJWTWJ5KN",
+    "value": "GS2.1.s1785576841$o1$g0$t1785576841$j60$l0$h0",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1820136841.543123,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ttp",
+    "value": "3HJCZeVx0kjqd3gbSlofv5q2tuS",
+    "domain": ".tiktok.com",
+    "path": "/",
+    "expires": 1819272841.939332,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_ga_S0X11D92BR",
+    "value": "GS2.1.s1785576841$o1$g0$t1785576841$j60$l0$h377480483",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1820136841.951351,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "test_cookie",
+    "value": "CheckForPermission",
+    "domain": ".doubleclick.net",
+    "path": "/",
+    "expires": 1785577742.147683,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_ga_1NMKMSWJD5",
+    "value": "GS2.1.s1785576842$o1$g0$t1785576842$j60$l0$h0",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1820136842.294773,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_tt_enable_cookie",
+    "value": "1",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1819272843,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ttp",
+    "value": "01KYYART8BYJNDKPHR3QQHSKXW_.tt.1",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1819272843,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1785576843889.881354977940509218",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1793352848,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ttcsid_CK96HT3C77UDMU34NODG",
+    "value": "1785576843551::DUx8kElydiXB2r7et6Nk.1.1785576843999.0",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1819272843,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ttcsid_CRV0H93C77U6GEBD6D40",
+    "value": "1785576843555::OmUXDcwTmx5JvlONC-PC.1.1785576843999.0",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1819272843,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga_NTF3ZTTJDX",
+    "value": "GS2.1.s1785576841$o1$g1$t1785576847$j54$l0$h0",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1820136847.494303,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ttcsid",
+    "value": "1785576843552::5lMjIm73PmKbmaEqotcp.1.1785576843998.0::1.-9150.76::0.0.0.0::8100.4.0",
+    "domain": ".preny.ai",
+    "path": "/",
+    "expires": 1819272852,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]

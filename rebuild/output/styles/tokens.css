@@ -1,0 +1,24 @@
+:root {
+  --primary: rgb(3,7,18);
+  --secondary: rgb(39,39,39);
+  --color-3: rgb(138,148,166);
+  --color-4: rgb(255,255,255);
+  --color-5: rgb(94,31,183);
+  --color-6: rgb(0,0,0);
+  --color-7: rgb(168,85,247);
+  --color-8: rgb(228,231,236);
+  --color-9: rgb(47,47,47);
+  --color-10: rgb(238,231,249);
+  --color-11: rgb(107,114,128);
+  --color-12: rgb(17,24,39);
+  --color-13: rgb(29,41,57);
+  --color-14: rgb(15,24,40);
+  --color-15: rgba(255,255,255,0.7);
+  --font-primary: "ui-sans-serif", system-ui, sans-serif;
+  --font-size-1: 16px;
+  --font-size-2: 12px;
+  --font-size-3: 10px;
+  --font-size-4: 14px;
+  --font-size-5: 20px;
+  --font-size-6: 9px;
+}

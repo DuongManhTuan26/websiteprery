@@ -1,0 +1,129 @@
+{
+  "generatedAt": "2026-08-02T07:40:53.579Z",
+  "version": "1.0.0",
+  "projectName": "https://preny.ai",
+  "pageType": "saas-ai-landing",
+  "overview": {
+    "description": "Functional specification for rebuilding https://preny.ai.",
+    "totalSections": 9,
+    "totalInteractiveElements": 90,
+    "layoutModel": "flexbox-dominant"
+  },
+  "userFlows": [
+    {
+      "name": "browse",
+      "steps": [
+        "view-header",
+        "navigate-sections",
+        "view-footer"
+      ]
+    },
+    {
+      "name": "form-submission",
+      "steps": [
+        "view-form",
+        "fill-inputs",
+        "submit"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "FR-NAVIGATION",
+      "title": "navigation",
+      "description": "The page must include navigation functionality as detected in the original site.",
+      "priority": "high",
+      "acceptanceCriteria": [
+        "User can access navigation section",
+        "navigation renders correctly on desktop viewport"
+      ]
+    },
+    {
+      "id": "FR-HERO",
+      "title": "hero",
+      "description": "The page must include hero functionality as detected in the original site.",
+      "priority": "high",
+      "acceptanceCriteria": [
+        "User can access hero section",
+        "hero renders correctly on desktop viewport"
+      ]
+    },
+    {
+      "id": "FR-CHAT",
+      "title": "chat",
+      "description": "The page must include chat functionality as detected in the original site.",
+      "priority": "medium",
+      "acceptanceCriteria": [
+        "User can access chat section",
+        "chat renders correctly on desktop viewport"
+      ]
+    },
+    {
+      "id": "FR-FORM",
+      "title": "form",
+      "description": "The page must include form functionality as detected in the original site.",
+      "priority": "medium",
+      "acceptanceCriteria": [
+        "User can access form section",
+        "form renders correctly on desktop viewport"
+      ]
+    },
+    {
+      "id": "FR-INTERACTIVE-ELEMENTS",
+      "title": "interactive elements",
+      "description": "The page must include interactive-elements functionality as detected in the original site.",
+      "priority": "medium",
+      "acceptanceCriteria": [
+        "User can access interactive-elements section",
+        "interactive-elements renders correctly on desktop viewport"
+      ]
+    }
+  ],
+  "contentSections": [
+    {
+      "type": "section",
+      "tag": "SECTION",
+      "text": "AI bán hàng mạnh mẽ, giúp tăng hiệu quả chốt đơn lên đến 50%"
+    },
+    {
+      "type": "card",
+      "tag": "SECTION",
+      "text": "Dữ liệu không chia sẻ - không phụ thuộc nền tảng ngoài"
+    },
+    {
+      "type": "card",
+      "tag": "SECTION",
+      "text": "Tập trung toàn bộ hội thoại bán hàng từ , , , , , ... vào một giao diện duy nhất. AI theo sát từng khách hàng, không bỏ sót cơ hội chốt đơn."
+    },
+    {
+      "type": "section",
+      "tag": "SECTION",
+      "text": "Mọi thông tin khách hàng được tự động ghi nhận và đồng bộ vào mini CRM ngay trong lúc chat, giúp đội ngũ bán hàng theo sát khách hơn và tăng tỷ lệ chuyển đổi."
+    },
+    {
+      "type": "card",
+      "tag": "SECTION",
+      "text": "AI Chatbot tư vấn sản phẩm trực quan qua hình ảnh 2 chiều, khách gửi AI tư vấn được ảnh và khách yêu cầu xem ảnh AI cũng sẽ gửi, giúp khách dễ hình dung và ra quyết định nhanh hơn."
+    },
+    {
+      "type": "section",
+      "tag": "SECTION",
+      "text": "Những góc nhìn và đánh giá từ các đơn vị báo chí uy tín"
+    },
+    {
+      "type": "section",
+      "tag": "SECTION",
+      "text": "Nhận tư vấn từ chuyên gia AI để tối ưu tương tác và tăng trưởng doanh nghiệp"
+    },
+    {
+      "type": "section",
+      "tag": "SECTION",
+      "text": "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp (Live Chat)? Quy trình chuyển đổi diễn ra như thế nào?"
+    },
+    {
+      "type": "section",
+      "tag": "SECTION",
+      "text": null
+    }
+  ]
+}

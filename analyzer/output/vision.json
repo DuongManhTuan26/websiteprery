@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-08-02T07:40:53.396Z",
+  "screenshotAvailable": true,
+  "screenshot": {
+    "path": "/Users/mac/capture/capture/raw/screenshots/home.png",
+    "width": 1440,
+    "height": 8406,
+    "format": "png",
+    "sizeBytes": 2184149,
+    "aspectRatio": 0.17
+  },
+  "dominantColors": [
+    {
+      "rgb": "rgb(255, 255, 255)",
+      "pixelCount": 589
+    },
+    {
+      "rgb": "rgb(240, 240, 240)",
+      "pixelCount": 175
+    },
+    {
+      "rgb": "rgb(255, 240, 255)",
+      "pixelCount": 91
+    },
+    {
+      "rgb": "rgb(240, 240, 255)",
+      "pixelCount": 86
+    },
+    {
+      "rgb": "rgb(16, 16, 32)",
+      "pixelCount": 81
+    }
+  ],
+  "pageHeight": 8406,
+  "isFullPage": true
+}

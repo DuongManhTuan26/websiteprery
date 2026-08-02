@@ -1,0 +1,42 @@
+{
+  "screenshot": {
+    "exists": true,
+    "path": "/Users/mac/capture/capture/raw/screenshots/home.png",
+    "size": 2184149
+  },
+  "har": {
+    "exists": true,
+    "path": "/Users/mac/capture/capture/raw/har/preny.har",
+    "size": 37733711
+  },
+  "cookies": {
+    "exists": true,
+    "path": "/Users/mac/capture/capture/raw/cookies/cookies.json",
+    "size": 3276
+  },
+  "localStorage": {
+    "exists": true,
+    "path": "/Users/mac/capture/capture/raw/storage/localStorage.json",
+    "size": 412
+  },
+  "sessionStorage": {
+    "exists": true,
+    "path": "/Users/mac/capture/capture/raw/storage/sessionStorage.json",
+    "size": 183
+  },
+  "indexedDB": {
+    "exists": true,
+    "path": "/Users/mac/capture/capture/raw/storage/indexedDB.json",
+    "size": 2
+  },
+  "styles": {
+    "exists": true,
+    "path": "/Users/mac/capture/capture/raw/style/styles.json",
+    "size": 1507273
+  },
+  "websocket": {
+    "exists": true,
+    "path": "/Users/mac/capture/capture/raw/websocket/frames.json",
+    "size": 95
+  }
+}

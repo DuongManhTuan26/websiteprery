@@ -1,0 +1,1193 @@
+{
+  "generatedAt": "2026-08-02T07:40:53.604Z",
+  "version": "1.0.0",
+  "stack": {
+    "framework": "static-html",
+    "styling": "css-variables",
+    "language": "javascript",
+    "buildTool": "vite"
+  },
+  "architecture": {
+    "pattern": "component-based",
+    "layoutModel": "flexbox-dominant",
+    "componentStrategy": "section-based"
+  },
+  "designSystem": {
+    "tokens": {
+      "colors": [
+        {
+          "name": "primary",
+          "value": "rgb(3,7,18)",
+          "usage": 1218
+        },
+        {
+          "name": "secondary",
+          "value": "rgb(39,39,39)",
+          "usage": 115
+        },
+        {
+          "name": "color-3",
+          "value": "rgb(138,148,166)",
+          "usage": 110
+        },
+        {
+          "name": "color-4",
+          "value": "rgb(255,255,255)",
+          "usage": 88
+        },
+        {
+          "name": "color-5",
+          "value": "rgb(94,31,183)",
+          "usage": 74
+        },
+        {
+          "name": "color-6",
+          "value": "rgb(0,0,0)",
+          "usage": 61
+        },
+        {
+          "name": "color-7",
+          "value": "rgb(168,85,247)",
+          "usage": 30
+        },
+        {
+          "name": "color-8",
+          "value": "rgb(228,231,236)",
+          "usage": 24
+        },
+        {
+          "name": "color-9",
+          "value": "rgb(47,47,47)",
+          "usage": 19
+        },
+        {
+          "name": "color-10",
+          "value": "rgb(238,231,249)",
+          "usage": 18
+        }
+      ],
+      "typography": {
+        "fonts": [
+          {
+            "name": "primary",
+            "family": "ui-sans-serif",
+            "usage": 61
+          }
+        ],
+        "fontSizes": [
+          {
+            "name": "size-1",
+            "value": "16px",
+            "usage": 1343
+          },
+          {
+            "name": "size-2",
+            "value": "12px",
+            "usage": 279
+          },
+          {
+            "name": "size-3",
+            "value": "10px",
+            "usage": 156
+          },
+          {
+            "name": "size-4",
+            "value": "14px",
+            "usage": 66
+          },
+          {
+            "name": "size-5",
+            "value": "20px",
+            "usage": 38
+          },
+          {
+            "name": "size-6",
+            "value": "9px",
+            "usage": 24
+          },
+          {
+            "name": "size-7",
+            "value": "40px",
+            "usage": 22
+          },
+          {
+            "name": "size-8",
+            "value": "11px",
+            "usage": 12
+          },
+          {
+            "name": "size-9",
+            "value": "24px",
+            "usage": 7
+          },
+          {
+            "name": "size-10",
+            "value": "30px",
+            "usage": 6
+          }
+        ],
+        "primaryFont": "ui-sans-serif"
+      }
+    },
+    "primaryFont": "ui-sans-serif",
+    "dominantColors": [
+      "rgb(3,7,18)",
+      "rgb(39,39,39)",
+      "rgb(138,148,166)",
+      "rgb(255,255,255)",
+      "rgb(94,31,183)"
+    ]
+  },
+  "components": {
+    "header": [
+      {
+        "tag": "HEADER",
+        "id": null,
+        "class": "fixed left-0 right-0 top-0 z-50 p-3 sm:p-4"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "glass-header mx-auto flex h-[64px] w-full max-w-[1400px] items-center justify-between rounded-[12px] bg-white px-3 py-2 backdrop-blur-[100px] sm:px-[13px] sm:py-[10px]"
+      }
+    ],
+    "link": [
+      {
+        "tag": "A",
+        "id": null,
+        "class": "flex items-center space-x-2"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 font-[600] text-purple-600"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "flex h-[44px] min-w-[180px] cursor-pointer items-center justify-center rounded-[8px] bg-[#EEE7F9] px-4 py-[10px] font-medium text-primary transition-all hover:bg-purple-200 sm:w-auto"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "flex h-[44px] w-full cursor-pointer items-center justify-center gap-1 rounded-[8px] px-0 font-medium text-white transition-all hover:opacity-90 sm:w-auto sm:min-w-[200px] md:gap-3 md:px-4"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]"
+      }
+    ],
+    "image": [
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "w-full rounded-[12px] object-cover"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "w-full rounded-[12px] object-cover"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "whyus-bg whyus-bg-default"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "whyus-bg whyus-bg-hover"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "object-cover opacity-50 sm:opacity-60"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "w-full rounded-[12px] object-cover"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "h-auto w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px]"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "h-auto w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px]"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "h-auto w-full max-w-[340px] sm:max-w-[400px] md:max-w-[480px]"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "w-full rounded-[12px] object-cover"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": null
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "h-auto w-full max-w-[320px] lg:max-w-[360px] xl:max-w-[400px]"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "mx-auto h-auto w-full max-w-[600px] lg:max-w-full"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "mx-auto h-auto w-full max-w-[600px] lg:max-w-full"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "object-contain object-center lg:object-right-bottom"
+      },
+      {
+        "tag": "IMG",
+        "id": null,
+        "class": "object-contain object-center lg:object-right-bottom"
+      }
+    ],
+    "navigation": [
+      {
+        "tag": "NAV",
+        "id": null,
+        "class": "hidden items-center space-x-6 pl-[40px] md:flex lg:space-x-10 lg:pl-[80px]"
+      }
+    ],
+    "button": [
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex items-center justify-between whitespace-nowrap rounded-md border border-input px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 h-11 w-[92px] bg-white"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-[#5E1FB7] transition-colors hover:text-purple-600 lg:w-[120px]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-white transition-colors hover:text-purple-300 lg:w-[120px]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 md:hidden"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25"
+      },
+      {
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-fashion-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tl-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-education-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tr-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-dental-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#5E1FB7]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-restaurant-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]"
+      },
+      {
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-cosmetics-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]"
+      }
+    ],
+    "main": [
+      {
+        "tag": "MAIN",
+        "id": null,
+        "class": "bg-[rgba(238, 231, 249, 1)] min-h-screen"
+      }
+    ],
+    "section": [
+      {
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative px-4 pb-16 pt-[120px] sm:px-6 sm:pb-20 md:pt-[140px] lg:px-8"
+      },
+      {
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8"
+      },
+      {
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative overflow-hidden px-4 pb-16 sm:px-6 sm:pb-20"
+      },
+      {
+        "tag": "SECTION",
+        "id": null,
+        "class": "px-4 py-10 sm:px-6 sm:py-12 md:py-14 lg:px-8 lg:py-16 xl:py-20"
+      },
+      {
+        "tag": "SECTION",
+        "id": null,
+        "class": "px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8"
+      }
+    ],
+    "hero": [
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "banner-orb absolute inset-0"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "glow-border bg-banner min-w-[350px] overflow-hidden rounded-[20px] border border-[#9D6AF4] bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 py-6 pl-[15px] pr-[15px] shadow-[0_6px_40px_0px_rgba(94,31,183,0.35)] backdrop-blur-sm"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "relative overflow-visible banner-soft-float banner-tilt min-h-[315px] w-full lg:max-w-[249px] xl:max-w-[260px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "h-full rounded-[9.6px] backdrop-blur-sm card-seq banner-shimmer"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "relative overflow-visible banner-soft-float variant-slower w-full rounded-[12px] pt-[60px] lg:h-[146px] lg:max-w-[240px] xl:max-w-[250px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "h-full rounded-[9.6px] backdrop-blur-sm py-[15px] pr-[20px] xl:pr-[24px] pl-[16px] card-seq banner-shimmer bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 border transition-transform duration-300 ease-out hover:translate-y-[-1px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "motion-safe:animate-float glow-border bg-banner banner-shimmer w-full overflow-hidden rounded-[20px] border border-[#9D6AF4] bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-5 shadow-[0_6px_40px_0px_rgba(94,31,183,0.45)] backdrop-blur-sm lg:min-w-[340px] lg:p-[18px] xl:min-w-[361px] xl:p-[20px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "banner-soft-float banner-tilt relative delay-200 duration-700 ease-out motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-right-6 lg:left-[70px] xl:left-[105px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "banner-soft-float variant-slower banner-tilt relative my-[60px] lg:ml-12 xl:ml-20"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "banner-soft-float banner-tilt relative w-full lg:ml-[100px] lg:min-w-[280px] xl:ml-[130px] xl:min-w-[300px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px] shadow-[0_12px_34px_rgba(109,40,217,0.16)]"
+      }
+    ],
+    "card": [
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden glow-border"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 rounded-[12px] border border-white/60 bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 backdrop-blur-sm sm:p-4"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 space-y-3 rounded-[12px] border bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 sm:p-4"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "via-[#F6F0FF]/200 to-[#FFF7F3]/200 card-seq relative z-10 rounded-[12px] border border-white/60 bg-gradient-to-br from-white p-3 sm:p-4"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "h-full rounded-[9.6px] backdrop-blur-sm card-seq"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "h-full rounded-[9.6px] backdrop-blur-sm py-3 sm:py-4 px-4 sm:px-5 card-seq bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 border"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden glow-border"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 w-full rounded-[12px] border border-white/60 bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 backdrop-blur-sm lg:min-w-[300px] lg:p-[10px] xl:min-w-[315px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 space-y-3 rounded-[12px] border bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 lg:p-[10px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 rounded-[12px] border border-white/60 bg-gradient-to-br from-white via-[#F6F0FF]/100 to-[#FFF7F3]/100 p-3 lg:p-[10px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "whyus-card min-h-[316px] rounded-[20px] p-[16px] sm:p-[20px] lg:col-span-6"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "feature-card relative min-w-[217px] rounded-[20px] bg-gradient-to-tr from-purple-100 via-white to-purple-200 lg:col-span-3"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "glass-card min-h-[230px] max-w-[309px] rounded-[14px] p-[10px] sm:min-h-[248px]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]"
+      }
+    ],
+    "input": [
+      {
+        "tag": "INPUT",
+        "id": null,
+        "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none"
+      },
+      {
+        "tag": "INPUT",
+        "id": null,
+        "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none"
+      }
+    ]
+  },
+  "dataModel": {
+    "pages": [
+      {
+        "name": "home",
+        "route": "/"
+      }
+    ],
+    "sections": [
+      "section",
+      "card",
+      "card",
+      "section",
+      "card",
+      "section",
+      "section",
+      "section",
+      "section"
+    ]
+  },
+  "apiSurface": {
+    "endpoints": [],
+    "note": "Static rebuild — no backend API required for initial version"
+  },
+  "dependencies": {
+    "runtime": [],
+    "dev": [
+      "vite"
+    ]
+  },
+  "functionalSpecRef": "1.0.0"
+}

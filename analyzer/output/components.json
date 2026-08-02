@@ -1,0 +1,1850 @@
+{
+  "generatedAt": "2026-08-02T07:40:53.368Z",
+  "totalNodes": 1566,
+  "totalComponents": 342,
+  "tagStatistics": {
+    "HTML": 1,
+    "HEAD": 1,
+    "META": 15,
+    "LINK": 14,
+    "TITLE": 1,
+    "BODY": 1,
+    "DIV": 886,
+    "HEADER": 1,
+    "A": 50,
+    "IMG": 85,
+    "NAV": 1,
+    "BUTTON": 34,
+    "SPAN": 62,
+    "MAIN": 1,
+    "SECTION": 9,
+    "H1": 1,
+    "BR": 6,
+    "P": 338,
+    "H2": 6,
+    "H3": 26,
+    "H4": 16,
+    "INPUT": 5,
+    "FORM": 1,
+    "LABEL": 3,
+    "FOOTER": 1,
+    "NEXT-ROUTE-ANNOUNCER": 1
+  },
+  "componentTypes": {
+    "element": 1224,
+    "header": 2,
+    "link": 50,
+    "image": 85,
+    "navigation": 1,
+    "button": 34,
+    "main": 1,
+    "section": 9,
+    "hero": 13,
+    "card": 140,
+    "input": 5,
+    "form": 1,
+    "footer": 1
+  },
+  "components": [
+    {
+      "index": 34,
+      "type": "header",
+      "tag": "HEADER",
+      "id": null,
+      "class": "fixed left-0 right-0 top-0 z-50 p-3 sm:p-4",
+      "depth": 3,
+      "text": null
+    },
+    {
+      "index": 35,
+      "type": "header",
+      "tag": "DIV",
+      "id": null,
+      "class": "glass-header mx-auto flex h-[64px] w-full max-w-[1400px] items-center justify-between rounded-[12px] bg-white px-3 py-2 backdrop-blur-[100px] sm:px-[13px] sm:py-[10px]",
+      "depth": 4,
+      "text": null
+    },
+    {
+      "index": 37,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "flex items-center space-x-2",
+      "depth": 6,
+      "text": null
+    },
+    {
+      "index": 38,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 7,
+      "text": null
+    },
+    {
+      "index": 39,
+      "type": "navigation",
+      "tag": "NAV",
+      "id": null,
+      "class": "hidden items-center space-x-6 pl-[40px] md:flex lg:space-x-10 lg:pl-[80px]",
+      "depth": 6,
+      "text": null
+    },
+    {
+      "index": 40,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 font-[600] text-purple-600",
+      "depth": 7,
+      "text": "Trang chủ"
+    },
+    {
+      "index": 41,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+      "depth": 7,
+      "text": "Hướng dẫn"
+    },
+    {
+      "index": 42,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+      "depth": 7,
+      "text": "Tính năng"
+    },
+    {
+      "index": 43,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+      "depth": 7,
+      "text": "Bảng giá"
+    },
+    {
+      "index": 44,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+      "depth": 7,
+      "text": "Tuyển dụng"
+    },
+    {
+      "index": 46,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "flex items-center justify-between whitespace-nowrap rounded-md border border-input px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 h-11 w-[92px] bg-white",
+      "depth": 7,
+      "text": null
+    },
+    {
+      "index": 48,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-[#5E1FB7] transition-colors hover:text-purple-600 lg:w-[120px]",
+      "depth": 7,
+      "text": "Đăng nhập"
+    },
+    {
+      "index": 49,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-white transition-colors hover:text-purple-300 lg:w-[120px]",
+      "depth": 7,
+      "text": "Đăng ký"
+    },
+    {
+      "index": 50,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 md:hidden",
+      "depth": 6,
+      "text": null
+    },
+    {
+      "index": 53,
+      "type": "main",
+      "tag": "MAIN",
+      "id": null,
+      "class": "bg-[rgba(238, 231, 249, 1)] min-h-screen",
+      "depth": 4,
+      "text": null
+    },
+    {
+      "index": 54,
+      "type": "section",
+      "tag": "SECTION",
+      "id": null,
+      "class": "relative px-4 pb-16 pt-[120px] sm:px-6 sm:pb-20 md:pt-[140px] lg:px-8",
+      "depth": 5,
+      "text": null
+    },
+    {
+      "index": 63,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "flex h-[44px] min-w-[180px] cursor-pointer items-center justify-center rounded-[8px] bg-[#EEE7F9] px-4 py-[10px] font-medium text-primary transition-all hover:bg-purple-200 sm:w-auto",
+      "depth": 8,
+      "text": "Xem demo"
+    },
+    {
+      "index": 64,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "flex h-[44px] w-full cursor-pointer items-center justify-center gap-1 rounded-[8px] px-0 font-medium text-white transition-all hover:opacity-90 sm:w-auto sm:min-w-[200px] md:gap-3 md:px-4",
+      "depth": 8,
+      "text": "Dùng thử miễn phí"
+    },
+    {
+      "index": 65,
+      "type": "section",
+      "tag": "SECTION",
+      "id": null,
+      "class": "relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8",
+      "depth": 5,
+      "text": null
+    },
+    {
+      "index": 69,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "banner-orb absolute inset-0",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 77,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "glow-border bg-banner min-w-[350px] overflow-hidden rounded-[20px] border border-[#9D6AF4] bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 py-6 pl-[15px] pr-[15px] shadow-[0_6px_40px_0px_rgba(94,31,183,0.35)] backdrop-blur-sm",
+      "depth": 14,
+      "text": null
+    },
+    {
+      "index": 81,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-crm min-w-[329px] overflow-hidden glow-border",
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 84,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 19,
+      "text": null
+    },
+    {
+      "index": 90,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 22,
+      "text": null
+    },
+    {
+      "index": 92,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "text-purple-500 transition-colors hover:text-purple-700",
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 101,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 104,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 106,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-crm min-w-[329px] overflow-hidden",
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 109,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 19,
+      "text": null
+    },
+    {
+      "index": 115,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 22,
+      "text": null
+    },
+    {
+      "index": 117,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "text-purple-500 transition-colors hover:text-purple-700",
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 125,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 128,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 130,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-crm min-w-[329px] overflow-hidden",
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 133,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 19,
+      "text": null
+    },
+    {
+      "index": 139,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 22,
+      "text": null
+    },
+    {
+      "index": 141,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "text-purple-500 transition-colors hover:text-purple-700",
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 148,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 155,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-seq relative z-10 rounded-[12px] border border-white/60 bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 backdrop-blur-sm sm:p-4",
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 188,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-seq relative z-10 space-y-3 rounded-[12px] border bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 sm:p-4",
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 194,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 19,
+      "text": null
+    },
+    {
+      "index": 198,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "via-[#F6F0FF]/200 to-[#FFF7F3]/200 card-seq relative z-10 rounded-[12px] border border-white/60 bg-gradient-to-br from-white p-3 sm:p-4",
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 201,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 207,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "h-full rounded-[9.6px] backdrop-blur-sm card-seq",
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 218,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "w-full rounded-[12px] object-cover",
+      "depth": 21,
+      "text": null
+    },
+    {
+      "index": 225,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "h-full rounded-[9.6px] backdrop-blur-sm py-3 sm:py-4 px-4 sm:px-5 card-seq bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 border",
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 230,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 233,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 236,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 239,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 242,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 245,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 249,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 250,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 251,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 255,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "relative overflow-visible banner-soft-float banner-tilt min-h-[315px] w-full lg:max-w-[249px] xl:max-w-[260px]",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 257,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "h-full rounded-[9.6px] backdrop-blur-sm card-seq banner-shimmer",
+      "depth": 12,
+      "text": null
+    },
+    {
+      "index": 268,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "w-full rounded-[12px] object-cover",
+      "depth": 17,
+      "text": null
+    },
+    {
+      "index": 274,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "relative overflow-visible banner-soft-float variant-slower w-full rounded-[12px] pt-[60px] lg:h-[146px] lg:max-w-[240px] xl:max-w-[250px]",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 276,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "h-full rounded-[9.6px] backdrop-blur-sm py-[15px] pr-[20px] xl:pr-[24px] pl-[16px] card-seq banner-shimmer bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 border transition-transform duration-300 ease-out hover:translate-y-[-1px]",
+      "depth": 12,
+      "text": null
+    },
+    {
+      "index": 281,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 284,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 287,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 290,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 293,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 296,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 16,
+      "text": null
+    },
+    {
+      "index": 300,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "motion-safe:animate-float glow-border bg-banner banner-shimmer w-full overflow-hidden rounded-[20px] border border-[#9D6AF4] bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-5 shadow-[0_6px_40px_0px_rgba(94,31,183,0.45)] backdrop-blur-sm lg:min-w-[340px] lg:p-[18px] xl:min-w-[361px] xl:p-[20px]",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 304,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-crm min-w-[329px] overflow-hidden glow-border",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 307,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 14,
+      "text": null
+    },
+    {
+      "index": 313,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 17,
+      "text": null
+    },
+    {
+      "index": 315,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "text-purple-500 transition-colors hover:text-purple-700",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 324,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 327,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 329,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-crm min-w-[329px] overflow-hidden",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 332,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 14,
+      "text": null
+    },
+    {
+      "index": 338,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 17,
+      "text": null
+    },
+    {
+      "index": 340,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "text-purple-500 transition-colors hover:text-purple-700",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 348,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 351,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 353,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-crm min-w-[329px] overflow-hidden",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 356,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 14,
+      "text": null
+    },
+    {
+      "index": 362,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 17,
+      "text": null
+    },
+    {
+      "index": 364,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "text-purple-500 transition-colors hover:text-purple-700",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 371,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "shrink-0",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 374,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "banner-soft-float banner-tilt relative delay-200 duration-700 ease-out motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-right-6 lg:left-[70px] xl:left-[105px]",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 376,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px]",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 377,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-seq relative z-10 w-full rounded-[12px] border border-white/60 bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 backdrop-blur-sm lg:min-w-[300px] lg:p-[10px] xl:min-w-[315px]",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 408,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "banner-soft-float variant-slower banner-tilt relative my-[60px] lg:ml-12 xl:ml-20",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 409,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px]",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 410,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-seq relative z-10 space-y-3 rounded-[12px] border bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 lg:p-[10px]",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 416,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 14,
+      "text": null
+    },
+    {
+      "index": 418,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "banner-soft-float banner-tilt relative w-full lg:ml-[100px] lg:min-w-[280px] xl:ml-[130px] xl:min-w-[300px]",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 419,
+      "type": "hero",
+      "tag": "DIV",
+      "id": null,
+      "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px] shadow-[0_12px_34px_rgba(109,40,217,0.16)]",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 420,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "card-seq relative z-10 rounded-[12px] border border-white/60 bg-gradient-to-br from-white via-[#F6F0FF]/100 to-[#FFF7F3]/100 p-3 lg:p-[10px]",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 423,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 13,
+      "text": null
+    },
+    {
+      "index": 424,
+      "type": "section",
+      "tag": "SECTION",
+      "id": null,
+      "class": "relative overflow-hidden px-4 pb-16 sm:px-6 sm:pb-20",
+      "depth": 5,
+      "text": null
+    },
+    {
+      "index": 437,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "whyus-card min-h-[316px] rounded-[20px] p-[16px] sm:p-[20px] lg:col-span-6",
+      "depth": 8,
+      "text": null
+    },
+    {
+      "index": 438,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "whyus-bg whyus-bg-default",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 439,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "whyus-bg whyus-bg-hover",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 450,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "feature-card relative min-w-[217px] rounded-[20px] bg-gradient-to-tr from-purple-100 via-white to-purple-200 lg:col-span-3",
+      "depth": 8,
+      "text": null
+    },
+    {
+      "index": 452,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "glass-card min-h-[230px] max-w-[309px] rounded-[14px] p-[10px] sm:min-h-[248px]",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 461,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 470,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 480,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
+      "depth": 9,
+      "text": null
+    },
+    {
+      "index": 490,
+      "type": "section",
+      "tag": "SECTION",
+      "id": null,
+      "class": "px-4 py-10 sm:px-6 sm:py-12 md:py-14 lg:px-8 lg:py-16 xl:py-20",
+      "depth": 5,
+      "text": null
+    },
+    {
+      "index": 493,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "object-cover opacity-50 sm:opacity-60",
+      "depth": 8,
+      "text": null
+    },
+    {
+      "index": 540,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "w-full rounded-[12px] object-cover",
+      "depth": 23,
+      "text": null
+    },
+    {
+      "index": 556,
+      "type": "input",
+      "tag": "INPUT",
+      "id": null,
+      "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none",
+      "depth": 19,
+      "text": null
+    },
+    {
+      "index": 557,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25",
+      "depth": 19,
+      "text": null
+    },
+    {
+      "index": 558,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 20,
+      "text": null
+    },
+    {
+      "index": 559,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "h-auto w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px]",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 576,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "h-auto w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px]",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 597,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "h-auto w-full max-w-[340px] sm:max-w-[400px] md:max-w-[480px]",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 599,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 600,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 601,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+      "depth": 10,
+      "text": null
+    },
+    {
+      "index": 640,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "w-full rounded-[12px] object-cover",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 656,
+      "type": "input",
+      "tag": "INPUT",
+      "id": null,
+      "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none",
+      "depth": 14,
+      "text": null
+    },
+    {
+      "index": 657,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": null,
+      "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25",
+      "depth": 14,
+      "text": null
+    },
+    {
+      "index": 658,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": null,
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 660,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "h-auto w-full max-w-[320px] lg:max-w-[360px] xl:max-w-[400px]",
+      "depth": 12,
+      "text": null
+    },
+    {
+      "index": 663,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "mx-auto h-auto w-full max-w-[600px] lg:max-w-full",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 696,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "mx-auto h-auto w-full max-w-[600px] lg:max-w-full",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 697,
+      "type": "section",
+      "tag": "SECTION",
+      "id": null,
+      "class": "px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8",
+      "depth": 5,
+      "text": null
+    },
+    {
+      "index": 708,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": ":Rb7n7nkva:-fashion-tab",
+      "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tl-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 711,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": ":Rb7n7nkva:-education-tab",
+      "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tr-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 714,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": ":Rb7n7nkva:-dental-tab",
+      "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#5E1FB7]",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 717,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": ":Rb7n7nkva:-restaurant-tab",
+      "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 720,
+      "type": "button",
+      "tag": "BUTTON",
+      "id": ":Rb7n7nkva:-cosmetics-tab",
+      "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+      "depth": 11,
+      "text": null
+    },
+    {
+      "index": 737,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+      "depth": 14,
+      "text": "Nhắn thử ngay"
+    },
+    {
+      "index": 743,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 747,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 751,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 755,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 763,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 767,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 771,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 775,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 779,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 783,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 787,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 791,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 795,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 799,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 803,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 807,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 815,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 819,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 823,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 827,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 831,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 835,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 839,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 843,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 848,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "object-contain object-center lg:object-right-bottom",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 858,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+      "depth": 14,
+      "text": "Nhắn thử ngay"
+    },
+    {
+      "index": 864,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 868,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 872,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 876,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 880,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 884,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 892,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 896,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 900,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 904,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 908,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 912,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 916,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 920,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 924,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 928,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 932,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 936,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 944,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 948,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 952,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 956,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 960,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 964,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 969,
+      "type": "image",
+      "tag": "IMG",
+      "id": null,
+      "class": "object-contain object-center lg:object-right-bottom",
+      "depth": 15,
+      "text": null
+    },
+    {
+      "index": 979,
+      "type": "link",
+      "tag": "A",
+      "id": null,
+      "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+      "depth": 14,
+      "text": "Nhắn thử ngay"
+    },
+    {
+      "index": 985,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 989,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 993,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 997,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1001,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1005,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1013,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1017,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1021,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1025,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1029,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1033,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1037,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1041,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1045,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1049,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1053,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+      "depth": 18,
+      "text": null
+    },
+    {
+      "index": 1057,
+      "type": "card",
+      "tag": "DIV",
+      "id": null,
+      "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+      "depth": 18,
+      "text": null
+    }
+  ]
+}

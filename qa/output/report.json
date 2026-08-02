@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-08-02T08:35:41.804Z",
+  "passed": true,
+  "outputChecks": [
+    {
+      "path": "/Users/mac/capture/capture/report.json",
+      "stage": "capture",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/normalize/output/dom.json",
+      "stage": "normalize",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/normalize/output/css.json",
+      "stage": "normalize",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/normalize/output/text.json",
+      "stage": "normalize",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/normalize/output/assets.json",
+      "stage": "normalize",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/analyzer/output/analysis.json",
+      "stage": "analyzer",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/style-extraction/output/tokens.json",
+      "stage": "style-extraction",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/collector/output/dataset.json",
+      "stage": "collector",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/ai-analysis/output/semantic.json",
+      "stage": "ai-analysis",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/spec/functional/output/spec.json",
+      "stage": "functional-spec",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/spec/technical/output/spec.json",
+      "stage": "technical-spec",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/rebuild/output/index.html",
+      "stage": "generator",
+      "exists": true,
+      "passed": true
+    },
+    {
+      "path": "/Users/mac/capture/rebuild/output/package.json",
+      "stage": "generator",
+      "exists": true,
+      "passed": true
+    }
+  ],
+  "analysisIssues": [],
+  "rebuildBuild": {
+    "passed": true,
+    "distExists": true
+  },
+  "captureStatus": {
+    "available": true,
+    "target": "https://preny.ai",
+    "finishedAt": "2026-08-01T09:34:19.047Z",
+    "ageHours": 23,
+    "stale": false,
+    "missingFiles": [
+      "websocket"
+    ],
+    "warning": null
+  },
+  "summary": {
+    "totalChecks": 13,
+    "passedChecks": 13,
+    "analysisIssues": 0,
+    "rebuildBuildPassed": true,
+    "captureStale": false
+  }
+}

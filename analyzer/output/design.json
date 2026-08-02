@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-08-02T07:40:53.388Z",
+  "totalElements": 1960,
+  "palette": [
+    {
+      "value": "rgb(3,7,18)",
+      "count": 1218
+    },
+    {
+      "value": "rgb(39,39,39)",
+      "count": 115
+    },
+    {
+      "value": "rgb(138,148,166)",
+      "count": 110
+    },
+    {
+      "value": "rgb(255,255,255)",
+      "count": 88
+    },
+    {
+      "value": "rgb(94,31,183)",
+      "count": 74
+    },
+    {
+      "value": "rgb(0,0,0)",
+      "count": 61
+    },
+    {
+      "value": "rgb(168,85,247)",
+      "count": 30
+    },
+    {
+      "value": "rgb(228,231,236)",
+      "count": 24
+    },
+    {
+      "value": "rgb(47,47,47)",
+      "count": 19
+    },
+    {
+      "value": "rgb(238,231,249)",
+      "count": 18
+    },
+    {
+      "value": "rgb(107,114,128)",
+      "count": 16
+    },
+    {
+      "value": "rgb(17,24,39)",
+      "count": 15
+    },
+    {
+      "value": "rgb(29,41,57)",
+      "count": 14
+    },
+    {
+      "value": "rgb(15,24,40)",
+      "count": 12
+    },
+    {
+      "value": "rgba(255,255,255,0.7)",
+      "count": 11
+    }
+  ],
+  "typography": {
+    "fonts": [
+      {
+        "value": "ui-sans-serif",
+        "count": 61
+      }
+    ],
+    "fontSizes": [
+      {
+        "value": "16px",
+        "count": 1343
+      },
+      {
+        "value": "12px",
+        "count": 279
+      },
+      {
+        "value": "10px",
+        "count": 156
+      },
+      {
+        "value": "14px",
+        "count": 66
+      },
+      {
+        "value": "20px",
+        "count": 38
+      },
+      {
+        "value": "9px",
+        "count": 24
+      },
+      {
+        "value": "40px",
+        "count": 22
+      },
+      {
+        "value": "11px",
+        "count": 12
+      },
+      {
+        "value": "24px",
+        "count": 7
+      },
+      {
+        "value": "30px",
+        "count": 6
+      }
+    ]
+  },
+  "borderRadii": [
+    {
+      "value": "16px",
+      "count": 134
+    },
+    {
+      "value": "9999px",
+      "count": 34
+    },
+    {
+      "value": "12px",
+      "count": 33
+    },
+    {
+      "value": "8px",
+      "count": 16
+    },
+    {
+      "value": "20px",
+      "count": 15
+    }
+  ],
+  "shadows": [
+    {
+      "value": "rgba(0, 0, 0, 0.1) 0px 0px 0px 0px, rgba(255, 255, 255, 0.5) 0px 10px 10px 0px inset, rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset, rgb(255, 255, 255) 0px 0px 90px 13px inset",
+      "count": 120
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+      "count": 7
+    },
+    {
+      "value": "rgba(17, 24, 39, 0.06) 0px 10px 26px 0px",
+      "count": 6
+    },
+    {
+      "value": "rgba(0, 0, 0, 0.05) 0px 8px 32px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset, rgb(255, 255, 255) 0px 0px 20px 10px inset",
+      "count": 6
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.25) 0px 0px 8px 0px",
+      "count": 4
+    }
+  ],
+  "primaryFont": "ui-sans-serif",
+  "dominantColors": [
+    "rgb(3,7,18)",
+    "rgb(39,39,39)",
+    "rgb(138,148,166)",
+    "rgb(255,255,255)",
+    "rgb(94,31,183)"
+  ]
+}

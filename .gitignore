@@ -1,0 +1,5 @@
+node_modules/
+rebuild/output/node_modules/
+rebuild/output/dist/
+rebuild/output/package-lock.json
+.claude/

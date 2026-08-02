@@ -1,0 +1,3570 @@
+{
+  "generatedAt": "2026-08-02T07:40:53.472Z",
+  "version": "1.0.0",
+  "layout": {
+    "generatedAt": "2026-08-02T07:40:53.358Z",
+    "totalNodes": 1566,
+    "maxDepth": 23,
+    "displayCounts": {
+      "block": 1150,
+      "none": 99,
+      "inline": 323,
+      "flex": 362,
+      "flow-root": 1,
+      "grid": 17,
+      "inline-flex": 5,
+      "inline-block": 3
+    },
+    "flexContainers": [
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "glass-header mx-auto flex h-[64px] w-full max-w-[1400px] items-center justify-between rounded-[12px] bg-white px-3 py-2 backdrop-blur-[100px] sm:px-[13px] sm:py-[10px]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex h-[64px] w-full items-center justify-between gap-3",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "flex items-center space-x-2",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "NAV",
+        "id": null,
+        "class": "hidden items-center space-x-6 pl-[40px] md:flex lg:space-x-10 lg:pl-[80px]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "hidden items-center space-x-3 md:flex lg:space-x-4",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex items-center justify-between whitespace-nowrap rounded-md border border-input px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 h-11 w-[92px] bg-white",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-[#5E1FB7] transition-colors hover:text-purple-600 lg:w-[120px]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-white transition-colors hover:text-purple-300 lg:w-[120px]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-col items-center justify-center space-y-3 px-2 sm:space-y-2",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "mx-auto mt-8 flex w-full max-w-xl flex-row items-stretch justify-center gap-2 text-sm sm:items-center sm:gap-6 md:gap-4 md:text-base",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "flex h-[44px] min-w-[180px] cursor-pointer items-center justify-center rounded-[8px] bg-[#EEE7F9] px-4 py-[10px] font-medium text-primary transition-all hover:bg-purple-200 sm:w-auto",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "A",
+        "id": null,
+        "class": "flex h-[44px] w-full cursor-pointer items-center justify-center gap-1 rounded-[8px] px-0 font-medium text-white transition-all hover:opacity-90 sm:w-auto sm:min-w-[200px] md:gap-3 md:px-4",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-start gap-4 sm:gap-6",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex justify-center",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-4 px-6 pb-4 pt-5",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center justify-between gap-3",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex min-w-0 items-center gap-2",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-wrap gap-3",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "SPAN",
+        "id": null,
+        "class": "inline-flex items-center h-[20px] min-w-[41px] p-[4px_6px] font-[500] text-[14px] border rounded-[3px] bg-[#FFF0F6] text-[#5E1FB7] border-[#5E1FB7]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "SPAN",
+        "id": null,
+        "class": "inline-flex items-center h-[20px] min-w-[41px] p-[4px_6px] font-[500] text-[14px] border rounded-[3px] bg-transparent text-[#FF7A45] border-[#FF7A45]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "SPAN",
+        "id": null,
+        "class": "inline-flex items-center h-[20px] min-w-[41px] p-[4px_6px] font-[500] text-[14px] border rounded-[3px] bg-transparent text-[#16A34A] border-[#16A34A]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-4 text-gray-900",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-4 text-gray-900",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-4 px-6 pb-4 pt-5",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center justify-between gap-3",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex min-w-0 items-center gap-2",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-wrap gap-3",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "SPAN",
+        "id": null,
+        "class": "inline-flex items-center h-[20px] min-w-[41px] p-[4px_6px] font-[500] text-[14px] border rounded-[3px] bg-[#FFF0F6] text-[#5E1FB7] border-[#5E1FB7]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "SPAN",
+        "id": null,
+        "class": "inline-flex items-center h-[20px] min-w-[41px] p-[4px_6px] font-[500] text-[14px] border rounded-[3px] bg-transparent text-[#FF7A45] border-[#FF7A45]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-4 text-gray-900",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-4 text-gray-900",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-4 px-6 pb-4 pt-5",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center justify-between gap-3",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex min-w-0 items-center gap-2",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-wrap gap-3",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "SPAN",
+        "id": null,
+        "class": "inline-flex items-center h-[20px] min-w-[41px] p-[4px_6px] font-[500] text-[14px] border rounded-[3px] bg-transparent text-[#16A34A] border-[#16A34A]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-4 text-gray-900",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-col items-center gap-6",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-col gap-1 pb-1",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center justify-between gap-2 text-[9px] leading-[8.8px]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-col gap-1",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center justify-between gap-2 text-[9px] leading-[8.8px]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-col gap-1",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center justify-between gap-2 text-[9px] leading-[8.8px]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-col gap-1",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center justify-between gap-2 text-[9px] leading-[8.8px]",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "mt-5 flex w-fit items-center gap-[4px] rounded-xl",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center text-[10px] font-semibold tracking-[0.2em] text-gray-700",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex flex-col items-center gap-4 sm:gap-5",
+        "flex": "0 1 auto"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "flex items-center gap-2",
+        "flex": "0 1 auto"
+      }
+    ],
+    "flexContainerCount": 367,
+    "gridContainers": [
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "mt-4 grid grid-cols-1 items-start gap-4 sm:grid-cols-[0.8fr_auto]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "mt-3 grid grid-cols-2 gap-x-6 gap-y-4 sm:mt-5 sm:gap-x-10 sm:gap-y-5"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "hidden items-start gap-6 lg:grid lg:grid-cols-3 xl:gap-8 2xl:gap-10"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "mt-3 grid grid-cols-2 gap-x-6 gap-y-4 sm:mt-5 sm:gap-x-10 sm:gap-y-5"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "mt-4 grid grid-cols-1 items-start gap-4 sm:grid-cols-[0.8fr_auto]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid gap-4 sm:gap-6 lg:grid-cols-9"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-3 lg:col-span-9"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid items-start gap-8 lg:grid-cols-2 lg:gap-10 xl:grid-cols-12 xl:gap-12"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-12"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-12"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid items-center gap-6 md:gap-8 lg:grid-cols-[40%_25%_40%]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid items-center gap-6 md:gap-8 lg:grid-cols-[40%_25%_40%]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid items-center gap-6 md:gap-8 lg:grid-cols-[40%_25%_40%]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid items-center gap-6 md:gap-8 lg:grid-cols-[40%_25%_40%]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "grid items-center gap-6 md:gap-8 lg:grid-cols-[40%_25%_40%]"
+      },
+      {
+        "tag": "DIV",
+        "id": null,
+        "class": "wrapper grid grid-cols-1 gap-10 py-20 sm:grid-cols-3 lg:grid-cols-5"
+      }
+    ],
+    "gridContainerCount": 17,
+    "semanticSections": [
+      {
+        "index": 34,
+        "endIndex": 52,
+        "tag": "HEADER",
+        "id": null,
+        "class": "fixed left-0 right-0 top-0 z-50 p-3 sm:p-4",
+        "depth": 3
+      },
+      {
+        "index": 39,
+        "endIndex": 45,
+        "tag": "NAV",
+        "id": null,
+        "class": "hidden items-center space-x-6 pl-[40px] md:flex lg:space-x-10 lg:pl-[80px]",
+        "depth": 6
+      },
+      {
+        "index": 53,
+        "endIndex": 1501,
+        "tag": "MAIN",
+        "id": null,
+        "class": "bg-[rgba(238, 231, 249, 1)] min-h-screen",
+        "depth": 4
+      },
+      {
+        "index": 54,
+        "endIndex": 65,
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative px-4 pb-16 pt-[120px] sm:px-6 sm:pb-20 md:pt-[140px] lg:px-8",
+        "depth": 5
+      },
+      {
+        "index": 65,
+        "endIndex": 424,
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8",
+        "depth": 5
+      },
+      {
+        "index": 424,
+        "endIndex": 490,
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative overflow-hidden px-4 pb-16 sm:px-6 sm:pb-20",
+        "depth": 5
+      },
+      {
+        "index": 490,
+        "endIndex": 697,
+        "tag": "SECTION",
+        "id": null,
+        "class": "px-4 py-10 sm:px-6 sm:py-12 md:py-14 lg:px-8 lg:py-16 xl:py-20",
+        "depth": 5
+      },
+      {
+        "index": 697,
+        "endIndex": 1333,
+        "tag": "SECTION",
+        "id": null,
+        "class": "px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8",
+        "depth": 5
+      },
+      {
+        "index": 1333,
+        "endIndex": 1403,
+        "tag": "SECTION",
+        "id": null,
+        "class": "bg-white px-4 py-10 md:py-20 sm:px-6 lg:px-8",
+        "depth": 5
+      },
+      {
+        "index": 1403,
+        "endIndex": 1431,
+        "tag": "SECTION",
+        "id": null,
+        "class": "bg-gradient-to-br from-purple-50 via-white to-purple-200 px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8",
+        "depth": 5
+      },
+      {
+        "index": 1431,
+        "endIndex": 1495,
+        "tag": "SECTION",
+        "id": null,
+        "class": "bg-white px-4 py-20 sm:px-6 lg:px-8",
+        "depth": 5
+      },
+      {
+        "index": 1507,
+        "endIndex": 1508,
+        "tag": "SECTION",
+        "id": null,
+        "class": null,
+        "depth": 3
+      },
+      {
+        "index": 1508,
+        "endIndex": 1564,
+        "tag": "FOOTER",
+        "id": null,
+        "class": null,
+        "depth": 3
+      }
+    ],
+    "layoutModel": "flexbox-dominant"
+  },
+  "components": {
+    "generatedAt": "2026-08-02T07:40:53.368Z",
+    "totalNodes": 1566,
+    "totalComponents": 342,
+    "tagStatistics": {
+      "HTML": 1,
+      "HEAD": 1,
+      "META": 15,
+      "LINK": 14,
+      "TITLE": 1,
+      "BODY": 1,
+      "DIV": 886,
+      "HEADER": 1,
+      "A": 50,
+      "IMG": 85,
+      "NAV": 1,
+      "BUTTON": 34,
+      "SPAN": 62,
+      "MAIN": 1,
+      "SECTION": 9,
+      "H1": 1,
+      "BR": 6,
+      "P": 338,
+      "H2": 6,
+      "H3": 26,
+      "H4": 16,
+      "INPUT": 5,
+      "FORM": 1,
+      "LABEL": 3,
+      "FOOTER": 1,
+      "NEXT-ROUTE-ANNOUNCER": 1
+    },
+    "componentTypes": {
+      "element": 1224,
+      "header": 2,
+      "link": 50,
+      "image": 85,
+      "navigation": 1,
+      "button": 34,
+      "main": 1,
+      "section": 9,
+      "hero": 13,
+      "card": 140,
+      "input": 5,
+      "form": 1,
+      "footer": 1
+    },
+    "components": [
+      {
+        "index": 34,
+        "type": "header",
+        "tag": "HEADER",
+        "id": null,
+        "class": "fixed left-0 right-0 top-0 z-50 p-3 sm:p-4",
+        "depth": 3,
+        "text": null
+      },
+      {
+        "index": 35,
+        "type": "header",
+        "tag": "DIV",
+        "id": null,
+        "class": "glass-header mx-auto flex h-[64px] w-full max-w-[1400px] items-center justify-between rounded-[12px] bg-white px-3 py-2 backdrop-blur-[100px] sm:px-[13px] sm:py-[10px]",
+        "depth": 4,
+        "text": null
+      },
+      {
+        "index": 37,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "flex items-center space-x-2",
+        "depth": 6,
+        "text": null
+      },
+      {
+        "index": 38,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 7,
+        "text": null
+      },
+      {
+        "index": 39,
+        "type": "navigation",
+        "tag": "NAV",
+        "id": null,
+        "class": "hidden items-center space-x-6 pl-[40px] md:flex lg:space-x-10 lg:pl-[80px]",
+        "depth": 6,
+        "text": null
+      },
+      {
+        "index": 40,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 font-[600] text-purple-600",
+        "depth": 7,
+        "text": "Trang chủ"
+      },
+      {
+        "index": 41,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+        "depth": 7,
+        "text": "Hướng dẫn"
+      },
+      {
+        "index": 42,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+        "depth": 7,
+        "text": "Tính năng"
+      },
+      {
+        "index": 43,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+        "depth": 7,
+        "text": "Bảng giá"
+      },
+      {
+        "index": 44,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+        "depth": 7,
+        "text": "Tuyển dụng"
+      },
+      {
+        "index": 46,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex items-center justify-between whitespace-nowrap rounded-md border border-input px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 h-11 w-[92px] bg-white",
+        "depth": 7,
+        "text": null
+      },
+      {
+        "index": 48,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-[#5E1FB7] transition-colors hover:text-purple-600 lg:w-[120px]",
+        "depth": 7,
+        "text": "Đăng nhập"
+      },
+      {
+        "index": 49,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-white transition-colors hover:text-purple-300 lg:w-[120px]",
+        "depth": 7,
+        "text": "Đăng ký"
+      },
+      {
+        "index": 50,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 md:hidden",
+        "depth": 6,
+        "text": null
+      },
+      {
+        "index": 53,
+        "type": "main",
+        "tag": "MAIN",
+        "id": null,
+        "class": "bg-[rgba(238, 231, 249, 1)] min-h-screen",
+        "depth": 4,
+        "text": null
+      },
+      {
+        "index": 54,
+        "type": "section",
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative px-4 pb-16 pt-[120px] sm:px-6 sm:pb-20 md:pt-[140px] lg:px-8",
+        "depth": 5,
+        "text": null
+      },
+      {
+        "index": 63,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "flex h-[44px] min-w-[180px] cursor-pointer items-center justify-center rounded-[8px] bg-[#EEE7F9] px-4 py-[10px] font-medium text-primary transition-all hover:bg-purple-200 sm:w-auto",
+        "depth": 8,
+        "text": "Xem demo"
+      },
+      {
+        "index": 64,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "flex h-[44px] w-full cursor-pointer items-center justify-center gap-1 rounded-[8px] px-0 font-medium text-white transition-all hover:opacity-90 sm:w-auto sm:min-w-[200px] md:gap-3 md:px-4",
+        "depth": 8,
+        "text": "Dùng thử miễn phí"
+      },
+      {
+        "index": 65,
+        "type": "section",
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8",
+        "depth": 5,
+        "text": null
+      },
+      {
+        "index": 69,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "banner-orb absolute inset-0",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 77,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "glow-border bg-banner min-w-[350px] overflow-hidden rounded-[20px] border border-[#9D6AF4] bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 py-6 pl-[15px] pr-[15px] shadow-[0_6px_40px_0px_rgba(94,31,183,0.35)] backdrop-blur-sm",
+        "depth": 14,
+        "text": null
+      },
+      {
+        "index": 81,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden glow-border",
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 84,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 19,
+        "text": null
+      },
+      {
+        "index": 90,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 22,
+        "text": null
+      },
+      {
+        "index": 92,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 101,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 104,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 106,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden",
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 109,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 19,
+        "text": null
+      },
+      {
+        "index": 115,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 22,
+        "text": null
+      },
+      {
+        "index": 117,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 125,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 128,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 130,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden",
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 133,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 19,
+        "text": null
+      },
+      {
+        "index": 139,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 22,
+        "text": null
+      },
+      {
+        "index": 141,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 148,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 155,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 rounded-[12px] border border-white/60 bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 backdrop-blur-sm sm:p-4",
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 188,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 space-y-3 rounded-[12px] border bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 sm:p-4",
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 194,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 19,
+        "text": null
+      },
+      {
+        "index": 198,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "via-[#F6F0FF]/200 to-[#FFF7F3]/200 card-seq relative z-10 rounded-[12px] border border-white/60 bg-gradient-to-br from-white p-3 sm:p-4",
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 201,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 207,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "h-full rounded-[9.6px] backdrop-blur-sm card-seq",
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 218,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "w-full rounded-[12px] object-cover",
+        "depth": 21,
+        "text": null
+      },
+      {
+        "index": 225,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "h-full rounded-[9.6px] backdrop-blur-sm py-3 sm:py-4 px-4 sm:px-5 card-seq bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 border",
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 230,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 233,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 236,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 239,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 242,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 245,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 249,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 250,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 251,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 255,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "relative overflow-visible banner-soft-float banner-tilt min-h-[315px] w-full lg:max-w-[249px] xl:max-w-[260px]",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 257,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "h-full rounded-[9.6px] backdrop-blur-sm card-seq banner-shimmer",
+        "depth": 12,
+        "text": null
+      },
+      {
+        "index": 268,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "w-full rounded-[12px] object-cover",
+        "depth": 17,
+        "text": null
+      },
+      {
+        "index": 274,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "relative overflow-visible banner-soft-float variant-slower w-full rounded-[12px] pt-[60px] lg:h-[146px] lg:max-w-[240px] xl:max-w-[250px]",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 276,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "h-full rounded-[9.6px] backdrop-blur-sm py-[15px] pr-[20px] xl:pr-[24px] pl-[16px] card-seq banner-shimmer bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 border transition-transform duration-300 ease-out hover:translate-y-[-1px]",
+        "depth": 12,
+        "text": null
+      },
+      {
+        "index": 281,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 284,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 287,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 290,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 293,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 296,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 16,
+        "text": null
+      },
+      {
+        "index": 300,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "motion-safe:animate-float glow-border bg-banner banner-shimmer w-full overflow-hidden rounded-[20px] border border-[#9D6AF4] bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-5 shadow-[0_6px_40px_0px_rgba(94,31,183,0.45)] backdrop-blur-sm lg:min-w-[340px] lg:p-[18px] xl:min-w-[361px] xl:p-[20px]",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 304,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden glow-border",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 307,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 14,
+        "text": null
+      },
+      {
+        "index": 313,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 17,
+        "text": null
+      },
+      {
+        "index": 315,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 324,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 327,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 329,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 332,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 14,
+        "text": null
+      },
+      {
+        "index": 338,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 17,
+        "text": null
+      },
+      {
+        "index": 340,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 348,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 351,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 353,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-crm min-w-[329px] overflow-hidden",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 356,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 14,
+        "text": null
+      },
+      {
+        "index": 362,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 17,
+        "text": null
+      },
+      {
+        "index": 364,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 371,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "shrink-0",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 374,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "banner-soft-float banner-tilt relative delay-200 duration-700 ease-out motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-right-6 lg:left-[70px] xl:left-[105px]",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 376,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px]",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 377,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 w-full rounded-[12px] border border-white/60 bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 backdrop-blur-sm lg:min-w-[300px] lg:p-[10px] xl:min-w-[315px]",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 408,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "banner-soft-float variant-slower banner-tilt relative my-[60px] lg:ml-12 xl:ml-20",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 409,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px]",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 410,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 space-y-3 rounded-[12px] border bg-white bg-gradient-to-br from-white via-[#F6F0FF]/30 to-[#FFF7F3]/30 p-3 lg:p-[10px]",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 416,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 14,
+        "text": null
+      },
+      {
+        "index": 418,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "banner-soft-float banner-tilt relative w-full lg:ml-[100px] lg:min-w-[280px] xl:ml-[130px] xl:min-w-[300px]",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 419,
+        "type": "hero",
+        "tag": "DIV",
+        "id": null,
+        "class": "border-flow-outer glow-border banner-shimmer relative overflow-hidden rounded-[12px] p-[1.2px] shadow-[0_12px_34px_rgba(109,40,217,0.16)]",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 420,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "card-seq relative z-10 rounded-[12px] border border-white/60 bg-gradient-to-br from-white via-[#F6F0FF]/100 to-[#FFF7F3]/100 p-3 lg:p-[10px]",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 423,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 13,
+        "text": null
+      },
+      {
+        "index": 424,
+        "type": "section",
+        "tag": "SECTION",
+        "id": null,
+        "class": "relative overflow-hidden px-4 pb-16 sm:px-6 sm:pb-20",
+        "depth": 5,
+        "text": null
+      },
+      {
+        "index": 437,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "whyus-card min-h-[316px] rounded-[20px] p-[16px] sm:p-[20px] lg:col-span-6",
+        "depth": 8,
+        "text": null
+      },
+      {
+        "index": 438,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "whyus-bg whyus-bg-default",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 439,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "whyus-bg whyus-bg-hover",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 450,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "feature-card relative min-w-[217px] rounded-[20px] bg-gradient-to-tr from-purple-100 via-white to-purple-200 lg:col-span-3",
+        "depth": 8,
+        "text": null
+      },
+      {
+        "index": 452,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "glass-card min-h-[230px] max-w-[309px] rounded-[14px] p-[10px] sm:min-h-[248px]",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 461,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 470,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 480,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "feature-card relative rounded-[20px] bg-gradient-to-tr from-purple-300 via-white to-purple-200",
+        "depth": 9,
+        "text": null
+      },
+      {
+        "index": 490,
+        "type": "section",
+        "tag": "SECTION",
+        "id": null,
+        "class": "px-4 py-10 sm:px-6 sm:py-12 md:py-14 lg:px-8 lg:py-16 xl:py-20",
+        "depth": 5,
+        "text": null
+      },
+      {
+        "index": 493,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "object-cover opacity-50 sm:opacity-60",
+        "depth": 8,
+        "text": null
+      },
+      {
+        "index": 540,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "w-full rounded-[12px] object-cover",
+        "depth": 23,
+        "text": null
+      },
+      {
+        "index": 556,
+        "type": "input",
+        "tag": "INPUT",
+        "id": null,
+        "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none",
+        "depth": 19,
+        "text": null
+      },
+      {
+        "index": 557,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25",
+        "depth": 19,
+        "text": null
+      },
+      {
+        "index": 558,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 20,
+        "text": null
+      },
+      {
+        "index": 559,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "h-auto w-full max-w-[260px] sm:max-w-[300px] md:max-w-[340px]",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 576,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "h-auto w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px]",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 597,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "h-auto w-full max-w-[340px] sm:max-w-[400px] md:max-w-[480px]",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 599,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 600,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 601,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+        "depth": 10,
+        "text": null
+      },
+      {
+        "index": 640,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "w-full rounded-[12px] object-cover",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 656,
+        "type": "input",
+        "tag": "INPUT",
+        "id": null,
+        "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none",
+        "depth": 14,
+        "text": null
+      },
+      {
+        "index": 657,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25",
+        "depth": 14,
+        "text": null
+      },
+      {
+        "index": 658,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": null,
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 660,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "h-auto w-full max-w-[320px] lg:max-w-[360px] xl:max-w-[400px]",
+        "depth": 12,
+        "text": null
+      },
+      {
+        "index": 663,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "mx-auto h-auto w-full max-w-[600px] lg:max-w-full",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 696,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "mx-auto h-auto w-full max-w-[600px] lg:max-w-full",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 697,
+        "type": "section",
+        "tag": "SECTION",
+        "id": null,
+        "class": "px-4 py-12 sm:px-6 sm:py-16 md:py-20 lg:px-8",
+        "depth": 5,
+        "text": null
+      },
+      {
+        "index": 708,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-fashion-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tl-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 711,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-education-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tr-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 714,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-dental-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#5E1FB7]",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 717,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-restaurant-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 720,
+        "type": "button",
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-cosmetics-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+        "depth": 11,
+        "text": null
+      },
+      {
+        "index": 737,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+        "depth": 14,
+        "text": "Nhắn thử ngay"
+      },
+      {
+        "index": 743,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 747,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 751,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 755,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 763,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 767,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 771,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 775,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 779,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 783,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 787,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 791,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 795,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 799,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 803,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 807,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 815,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 819,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 823,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 827,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 831,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 835,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 839,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 843,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 848,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "object-contain object-center lg:object-right-bottom",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 858,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+        "depth": 14,
+        "text": "Nhắn thử ngay"
+      },
+      {
+        "index": 864,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 868,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 872,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 876,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 880,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 884,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 892,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 896,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 900,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 904,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 908,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 912,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 916,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 920,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 924,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 928,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 932,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 936,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 944,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 948,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 952,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 956,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 960,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 964,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 969,
+        "type": "image",
+        "tag": "IMG",
+        "id": null,
+        "class": "object-contain object-center lg:object-right-bottom",
+        "depth": 15,
+        "text": null
+      },
+      {
+        "index": 979,
+        "type": "link",
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+        "depth": 14,
+        "text": "Nhắn thử ngay"
+      },
+      {
+        "index": 985,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 989,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 993,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 997,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1001,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1005,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1013,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1017,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1021,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1025,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1029,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1033,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1037,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1041,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1045,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1049,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1053,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "max-w-[290px] rounded-[14px] px-4 py-3 text-[12px] leading-[20px] shadow-sm glass-card-support",
+        "depth": 18,
+        "text": null
+      },
+      {
+        "index": 1057,
+        "type": "card",
+        "tag": "DIV",
+        "id": null,
+        "class": "w-full max-w-[320px] glass-card-support overflow-hidden rounded-[16px] border border-[#E4D9FB] bg-white shadow-[0_12px_30px_rgba(17,24,39,0.12)]",
+        "depth": 18,
+        "text": null
+      }
+    ]
+  },
+  "design": {
+    "generatedAt": "2026-08-02T07:40:53.388Z",
+    "totalElements": 1960,
+    "palette": [
+      {
+        "value": "rgb(3,7,18)",
+        "count": 1218
+      },
+      {
+        "value": "rgb(39,39,39)",
+        "count": 115
+      },
+      {
+        "value": "rgb(138,148,166)",
+        "count": 110
+      },
+      {
+        "value": "rgb(255,255,255)",
+        "count": 88
+      },
+      {
+        "value": "rgb(94,31,183)",
+        "count": 74
+      },
+      {
+        "value": "rgb(0,0,0)",
+        "count": 61
+      },
+      {
+        "value": "rgb(168,85,247)",
+        "count": 30
+      },
+      {
+        "value": "rgb(228,231,236)",
+        "count": 24
+      },
+      {
+        "value": "rgb(47,47,47)",
+        "count": 19
+      },
+      {
+        "value": "rgb(238,231,249)",
+        "count": 18
+      },
+      {
+        "value": "rgb(107,114,128)",
+        "count": 16
+      },
+      {
+        "value": "rgb(17,24,39)",
+        "count": 15
+      },
+      {
+        "value": "rgb(29,41,57)",
+        "count": 14
+      },
+      {
+        "value": "rgb(15,24,40)",
+        "count": 12
+      },
+      {
+        "value": "rgba(255,255,255,0.7)",
+        "count": 11
+      }
+    ],
+    "typography": {
+      "fonts": [
+        {
+          "value": "ui-sans-serif",
+          "count": 61
+        }
+      ],
+      "fontSizes": [
+        {
+          "value": "16px",
+          "count": 1343
+        },
+        {
+          "value": "12px",
+          "count": 279
+        },
+        {
+          "value": "10px",
+          "count": 156
+        },
+        {
+          "value": "14px",
+          "count": 66
+        },
+        {
+          "value": "20px",
+          "count": 38
+        },
+        {
+          "value": "9px",
+          "count": 24
+        },
+        {
+          "value": "40px",
+          "count": 22
+        },
+        {
+          "value": "11px",
+          "count": 12
+        },
+        {
+          "value": "24px",
+          "count": 7
+        },
+        {
+          "value": "30px",
+          "count": 6
+        }
+      ]
+    },
+    "borderRadii": [
+      {
+        "value": "16px",
+        "count": 134
+      },
+      {
+        "value": "9999px",
+        "count": 34
+      },
+      {
+        "value": "12px",
+        "count": 33
+      },
+      {
+        "value": "8px",
+        "count": 16
+      },
+      {
+        "value": "20px",
+        "count": 15
+      }
+    ],
+    "shadows": [
+      {
+        "value": "rgba(0, 0, 0, 0.1) 0px 0px 0px 0px, rgba(255, 255, 255, 0.5) 0px 10px 10px 0px inset, rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset, rgb(255, 255, 255) 0px 0px 90px 13px inset",
+        "count": 120
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+        "count": 7
+      },
+      {
+        "value": "rgba(17, 24, 39, 0.06) 0px 10px 26px 0px",
+        "count": 6
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.05) 0px 8px 32px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset, rgb(255, 255, 255) 0px 0px 20px 10px inset",
+        "count": 6
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.25) 0px 0px 8px 0px",
+        "count": 4
+      }
+    ],
+    "primaryFont": "ui-sans-serif",
+    "dominantColors": [
+      "rgb(3,7,18)",
+      "rgb(39,39,39)",
+      "rgb(138,148,166)",
+      "rgb(255,255,255)",
+      "rgb(94,31,183)"
+    ]
+  },
+  "interaction": {
+    "generatedAt": "2026-08-02T07:40:53.396Z",
+    "clickable": 84,
+    "forms": 1,
+    "inputs": 5,
+    "totalInteractive": 90,
+    "elements": [
+      {
+        "index": 37,
+        "tag": "A",
+        "id": null,
+        "class": "flex items-center space-x-2",
+        "type": null,
+        "name": null,
+        "href": "/",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 40,
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 font-[600] text-purple-600",
+        "type": null,
+        "name": null,
+        "href": "/",
+        "ariaLabel": null,
+        "text": "Trang chủ"
+      },
+      {
+        "index": 41,
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+        "type": null,
+        "name": null,
+        "href": "/huong-dan",
+        "ariaLabel": null,
+        "text": "Hướng dẫn"
+      },
+      {
+        "index": 42,
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+        "type": null,
+        "name": null,
+        "href": "/tinh-nang",
+        "ariaLabel": null,
+        "text": "Tính năng"
+      },
+      {
+        "index": 43,
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+        "type": null,
+        "name": null,
+        "href": "/bao-gia-dich-vu",
+        "ariaLabel": null,
+        "text": "Bảng giá"
+      },
+      {
+        "index": 44,
+        "tag": "A",
+        "id": null,
+        "class": "whitespace-nowrap text-[16px] font-[400] leading-[24px] transition-colors hover:text-purple-600 text-[#272727]",
+        "type": null,
+        "name": null,
+        "href": "/tuyen-dung",
+        "ariaLabel": null,
+        "text": "Tuyển dụng"
+      },
+      {
+        "index": 46,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex items-center justify-between whitespace-nowrap rounded-md border border-input px-3 py-2 text-sm shadow-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 h-11 w-[92px] bg-white",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 48,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-[#5E1FB7] transition-colors hover:text-purple-600 lg:w-[120px]",
+        "type": null,
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": "Đăng nhập"
+      },
+      {
+        "index": 49,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-[110px] cursor-pointer flex-col items-center justify-center rounded-[8px] bg-[#EEE7F9] p-[10px] text-center text-[16px] font-[400] leading-[24px] text-white transition-colors hover:text-purple-300 lg:w-[120px]",
+        "type": null,
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": "Đăng ký"
+      },
+      {
+        "index": 50,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 md:hidden",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 63,
+        "tag": "A",
+        "id": null,
+        "class": "flex h-[44px] min-w-[180px] cursor-pointer items-center justify-center rounded-[8px] bg-[#EEE7F9] px-4 py-[10px] font-medium text-primary transition-all hover:bg-purple-200 sm:w-auto",
+        "type": null,
+        "name": null,
+        "href": "https://www.youtube.com/watch?v=GI4ALRSNceo",
+        "ariaLabel": null,
+        "text": "Xem demo"
+      },
+      {
+        "index": 64,
+        "tag": "A",
+        "id": null,
+        "class": "flex h-[44px] w-full cursor-pointer items-center justify-center gap-1 rounded-[8px] px-0 font-medium text-white transition-all hover:opacity-90 sm:w-auto sm:min-w-[200px] md:gap-3 md:px-4",
+        "type": null,
+        "name": null,
+        "href": "/dang-ky",
+        "ariaLabel": null,
+        "text": "Dùng thử miễn phí"
+      },
+      {
+        "index": 92,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "menu",
+        "text": null
+      },
+      {
+        "index": 117,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "menu",
+        "text": null
+      },
+      {
+        "index": 141,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "menu",
+        "text": null
+      },
+      {
+        "index": 249,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "Chuyển tới slide 1",
+        "text": null
+      },
+      {
+        "index": 250,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "Chuyển tới slide 2",
+        "text": null
+      },
+      {
+        "index": 251,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-gray-300 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "Chuyển tới slide 3",
+        "text": null
+      },
+      {
+        "index": 315,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "menu",
+        "text": null
+      },
+      {
+        "index": 340,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "menu",
+        "text": null
+      },
+      {
+        "index": 364,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "text-purple-500 transition-colors hover:text-purple-700",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "menu",
+        "text": null
+      },
+      {
+        "index": 556,
+        "tag": "INPUT",
+        "id": null,
+        "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none",
+        "type": "text",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 557,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25",
+        "type": null,
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 599,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-7 border-transparent bg-gradient-to-r from-[#C026D3] to-[#EC4899] shadow-[0_0_10px_rgba(236,72,153,0.45)]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "Chuyển tới slide 1",
+        "text": null
+      },
+      {
+        "index": 600,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "Chuyển tới slide 2",
+        "text": null
+      },
+      {
+        "index": 601,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "h-2.5 rounded-full border transition-all w-2.5 border-white/80 bg-white/70 shadow-[0_0_8px_rgba(255,255,255,0.25)] hover:bg-white/90",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": "Chuyển tới slide 3",
+        "text": null
+      },
+      {
+        "index": 656,
+        "tag": "INPUT",
+        "id": null,
+        "class": "flex-1 bg-transparent px-3 text-sm text-white placeholder:text-white/70 focus:outline-none",
+        "type": "text",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 657,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[30px] min-w-[20px] cursor-pointer flex-col items-center justify-center rounded-[5px] p-[10px] transition-colors hover:bg-white/25",
+        "type": null,
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 708,
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-fashion-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tl-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 711,
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-education-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white rounded-tr-[20px] after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 714,
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-dental-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#5E1FB7]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 717,
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-restaurant-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-[#E9E9E9] text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 720,
+        "tag": "BUTTON",
+        "id": ":Rb7n7nkva:-cosmetics-tab",
+        "class": "relative z-10 flex items-center justify-center gap-2 sm:gap-3 cursor-pointer px-2 sm:px-4 md:px-5 py-3 sm:py-4 text-[13px] sm:text-[15px] md:text-[16px] h-[48px] sm:h-[52px] md:h-[56px] font-[700] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5E1FB7]/25 focus-visible:ring-offset-2 focus-visible:ring-offset-white text-[#272727] hover:text-[#5E1FB7] hover:bg-[#EEE7F9]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 737,
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+        "type": null,
+        "name": null,
+        "href": "https://www.facebook.com/profile.php?id=61574111189034",
+        "ariaLabel": null,
+        "text": "Nhắn thử ngay"
+      },
+      {
+        "index": 858,
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+        "type": null,
+        "name": null,
+        "href": "https://www.facebook.com/profile.php?id=61588877132749",
+        "ariaLabel": null,
+        "text": "Nhắn thử ngay"
+      },
+      {
+        "index": 979,
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+        "type": null,
+        "name": null,
+        "href": "https://www.facebook.com/people/Page-test-Nha-Khoa/61588905631676/",
+        "ariaLabel": null,
+        "text": "Nhắn thử ngay"
+      },
+      {
+        "index": 1100,
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+        "type": null,
+        "name": null,
+        "href": "https://www.facebook.com/profile.php?id=61574543694643",
+        "ariaLabel": null,
+        "text": "Nhắn thử ngay"
+      },
+      {
+        "index": 1221,
+        "tag": "A",
+        "id": null,
+        "class": "mt-4 inline-flex items-center gap-2 text-sm font-[500] text-[#5E1FB7] transition-all hover:gap-3 sm:mt-5 sm:gap-3 sm:text-base sm:hover:gap-4 md:text-[16px]",
+        "type": null,
+        "name": null,
+        "href": "https://www.facebook.com/profile.php?id=61577029167634",
+        "ariaLabel": null,
+        "text": "Nhắn thử ngay"
+      },
+      {
+        "index": 1356,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://thanhnien.vn/ai-chatbot-preny-cuc-ky-thong-minh-tra-loi-tu-nhien-nhu-nguoi-that-185241205173221179.htm",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1360,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://www.24h.com.vn/kham-pha-cong-nghe/tang-ty-le-chot-don-tren-facebook-bang-ai-chatbot-preny-c675a1621948.html",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1364,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://cafef.vn/ai-chatbot-preny-giup-tang-ty-le-chuyen-doi-khi-chay-quang-cao-188241206071154103.chn",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1368,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://soha.vn/chot-don-tu-dong-bang-ai-chatbot-preny-198241205180248257.htm",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1372,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://thanhnien.vn/ai-chatbot-preny-cuc-ky-thong-minh-tra-loi-tu-nhien-nhu-nguoi-that-185241205173221179.htm",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1376,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://www.24h.com.vn/kham-pha-cong-nghe/tang-ty-le-chot-don-tren-facebook-bang-ai-chatbot-preny-c675a1621948.html",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1380,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://cafef.vn/ai-chatbot-preny-giup-tang-ty-le-chuyen-doi-khi-chay-quang-cao-188241206071154103.chn",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1384,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://soha.vn/chot-don-tu-dong-bang-ai-chatbot-preny-198241205180248257.htm",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1388,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://thanhnien.vn/ai-chatbot-preny-cuc-ky-thong-minh-tra-loi-tu-nhien-nhu-nguoi-that-185241205173221179.htm",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1392,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://www.24h.com.vn/kham-pha-cong-nghe/tang-ty-le-chot-don-tren-facebook-bang-ai-chatbot-preny-c675a1621948.html",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1396,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://cafef.vn/ai-chatbot-preny-giup-tang-ty-le-chuyen-doi-khi-chay-quang-cao-188241206071154103.chn",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1400,
+        "tag": "A",
+        "id": null,
+        "class": "block",
+        "type": null,
+        "name": null,
+        "href": "https://soha.vn/chot-don-tu-dong-bang-ai-chatbot-preny-198241205180248257.htm",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1417,
+        "tag": "FORM",
+        "id": null,
+        "class": "w-full max-w-md space-y-5 rounded-2xl p-6 sm:space-y-6 sm:rounded-[20px] sm:p-8 md:p-[30px_40px] lg:max-w-[517px]",
+        "type": null,
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1421,
+        "tag": "INPUT",
+        "id": "username",
+        "class": "h-[44px] w-full rounded-md border border-[#E6E6E6] px-3 py-2 text-sm transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 sm:h-[48px] sm:rounded-[6px] sm:p-[10px] sm:px-4 sm:text-base",
+        "type": "text",
+        "name": "username",
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1425,
+        "tag": "INPUT",
+        "id": "phone",
+        "class": "h-[44px] w-full rounded-md border border-[#E6E6E6] px-3 py-2 text-sm transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 sm:h-[48px] sm:rounded-[6px] sm:p-[10px] sm:px-4 sm:text-base",
+        "type": "tel",
+        "name": "phone",
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1429,
+        "tag": "INPUT",
+        "id": "category",
+        "class": "h-[44px] w-full rounded-md border border-[#E6E6E6] px-3 py-2 text-sm transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 sm:h-[48px] sm:rounded-[6px] sm:p-[10px] sm:px-4 sm:text-base",
+        "type": "text",
+        "name": "category",
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1430,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "flex h-[44px] w-full cursor-pointer items-center justify-center gap-2 rounded-lg px-4 text-center text-sm font-[500] leading-tight text-white transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 sm:h-[48px] sm:w-auto sm:min-w-[147px] sm:gap-3 sm:rounded-[8px] sm:p-[10px] sm:text-[16px] sm:font-[400] sm:leading-[24px]",
+        "type": "submit",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": "Nhận tư vấn"
+      },
+      {
+        "index": 1440,
+        "tag": "BUTTON",
+        "id": "radix-:R6h7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#5E1FB7]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1450,
+        "tag": "BUTTON",
+        "id": "radix-:Rah7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#272727]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1456,
+        "tag": "BUTTON",
+        "id": "radix-:Reh7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#272727]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1462,
+        "tag": "BUTTON",
+        "id": "radix-:Rih7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#272727]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1468,
+        "tag": "BUTTON",
+        "id": "radix-:Rmh7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#272727]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1474,
+        "tag": "BUTTON",
+        "id": "radix-:Rqh7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#272727]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1480,
+        "tag": "BUTTON",
+        "id": "radix-:Ruh7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#272727]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1486,
+        "tag": "BUTTON",
+        "id": "radix-:R12h7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#272727]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1492,
+        "tag": "BUTTON",
+        "id": "radix-:R16h7n7nkva:",
+        "class": "flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 cursor-pointer py-0 text-start text-base font-medium hover:no-underline [&>svg]:h-[25px] [&>svg]:w-[25px] [&[data-state=open]>svg]:text-[#5E1FB7] text-[#272727]",
+        "type": "button",
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1496,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "https://www.facebook.com/messages/t/prenychatbot",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1499,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "https://zalo.me/3555063027984707015",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1502,
+        "tag": "BUTTON",
+        "id": null,
+        "class": "group absolute -top-8 flex items-center justify-start gap-1 rounded-md border bg-neutral-200 px-2 py-1",
+        "type": null,
+        "name": null,
+        "href": null,
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1504,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "/preny-tang-2000-tin-nhan-zalo-mien-phi",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1512,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "/",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1523,
+        "tag": "A",
+        "id": null,
+        "class": "text-base text-[#E4E7EC] hover:underline",
+        "type": null,
+        "name": null,
+        "href": "tel:0389647778",
+        "ariaLabel": null,
+        "text": "0389647778"
+      },
+      {
+        "index": 1526,
+        "tag": "A",
+        "id": null,
+        "class": "text-base text-[#E4E7EC] hover:underline",
+        "type": null,
+        "name": null,
+        "href": "tel:0379015179",
+        "ariaLabel": null,
+        "text": "0379015179"
+      },
+      {
+        "index": 1529,
+        "tag": "A",
+        "id": null,
+        "class": "text-base text-[#E4E7EC] hover:underline",
+        "type": null,
+        "name": null,
+        "href": "tel:0333593279",
+        "ariaLabel": null,
+        "text": "0333593279"
+      },
+      {
+        "index": 1531,
+        "tag": "A",
+        "id": null,
+        "class": "text-base text-[#E4E7EC] hover:underline",
+        "type": null,
+        "name": null,
+        "href": "mailto:cskh@preny.ai",
+        "ariaLabel": null,
+        "text": "cskh@preny.ai"
+      },
+      {
+        "index": 1533,
+        "tag": "A",
+        "id": null,
+        "class": "text-[#E4E7EC] duration-300 hover:text-violet-400 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/huong-dan",
+        "ariaLabel": null,
+        "text": "Cách tạo chatbot"
+      },
+      {
+        "index": 1534,
+        "tag": "A",
+        "id": null,
+        "class": "text-[#E4E7EC] duration-300 hover:text-violet-400 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/tinh-nang",
+        "ariaLabel": null,
+        "text": "Tính năng"
+      },
+      {
+        "index": 1535,
+        "tag": "A",
+        "id": null,
+        "class": "text-[#E4E7EC] duration-300 hover:text-violet-400 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/chinh-sach-mua-hang",
+        "ariaLabel": null,
+        "text": "Chính sách mua hàng"
+      },
+      {
+        "index": 1536,
+        "tag": "A",
+        "id": null,
+        "class": "text-[#E4E7EC] duration-300 hover:text-violet-400 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/huong-dan-thanh-toan",
+        "ariaLabel": null,
+        "text": "Hướng dẫn thanh toán"
+      },
+      {
+        "index": 1537,
+        "tag": "A",
+        "id": null,
+        "class": "duration-300 hover:text-violet-400 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/dieu-khoan",
+        "ariaLabel": null,
+        "text": "Điều khoản sử dụng"
+      },
+      {
+        "index": 1538,
+        "tag": "A",
+        "id": null,
+        "class": "text-[#E4E7EC] duration-300 hover:text-violet-400 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/chinh-sach-bao-mat",
+        "ariaLabel": null,
+        "text": "Chính sách bảo mật"
+      },
+      {
+        "index": 1539,
+        "tag": "A",
+        "id": null,
+        "class": "text-[#E4E7EC] duration-300 hover:text-violet-400 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/huong-dan-thanh-toan-vnpay",
+        "ariaLabel": null,
+        "text": "Hướng dẫn thanh toán VNPAY"
+      },
+      {
+        "index": 1540,
+        "tag": "A",
+        "id": null,
+        "class": "text-[#E4E7EC] duration-300 hover:text-violet-400 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/affiliate#dang-ky-affiliate",
+        "ariaLabel": null,
+        "text": "Trở thành đối tác"
+      },
+      {
+        "index": 1544,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "https://www.facebook.com/prenychatbot",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1546,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "https://zalo.me/3555063027984707015",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1548,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "https://www.instagram.com/chatbotai_preny/",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1550,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "https://www.youtube.com/@PrenyAIChatbot",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1552,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "https://x.com/AICHATBOTPRENY",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1555,
+        "tag": "A",
+        "id": null,
+        "class": "font-medium text-blue-500 hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/",
+        "ariaLabel": null,
+        "text": "AI Chatbot"
+      },
+      {
+        "index": 1556,
+        "tag": "A",
+        "id": null,
+        "class": null,
+        "type": null,
+        "name": null,
+        "href": "http://online.gov.vn/Home/WebDetails/127585",
+        "ariaLabel": null,
+        "text": null
+      },
+      {
+        "index": 1561,
+        "tag": "A",
+        "id": null,
+        "class": "hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/chinh-sach-bao-mat",
+        "ariaLabel": null,
+        "text": "Privacy Policy"
+      },
+      {
+        "index": 1562,
+        "tag": "A",
+        "id": null,
+        "class": "hover:underline",
+        "type": null,
+        "name": null,
+        "href": "/dieu-khoan",
+        "ariaLabel": null,
+        "text": "Terms of Service"
+      }
+    ]
+  },
+  "vision": {
+    "generatedAt": "2026-08-02T07:40:53.396Z",
+    "screenshotAvailable": true,
+    "screenshot": {
+      "path": "/Users/mac/capture/capture/raw/screenshots/home.png",
+      "width": 1440,
+      "height": 8406,
+      "format": "png",
+      "sizeBytes": 2184149,
+      "aspectRatio": 0.17
+    },
+    "dominantColors": [
+      {
+        "rgb": "rgb(255, 255, 255)",
+        "pixelCount": 589
+      },
+      {
+        "rgb": "rgb(240, 240, 240)",
+        "pixelCount": 175
+      },
+      {
+        "rgb": "rgb(255, 240, 255)",
+        "pixelCount": 91
+      },
+      {
+        "rgb": "rgb(240, 240, 255)",
+        "pixelCount": 86
+      },
+      {
+        "rgb": "rgb(16, 16, 32)",
+        "pixelCount": 81
+      }
+    ],
+    "pageHeight": 8406,
+    "isFullPage": true
+  }
+}

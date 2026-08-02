@@ -1,0 +1,18 @@
+{
+  "target": "https://preny.ai",
+  "startedAt": "2026-08-01T09:33:53.090Z",
+  "finishedAt": "2026-08-01T09:34:19.047Z",
+  "durationMs": 25957,
+  "files": {
+    "har": true,
+    "html": true,
+    "dom": true,
+    "screenshot": true,
+    "cookies": true,
+    "localStorage": true,
+    "sessionStorage": true,
+    "indexedDB": true,
+    "websocket": false,
+    "styles": true
+  }
+}
