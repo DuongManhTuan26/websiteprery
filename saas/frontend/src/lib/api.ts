@@ -200,5 +200,12 @@ export const api = {
     }),
 
   deleteChatbot: (workspaceId: string, chatbotId: string) =>
-    request<void>(`/workspaces/${workspaceId}/chatbots/${chatbotId}`, { method: 'DELETE', auth: true })
+    request<void>(`/workspaces/${workspaceId}/chatbots/${chatbotId}`, { method: 'DELETE', auth: true }),
+
+  testChatbotReply: (workspaceId: string, chatbotId: string, message: string) =>
+    request<{ reply: string }>(`/workspaces/${workspaceId}/chatbots/${chatbotId}/test-reply`, {
+      method: 'POST',
+      body: { message },
+      auth: true
+    })
 };

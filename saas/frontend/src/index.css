@@ -291,3 +291,27 @@ button {
   font-size: 12px;
   color: var(--text);
 }
+
+.row-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.test-reply-row td {
+  background: var(--bg);
+  padding-top: 12px;
+  padding-bottom: 16px;
+}
+
+.test-reply-row .inline-form {
+  margin: 0 0 8px;
+}
+
+.test-reply-output {
+  margin: 0;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+}

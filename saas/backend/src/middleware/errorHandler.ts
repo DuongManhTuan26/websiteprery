@@ -41,6 +41,15 @@ export class ConflictError extends AppError {
   }
 }
 
+// An upstream AI provider (or any third-party dependency) failed or is
+// unreachable/misconfigured — 502, distinct from a validation error on the
+// caller's part.
+export class UpstreamError extends AppError {
+  constructor(message: string) {
+    super(502, 'upstream_error', message);
+  }
+}
+
 // Single place errors are mapped to HTTP responses. Known AppError subtypes
 // return their intended status/code; anything else is logged and collapsed
 // to a generic 500 so internal details (stack traces, DB errors) never leak

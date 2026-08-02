@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { requireAuth } from '../../middleware/requireAuth.js';
 import { requireRole, requireWorkspaceMember } from '../../middleware/requireWorkspaceMember.js';
 import { parseOrThrow } from '../../utils/validate.js';
-import { createChatbotSchema, updateChatbotSchema } from './schemas.js';
+import { createChatbotSchema, testReplySchema, updateChatbotSchema } from './schemas.js';
 import * as chatbotService from './service.js';
 
 // Mounted at /workspaces/:workspaceId/chatbots — mergeParams so :workspaceId
@@ -53,6 +53,16 @@ chatbotsRouter.delete('/:chatbotId', requireRole('OWNER', 'ADMIN'), async (req, 
   try {
     await chatbotService.deleteChatbot(req.workspaceId!, String(req.params.chatbotId));
     res.status(204).send();
+  } catch (err) {
+    next(err);
+  }
+});
+
+chatbotsRouter.post('/:chatbotId/test-reply', async (req, res, next) => {
+  try {
+    const { message } = parseOrThrow(testReplySchema, req.body);
+    const reply = await chatbotService.testChatbotReply(req.workspaceId!, String(req.params.chatbotId), message);
+    res.json({ reply });
   } catch (err) {
     next(err);
   }

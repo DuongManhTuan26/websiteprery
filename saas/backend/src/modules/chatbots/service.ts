@@ -1,5 +1,6 @@
 import { prisma } from '../../db/client.js';
 import { NotFoundError } from '../../middleware/errorHandler.js';
+import { getProvider } from '../ai-providers/index.js';
 import type { AIProviderType } from '../../generated/prisma/enums.js';
 
 export interface CreateChatbotInput {
@@ -51,4 +52,27 @@ export async function updateChatbot(workspaceId: string, chatbotId: string, inpu
 export async function deleteChatbot(workspaceId: string, chatbotId: string) {
   await findOwnedChatbot(workspaceId, chatbotId);
   await prisma.chatbot.delete({ where: { id: chatbotId } });
+}
+
+// Exercises the chatbot's configured AI provider directly (no conversation
+// persistence — that's the conversation-storage phase, which will reuse
+// this same getProvider() call). Useful on its own for confirming a
+// chatbot's provider/prompt/model are configured correctly before
+// embedding the widget anywhere.
+//
+// TODO(settings phase): fetch + decrypt the workspace's ApiKey for
+// chatbot.aiProvider and pass it as the second argument instead of
+// `undefined` — until then, an OPENAI-configured chatbot will correctly
+// fail with a clear "no API key configured" error rather than a silent
+// fallback to Mock.
+export async function testChatbotReply(workspaceId: string, chatbotId: string, message: string): Promise<string> {
+  const chatbot = await findOwnedChatbot(workspaceId, chatbotId);
+  const provider = getProvider(chatbot.aiProvider, undefined);
+
+  return provider.generateReply({
+    systemPrompt: chatbot.systemPrompt,
+    history: [],
+    userMessage: message,
+    model: chatbot.aiModel
+  });
 }

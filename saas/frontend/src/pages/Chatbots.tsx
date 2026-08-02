@@ -1,6 +1,48 @@
-import { useCallback, useEffect, useState, type FormEvent } from 'react';
+import { Fragment, useCallback, useEffect, useState, type FormEvent } from 'react';
 import { useWorkspace } from '../context/WorkspaceContext';
 import { api, ApiError, type Chatbot } from '../lib/api';
+
+function TestReplyPanel({ workspaceId, chatbot }: { workspaceId: string; chatbot: Chatbot }) {
+  const [message, setMessage] = useState('');
+  const [reply, setReply] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [sending, setSending] = useState(false);
+
+  async function handleSend(e: FormEvent) {
+    e.preventDefault();
+    setSending(true);
+    setError(null);
+    setReply(null);
+    try {
+      const res = await api.testChatbotReply(workspaceId, chatbot.id, message);
+      setReply(res.reply);
+    } catch (err) {
+      setError(err instanceof ApiError ? err.message : 'Failed to get a reply');
+    } finally {
+      setSending(false);
+    }
+  }
+
+  return (
+    <tr className="test-reply-row">
+      <td colSpan={5}>
+        <form className="inline-form" onSubmit={handleSend}>
+          <input
+            placeholder={`Send a test message to "${chatbot.name}"`}
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+            required
+          />
+          <button type="submit" disabled={sending}>
+            {sending ? 'Sending…' : 'Send'}
+          </button>
+        </form>
+        {error && <p className="error-text">{error}</p>}
+        {reply && <p className="test-reply-output">{reply}</p>}
+      </td>
+    </tr>
+  );
+}
 
 export function ChatbotsPage() {
   const { currentWorkspace } = useWorkspace();
@@ -9,6 +51,7 @@ export function ChatbotsPage() {
   const [error, setError] = useState<string | null>(null);
   const [newName, setNewName] = useState('');
   const [creating, setCreating] = useState(false);
+  const [testingBotId, setTestingBotId] = useState<string | null>(null);
   const workspaceId = currentWorkspace?.id;
 
   const load = useCallback(async () => {
@@ -58,7 +101,7 @@ export function ChatbotsPage() {
     await load();
   }
 
-  if (!currentWorkspace) return null;
+  if (!currentWorkspace || !workspaceId) return null;
 
   return (
     <div>
@@ -90,23 +133,29 @@ export function ChatbotsPage() {
           </thead>
           <tbody>
             {chatbots.map(bot => (
-              <tr key={bot.id}>
-                <td>{bot.name}</td>
-                <td>{bot.aiProvider}</td>
-                <td>
-                  <button className="link-button" onClick={() => handleToggleActive(bot)}>
-                    {bot.isActive ? 'Active' : 'Inactive'}
-                  </button>
-                </td>
-                <td>
-                  <code>{bot.widgetToken}</code>
-                </td>
-                <td>
-                  <button className="link-button" onClick={() => handleDelete(bot)}>
-                    Delete
-                  </button>
-                </td>
-              </tr>
+              <Fragment key={bot.id}>
+                <tr>
+                  <td>{bot.name}</td>
+                  <td>{bot.aiProvider}</td>
+                  <td>
+                    <button className="link-button" onClick={() => handleToggleActive(bot)}>
+                      {bot.isActive ? 'Active' : 'Inactive'}
+                    </button>
+                  </td>
+                  <td>
+                    <code>{bot.widgetToken}</code>
+                  </td>
+                  <td className="row-actions">
+                    <button className="link-button" onClick={() => setTestingBotId(testingBotId === bot.id ? null : bot.id)}>
+                      {testingBotId === bot.id ? 'Hide test' : 'Test'}
+                    </button>
+                    <button className="link-button" onClick={() => handleDelete(bot)}>
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                {testingBotId === bot.id && <TestReplyPanel workspaceId={workspaceId} chatbot={bot} />}
+              </Fragment>
             ))}
           </tbody>
         </table>

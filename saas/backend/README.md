@@ -103,6 +103,29 @@ A chatbot gets a random `widgetToken` (UUID) at creation — this is what the
 embeddable widget (a later phase) uses to authenticate publicly, scoped to
 that one chatbot only, never to the workspace or a user session.
 
+## AI providers
+
+`src/modules/ai-providers/` — the `AIProvider` interface (`generateReply`)
+that everything else (chatbots, the widget, conversation storage) depends
+on, not on a concrete implementation:
+
+- `MockAIProvider` (default, `aiProvider: 'MOCK'`) — deterministic, offline,
+  no credentials needed. Replies are explicitly prefixed `[mock-ai]` so
+  nobody mistakes them for a real model's output.
+- `OpenAIProvider` (`aiProvider: 'OPENAI'`) — real integration against the
+  Chat Completions API via `fetch` (no SDK dependency). Requires a workspace
+  API key (wired up in the settings phase); `getProvider('OPENAI')` without
+  a key throws a clear `ValidationError` rather than silently using Mock.
+  **Not verified against the real OpenAI API** — `api.openai.com` isn't
+  reachable from this sandbox's egress allowlist, so this is covered by
+  tests against a mocked `fetch` only; see the class's header comment.
+
+`POST /workspaces/:workspaceId/chatbots/:chatbotId/test-reply` `{message}`
+-> `200 {reply}` exercises a chatbot's configured provider directly (any
+workspace member) — useful for confirming configuration before conversation
+storage (a later phase) or the embeddable widget are wired up to the same
+call.
+
 ## Health check
 
 `GET /health` — checks DB connectivity via `SELECT 1`; returns `503` with
