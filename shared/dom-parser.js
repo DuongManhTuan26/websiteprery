@@ -50,7 +50,9 @@ function parseHtmlToNodes(html) {
       type: attribs.type || null,
       name: attribs.name || null,
       ariaLabel: attribs['aria-label'] || null,
-      alt: attribs.alt || null
+      alt: attribs.alt || null,
+      content: attribs.content || null,
+      rel: attribs.rel || null
     });
 
     for (const child of element.children || []) {

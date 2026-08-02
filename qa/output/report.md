@@ -1,6 +1,6 @@
 # QA Report
 
-**Generated:** 2026-08-02T12:26:10.236Z
+**Generated:** 2026-08-02T12:33:38.990Z
 **Overall:** PASSED
 
 ## Output Validation
@@ -31,6 +31,6 @@ Build: PASSED
 
 Target: https://preny.ai
 Finished at: 2026-08-01T09:34:19.047Z
-Age: 26.9 hours
-⚠️ Dữ liệu capture đã 26.9 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công.
+Age: 27 hours
+⚠️ Dữ liệu capture đã 27.0 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công.
 ⚠️ Missing capture artifacts: websocket

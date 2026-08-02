@@ -2,7 +2,7 @@
 
 **Project:** https://preny.ai
 **Page Type:** saas-ai-landing
-**Generated:** 2026-08-02T12:25:26.933Z
+**Generated:** 2026-08-02T12:32:46.486Z
 
 ## Overview
 

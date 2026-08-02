@@ -1,7 +1,9 @@
 {
-  "generatedAt": "2026-08-02T12:25:26.907Z",
+  "generatedAt": "2026-08-02T12:32:46.460Z",
   "branding": {
     "title": "AI chatbot Preny tăng 50% tỷ lệ mua hàng",
+    "description": "AI chatbot chốt đơn tự động, tăng 50% tỷ lệ mua hàng khi tích hợp vào Fanpage, nhất là chốt sales khi chạy quảng cáo tin nhắn trên Facebook",
+    "favicon": "/favicon.ico",
     "logo": {
       "src": "/images/logo.svg",
       "alt": "Preny Logo"

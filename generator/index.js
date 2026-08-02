@@ -423,13 +423,20 @@ function buildFooterSection() {
 </footer>`.trim();
 }
 
-function buildIndexHtml(sections, title) {
+function buildIndexHtml(sections, title, lang, description, faviconHref) {
+  const descriptionHtml = description
+    ? `\n  <meta name="description" content="${escapeHtml(description)}">`
+    : '';
+  const faviconHtml = faviconHref
+    ? `\n  <link rel="icon" href="${escapeHtml(faviconHref)}">`
+    : '';
+
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${escapeHtml(lang || 'en')}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(title || 'Rebuilt Site')}</title>
+  <title>${escapeHtml(title || 'Rebuilt Site')}</title>${descriptionHtml}${faviconHtml}
   <link rel="stylesheet" href="/styles/tokens.css">
   <link rel="stylesheet" href="/styles/main.css">
 </head>
@@ -494,7 +501,12 @@ async function generateCode() {
     buildFooterSection()
   ].filter(Boolean);
 
-  fs.writeFileSync(path.join(outputDir, 'index.html'), buildIndexHtml(sections, semantic.branding?.title));
+  const htmlLang = semantic.language && semantic.language !== 'unknown' ? semantic.language : 'en';
+  const faviconHref = resolveUrl(semantic.branding?.favicon, baseUrl);
+  fs.writeFileSync(
+    path.join(outputDir, 'index.html'),
+    buildIndexHtml(sections, semantic.branding?.title, htmlLang, semantic.branding?.description, faviconHref)
+  );
   fs.writeFileSync(path.join(outputDir, 'styles', 'tokens.css'), buildTokensCss(tokens));
   fs.writeFileSync(path.join(outputDir, 'styles', 'main.css'), buildMainCss());
   fs.writeFileSync(path.join(outputDir, 'package.json'), JSON.stringify(buildPackageJson(), null, 2));

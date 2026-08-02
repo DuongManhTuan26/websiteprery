@@ -139,7 +139,10 @@ function sectionImage(containedComponents) {
 }
 
 function extractBranding(layout, components, allNodes) {
-  const titleNode = (allNodes || []).find(n => n.tag === 'TITLE');
+  const nodes = allNodes || [];
+  const titleNode = nodes.find(n => n.tag === 'TITLE');
+  const descriptionNode = nodes.find(n => n.tag === 'META' && n.name === 'description');
+  const faviconNode = nodes.find(n => n.tag === 'LINK' && (n.rel === 'icon' || n.rel === 'shortcut icon'));
   const header = (layout?.semanticSections || []).find(s => s.tag === 'HEADER');
   let logo = null;
 
@@ -155,6 +158,8 @@ function extractBranding(layout, components, allNodes) {
 
   return {
     title: titleNode?.text || null,
+    description: descriptionNode?.content || null,
+    favicon: faviconNode?.href || null,
     logo
   };
 }
