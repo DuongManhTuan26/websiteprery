@@ -193,6 +193,41 @@ body {
   text-align: center;
 }
 
+.split {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.split-reverse {
+  flex-direction: row-reverse;
+}
+
+.split-text {
+  flex: 1;
+}
+
+.split-text h2,
+.split-text p {
+  text-align: left;
+}
+
+.split .section-image {
+  flex: 1;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+  }
+
+  .split-text h2,
+  .split-text p {
+    text-align: center;
+  }
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -288,11 +323,18 @@ const SECTION_HEADINGS = {
   testimonial: 'Testimonials'
 };
 
-function buildBodySections(bodySections, baseUrl) {
+function buildBodySections(bodySections, baseUrl, layoutModel) {
   const sections = bodySections
     .filter(s => s.type !== 'header' && s.type !== 'footer')
     .filter(s => s.text);
 
+  // On pages whose real computed layout is flexbox-dominant, lay
+  // text+image sections out side-by-side (alternating sides) rather than
+  // always stacked — a real, extremely common flex landing-page pattern.
+  // Deliberately global (page-level layoutModel), not per-section: matching
+  // each generated section to its own specific original flex/grid container
+  // would need a much riskier redesign (see CLAUDE.md backlog).
+  const useSplitLayout = layoutModel === 'flexbox-dominant';
   let genericCount = 0;
 
   return sections.map((s, i) => {
@@ -309,6 +351,22 @@ function buildBodySections(bodySections, baseUrl) {
 
     const imageHtml = buildImageHtml(s.image, baseUrl, 'section-image');
     const ctaHtml = buildCtaHtml(s, baseUrl, null);
+
+    if (useSplitLayout && imageHtml) {
+      const reverseClass = i % 2 === 1 ? ' split-reverse' : '';
+
+      return `
+<section class="section" id="${s.type}-${i}">
+  <div class="container split${reverseClass}">
+    <div class="split-text">
+      <h2>${escapeHtml(heading)}</h2>
+      <p>${escapeHtml(s.text)}</p>
+      ${ctaHtml}
+    </div>
+    ${imageHtml}
+  </div>
+</section>`.trim();
+    }
 
     return `
 <section class="section" id="${s.type}-${i}">
@@ -421,6 +479,7 @@ async function generateCode() {
   const tokens = readJson(paths.styleExtraction.tokens);
   const interaction = dataset.analysis?.interaction || { elements: [], forms: 0 };
   const baseUrl = dataset.source?.target || null;
+  const layoutModel = dataset.analysis?.layout?.layoutModel || null;
 
   const contentSections = semantic.contentSections || [];
   const [heroSection, ...restSections] = contentSections;
@@ -430,7 +489,7 @@ async function generateCode() {
   const sections = [
     buildHeaderSection(semantic, interaction, ctaHref, baseUrl),
     buildHeroSection(heroSection, baseUrl, ctaHref),
-    ...buildBodySections(restSections, baseUrl),
+    ...buildBodySections(restSections, baseUrl, layoutModel),
     buildFormSection(interaction, fields),
     buildFooterSection()
   ].filter(Boolean);

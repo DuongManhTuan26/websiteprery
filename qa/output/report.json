@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T11:45:13.067Z",
+  "generatedAt": "2026-08-02T12:26:10.236Z",
   "passed": true,
   "outputChecks": [
     {
@@ -90,12 +90,12 @@
     "available": true,
     "target": "https://preny.ai",
     "finishedAt": "2026-08-01T09:34:19.047Z",
-    "ageHours": 26.2,
+    "ageHours": 26.9,
     "stale": true,
     "missingFiles": [
       "websocket"
     ],
-    "warning": "Dữ liệu capture đã 26.2 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công."
+    "warning": "Dữ liệu capture đã 26.9 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công."
   },
   "summary": {
     "totalChecks": 13,

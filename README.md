@@ -125,8 +125,9 @@ Working principles established over this project's development (keep following t
 
 ### Known open items (not blockers, intentionally deferred — see `CLAUDE.md` for full detail)
 
-- `generator/index.js` still renders a fixed overall page shape (header → hero → real body sections → contact form → footer); it does not yet decide *which* structural elements (nav vs. aside vs. multiple `<main>` regions) get dedicated treatment beyond header/footer/section/aside.
+- `generator/index.js` still renders a fixed overall page shape (header → hero → real body sections → contact form → footer); it does not yet decide *which* structural elements (nav vs. aside vs. multiple `<main>` regions) get dedicated treatment beyond header/footer/section/aside. Per-section image layout does adapt to the page's real `layoutModel` (side-by-side `.split` on flexbox-dominant pages), but that's a page-level heuristic, not a per-section match to each section's own original flex/grid container — matching individual sections to their own real container would need correlating `layout.json`'s `flexContainers`/`gridContainers` by DOM position, a larger, riskier redesign.
 - Minor heuristic overlap in `analyzer/component.js`'s class-name matching (e.g. a class containing both `cta` and `banner` resolves to `hero`) — real but low-impact, not fixed because it would add complexity without evidenced need.
+- Colors/fonts/radius/shadow/heading-sizes are all real, extracted design tokens now (see `CLAUDE.md`); real per-element spacing/padding is not yet extracted (`.section`/`.hero` padding is still a fixed `4rem 1rem`).
 - Live capture of the default target (`https://preny.ai`) is blocked by that site's own expired TLS certificate — external, not a repo defect. `npm run pipeline:skip-capture` is unaffected.
 
 ### Known external blocker

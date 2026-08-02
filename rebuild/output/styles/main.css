@@ -110,6 +110,41 @@ body {
   text-align: center;
 }
 
+.split {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.split-reverse {
+  flex-direction: row-reverse;
+}
+
+.split-text {
+  flex: 1;
+}
+
+.split-text h2,
+.split-text p {
+  text-align: left;
+}
+
+.split .section-image {
+  flex: 1;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+  }
+
+  .split-text h2,
+  .split-text p {
+    text-align: center;
+  }
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
