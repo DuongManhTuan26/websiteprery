@@ -25,7 +25,7 @@ function TestReplyPanel({ workspaceId, chatbot }: { workspaceId: string; chatbot
 
   return (
     <tr className="test-reply-row">
-      <td colSpan={5}>
+      <td colSpan={6}>
         <form className="inline-form" onSubmit={handleSend}>
           <input
             placeholder={`Send a test message to "${chatbot.name}"`}
@@ -44,6 +44,31 @@ function TestReplyPanel({ workspaceId, chatbot }: { workspaceId: string; chatbot
   );
 }
 
+const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:4000';
+
+function EmbedCodePanel({ chatbot }: { chatbot: Chatbot }) {
+  const snippet = `<script src="${API_URL}/widget.js" data-token="${chatbot.widgetToken}" data-api-url="${API_URL}"></script>`;
+  const [copied, setCopied] = useState(false);
+
+  async function handleCopy() {
+    await navigator.clipboard.writeText(snippet);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }
+
+  return (
+    <tr className="test-reply-row">
+      <td colSpan={6}>
+        <p>Paste this before <code>&lt;/body&gt;</code> on any page to embed this chatbot:</p>
+        <pre className="embed-snippet">{snippet}</pre>
+        <button type="button" onClick={handleCopy}>
+          {copied ? 'Copied!' : 'Copy snippet'}
+        </button>
+      </td>
+    </tr>
+  );
+}
+
 export function ChatbotsPage() {
   const { currentWorkspace } = useWorkspace();
   const [chatbots, setChatbots] = useState<Chatbot[]>([]);
@@ -52,6 +77,7 @@ export function ChatbotsPage() {
   const [newName, setNewName] = useState('');
   const [creating, setCreating] = useState(false);
   const [testingBotId, setTestingBotId] = useState<string | null>(null);
+  const [embedBotId, setEmbedBotId] = useState<string | null>(null);
   const workspaceId = currentWorkspace?.id;
 
   const load = useCallback(async () => {
@@ -129,6 +155,7 @@ export function ChatbotsPage() {
               <th>Status</th>
               <th>Widget token</th>
               <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -149,12 +176,18 @@ export function ChatbotsPage() {
                     <button className="link-button" onClick={() => setTestingBotId(testingBotId === bot.id ? null : bot.id)}>
                       {testingBotId === bot.id ? 'Hide test' : 'Test'}
                     </button>
+                    <button className="link-button" onClick={() => setEmbedBotId(embedBotId === bot.id ? null : bot.id)}>
+                      {embedBotId === bot.id ? 'Hide embed code' : 'Embed'}
+                    </button>
+                  </td>
+                  <td>
                     <button className="link-button" onClick={() => handleDelete(bot)}>
                       Delete
                     </button>
                   </td>
                 </tr>
                 {testingBotId === bot.id && <TestReplyPanel workspaceId={workspaceId} chatbot={bot} />}
+                {embedBotId === bot.id && <EmbedCodePanel chatbot={bot} />}
               </Fragment>
             ))}
           </tbody>

@@ -169,3 +169,26 @@ sandbox allows it; the Docker **daemon** is not running in this development
 sandbox (`docker ps` fails to reach `/var/run/docker.sock`), which is
 disclosed rather than silently assumed working — see that phase's commit
 message for exactly what was and wasn't exercised.
+
+## Known rough edges (worth checking before assuming behavior)
+
+- Prisma 7 requires an explicit driver adapter (`@prisma/adapter-pg`) at
+  runtime — `new PrismaClient()` with no adapter throws
+  `PrismaClientInitializationError` immediately. This is a real difference
+  from Prisma 5/6 (implicit connection-string-from-schema); don't "fix" a
+  fresh `PrismaClient()` call by re-adding a schema `url =` line, add the
+  adapter.
+- `helmet()`'s default `Cross-Origin-Resource-Policy: same-origin` silently
+  blocks a third-party page from *executing* a same-origin-fetched script
+  even when CORS headers explicitly allow the cross-origin request — CORP
+  and CORS are separate browser mechanisms and both must cooperate. This
+  broke the embeddable widget's `GET /widget.js` route during development
+  (script loaded with a 200, browser refused to run it, no console error
+  pointing at the cause) until `Cross-Origin-Resource-Policy: cross-origin`
+  was set explicitly on that one route. If a future public/embeddable route
+  is added, check this before assuming "CORS is allowed, so it'll work."
+- The dashboard API and the public widget API use *different* CORS
+  policies mounted per-router (`app.ts`), not a single global `cors()` call
+  — a single global policy can't simultaneously restrict the dashboard to
+  one origin (credentialed) and allow the widget to be embedded anywhere
+  (uncredentialed, token-scoped).

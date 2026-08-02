@@ -126,6 +126,25 @@ workspace member) — useful for confirming configuration before conversation
 storage (a later phase) or the embeddable widget are wired up to the same
 call.
 
+## Widget (public API)
+
+No authentication — access is scoped by the unguessable per-chatbot
+`widgetToken` in the URL, not by workspace/session. Mounted with permissive
+CORS (`origin: true`) since a real embed is loaded from arbitrary
+third-party origins.
+
+- `GET /widget/:widgetToken/config` -> `200 {name, isActive}`
+- `POST /widget/:widgetToken/message` `{message, history?}` -> `200 {reply}`
+  — `history` is client-supplied (capped at 20 entries, `role` restricted to
+  `user`/`assistant` only — a client cannot inject a `system` message to
+  override the chatbot's real system prompt) since there's no server-side
+  conversation persistence yet (conversation-storage phase).
+- `GET /widget.js` — serves the built widget bundle
+  (`../widget/dist/widget.js`) with `Cross-Origin-Resource-Policy:
+  cross-origin` explicitly set, overriding helmet's default `same-origin`
+  policy for this one route so a third-party page's `<script src=...>` can
+  actually execute it.
+
 ## Health check
 
 `GET /health` — checks DB connectivity via `SELECT 1`; returns `503` with

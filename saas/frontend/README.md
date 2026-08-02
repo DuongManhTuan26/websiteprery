@@ -35,7 +35,9 @@ Requires `saas-backend` running (see `../backend/README.md`).
 - `src/components/WorkspaceSwitcher.tsx` — sidebar dropdown + inline
   "create new workspace" form.
 - `src/pages/Chatbots.tsx` — CRUD for the current workspace's chatbots
-  (`/dashboard/chatbots`).
+  (`/dashboard/chatbots`), plus per-chatbot "Test" (calls
+  `/test-reply` inline) and "Embed" (shows the real `<script>` snippet,
+  with the actual widget token filled in, to copy onto any page).
 
 Routing is now nested (`DashboardLayout` renders `<Outlet/>`) so new
 authenticated pages are added as child routes in `App.tsx` rather than each
