@@ -63,6 +63,7 @@ model Workspace {
 
   members  WorkspaceMember[]
   chatbots Chatbot[]
+  contacts Contact[]
 
   @@map("workspaces")
 }
@@ -121,15 +122,40 @@ model Chatbot {
 model Conversation {
   id        String   @id @default(uuid())
   chatbotId String
+  contactId String?
   channel   String   @default("widget")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   chatbot  Chatbot   @relation(fields: [chatbotId], references: [id], onDelete: Cascade)
+  contact  Contact?  @relation(fields: [contactId], references: [id], onDelete: SetNull)
   messages Message[]
 
   @@index([chatbotId])
+  @@index([contactId])
   @@map("conversations")
+}
+
+// The mini-CRM entity — a real person behind one or more conversations.
+// Deliberately minimal fields (no custom fields, no pipeline/stage) rather
+// than guessing what a full CRM should look like without a real product
+// spec to build against.
+model Contact {
+  id          String   @id @default(uuid())
+  workspaceId String
+  name        String?
+  email       String?
+  phone       String?
+  notes       String?
+  tags        String[] @default([])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace     Workspace      @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  conversations Conversation[]
+
+  @@index([workspaceId])
+  @@map("contacts")
 }
 
 enum MessageRole {

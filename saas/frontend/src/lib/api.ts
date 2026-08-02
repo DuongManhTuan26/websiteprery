@@ -160,18 +160,49 @@ export interface Message {
   createdAt: string;
 }
 
+export interface ContactRef {
+  id: string;
+  name: string | null;
+  email: string | null;
+}
+
 export interface ConversationSummary {
   id: string;
   channel: string;
   createdAt: string;
   updatedAt: string;
   chatbot: { id: string; name: string };
+  contact: ContactRef | null;
   messageCount: number;
   lastMessage: Message | null;
 }
 
 export interface ConversationDetail extends ConversationSummary {
   messages: Message[];
+}
+
+export interface Contact {
+  id: string;
+  workspaceId: string;
+  name: string | null;
+  email: string | null;
+  phone: string | null;
+  notes: string | null;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ContactInput {
+  name?: string;
+  email?: string;
+  phone?: string;
+  notes?: string;
+  tags?: string[];
+}
+
+export interface ContactDetail extends Contact {
+  conversations: (ConversationSummary & { chatbot: { id: string; name: string } })[];
 }
 
 export const api = {
@@ -238,5 +269,30 @@ export const api = {
   getConversation: (workspaceId: string, conversationId: string) =>
     request<{ conversation: ConversationDetail }>(`/workspaces/${workspaceId}/conversations/${conversationId}`, {
       auth: true
-    })
+    }),
+
+  setConversationContact: (workspaceId: string, conversationId: string, contactId: string | null) =>
+    request<{ conversation: ConversationDetail }>(`/workspaces/${workspaceId}/conversations/${conversationId}/contact`, {
+      method: 'PATCH',
+      body: { contactId },
+      auth: true
+    }),
+
+  listContacts: (workspaceId: string) => request<{ contacts: Contact[] }>(`/workspaces/${workspaceId}/contacts`, { auth: true }),
+
+  createContact: (workspaceId: string, input: ContactInput) =>
+    request<{ contact: Contact }>(`/workspaces/${workspaceId}/contacts`, { method: 'POST', body: input, auth: true }),
+
+  getContact: (workspaceId: string, contactId: string) =>
+    request<{ contact: ContactDetail }>(`/workspaces/${workspaceId}/contacts/${contactId}`, { auth: true }),
+
+  updateContact: (workspaceId: string, contactId: string, input: ContactInput) =>
+    request<{ contact: Contact }>(`/workspaces/${workspaceId}/contacts/${contactId}`, {
+      method: 'PATCH',
+      body: input,
+      auth: true
+    }),
+
+  deleteContact: (workspaceId: string, contactId: string) =>
+    request<void>(`/workspaces/${workspaceId}/contacts/${contactId}`, { method: 'DELETE', auth: true })
 };

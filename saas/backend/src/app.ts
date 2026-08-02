@@ -11,6 +11,7 @@ import { workspacesRouter } from './modules/workspaces/router.js';
 import { chatbotsRouter } from './modules/chatbots/router.js';
 import { widgetRouter } from './modules/widget/router.js';
 import { conversationsRouter } from './modules/conversations/router.js';
+import { crmRouter } from './modules/crm/router.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const WIDGET_DIST_DIR = path.resolve(__dirname, '../../widget/dist');
@@ -37,6 +38,7 @@ export function createApp(): Express {
   app.use('/workspaces', dashboardCors, workspacesRouter);
   app.use('/workspaces/:workspaceId/chatbots', dashboardCors, chatbotsRouter);
   app.use('/workspaces/:workspaceId/conversations', dashboardCors, conversationsRouter);
+  app.use('/workspaces/:workspaceId/contacts', dashboardCors, crmRouter);
   app.use('/widget', widgetCors, widgetRouter);
 
   // Serves the built widget bundle (saas/widget/dist/widget.js) so a

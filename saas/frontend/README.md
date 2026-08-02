@@ -40,8 +40,15 @@ Requires `saas-backend` running (see `../backend/README.md`).
   with the actual widget token filled in, to copy onto any page).
 - `src/pages/Conversations.tsx` — master-detail view of every real
   conversation the widget has recorded (`/dashboard/conversations`):
-  a list (chatbot name, last-message preview, updated time) and, on
-  selection, the full message thread for that conversation.
+  a list (chatbot name, linked contact if any, last-message preview,
+  updated time) and, on selection, the full message thread plus a
+  dropdown to link/unlink a contact. Linking triggers both the detail
+  reload and a background refresh of the summary list (a real bug from
+  this phase's own E2E testing: linking updated the detail pane but left
+  the list showing stale data until a full page reload).
+- `src/pages/Contacts.tsx` — mini CRM (`/dashboard/crm`): create/list/
+  delete contacts, and per-contact a notes editor + read-only list of
+  linked conversations.
 
 Routing is now nested (`DashboardLayout` renders `<Outlet/>`) so new
 authenticated pages are added as child routes in `App.tsx` rather than each

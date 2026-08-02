@@ -164,6 +164,26 @@ endpoint on the dashboard side. Every query filters by `chatbot:
 different tenant 404s even for an authenticated member of some other
 workspace.
 
+## Mini CRM (contacts)
+
+Nested under a workspace:
+
+- `POST /workspaces/:workspaceId/contacts` `{name?, email?, phone?, notes?, tags?}` -> `201 {contact}` (any member)
+- `GET /workspaces/:workspaceId/contacts` -> `200 {contacts}` (any member)
+- `GET /workspaces/:workspaceId/contacts/:contactId` -> `200 {contact}` (any member) — includes linked conversations, each with a real last-message preview and message count (same shape as the conversations list endpoint)
+- `PATCH /workspaces/:workspaceId/contacts/:contactId` -> `200 {contact}` (any member)
+- `DELETE /workspaces/:workspaceId/contacts/:contactId` -> `204` (`OWNER`/`ADMIN` only)
+
+Deliberately minimal fields — no custom fields, no pipeline/stage — rather
+than guessing what a full CRM should look like without a real product spec.
+
+Linking a conversation to a contact is a conversations-module endpoint:
+`PATCH /workspaces/:workspaceId/conversations/:conversationId/contact
+{contactId}` (`contactId: null` to unlink). Both the conversation and the
+contact are independently verified to belong to `:workspaceId` — a
+`contactId` from a different tenant 404s rather than silently linking
+across tenants.
+
 ## Health check
 
 `GET /health` — checks DB connectivity via `SELECT 1`; returns `503` with

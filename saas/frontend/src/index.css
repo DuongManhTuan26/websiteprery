@@ -398,6 +398,54 @@ button {
   border: 1px solid var(--border);
 }
 
+.conversation-contact {
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.contact-linker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.contact-linker select {
+  font: inherit;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.contact-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contact-detail-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.contact-detail-grid textarea {
+  font: inherit;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.linked-conversations {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+}
+
 .test-reply-output {
   margin: 0;
   padding: 10px 12px;

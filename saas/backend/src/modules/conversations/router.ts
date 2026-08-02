@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import { requireAuth } from '../../middleware/requireAuth.js';
 import { requireWorkspaceMember } from '../../middleware/requireWorkspaceMember.js';
+import { parseOrThrow } from '../../utils/validate.js';
+import { setContactSchema } from './schemas.js';
 import * as conversationService from './service.js';
 
 // Mounted at /workspaces/:workspaceId/conversations — read-only for now
@@ -21,6 +23,20 @@ conversationsRouter.get('/', async (req, res, next) => {
 conversationsRouter.get('/:conversationId', async (req, res, next) => {
   try {
     const conversation = await conversationService.getConversation(req.workspaceId!, String(req.params.conversationId));
+    res.json({ conversation });
+  } catch (err) {
+    next(err);
+  }
+});
+
+conversationsRouter.patch('/:conversationId/contact', async (req, res, next) => {
+  try {
+    const { contactId } = parseOrThrow(setContactSchema, req.body);
+    const conversation = await conversationService.setConversationContact(
+      req.workspaceId!,
+      String(req.params.conversationId),
+      contactId
+    );
     res.json({ conversation });
   } catch (err) {
     next(err);
