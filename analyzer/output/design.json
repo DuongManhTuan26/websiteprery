@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T11:36:35.064Z",
+  "generatedAt": "2026-08-02T11:44:10.528Z",
   "totalElements": 1960,
   "palette": [
     {
@@ -165,10 +165,6 @@
   ],
   "shadows": [
     {
-      "value": "rgba(0, 0, 0, 0.1) 0px 0px 0px 0px, rgba(255, 255, 255, 0.5) 0px 10px 10px 0px inset, rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset, rgb(255, 255, 255) 0px 0px 90px 13px inset",
-      "count": 120
-    },
-    {
       "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
       "count": 7
     },
@@ -177,14 +173,19 @@
       "count": 6
     },
     {
-      "value": "rgba(0, 0, 0, 0.05) 0px 8px 32px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset, rgb(255, 255, 255) 0px 0px 20px 10px inset",
-      "count": 6
-    },
-    {
       "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.25) 0px 0px 8px 0px",
       "count": 4
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+      "count": 3
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+      "count": 2
     }
   ],
+  "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
   "primaryFont": "ui-sans-serif",
   "dominantColors": [
     "rgb(255,255,255)",

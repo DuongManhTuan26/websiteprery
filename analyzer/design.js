@@ -84,7 +84,11 @@ async function analyzeDesign() {
       borderRadii[style.borderRadius] = (borderRadii[style.borderRadius] || 0) + 1;
     }
 
-    if (style.boxShadow && style.boxShadow !== 'none') {
+    // "inset" shadows are decorative glass/glow accents baked into one
+    // specific element (e.g. a blurred glass header) — reusing one as a
+    // generic "elevation" shadow for arbitrary elements looks wrong.
+    // General-purpose drop shadows never use inset, so exclude them here.
+    if (style.boxShadow && style.boxShadow !== 'none' && !style.boxShadow.includes('inset')) {
       shadows[style.boxShadow] = (shadows[style.boxShadow] || 0) + 1;
     }
   }
@@ -131,6 +135,7 @@ async function analyzeDesign() {
     },
     borderRadii: topEntries(borderRadii, 5),
     shadows: topEntries(shadows, 5),
+    boxShadow: topEntries(shadows, 1)[0]?.value || null,
     primaryFont: topEntries(fonts, 1)[0]?.value || null,
     dominantColors: topEntries(backgroundColors, 5).map(entry => entry.value)
   };

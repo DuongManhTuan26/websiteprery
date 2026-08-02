@@ -52,6 +52,10 @@ function buildTokensCss(tokens) {
     lines.push(`  --radius: ${tokens.radius};`);
   }
 
+  if (tokens.shadow) {
+    lines.push(`  --shadow: ${tokens.shadow};`);
+  }
+
   if (tokens.typography.primaryFont) {
     lines.push(`  --font-primary: "${tokens.typography.primaryFont}", system-ui, sans-serif;`);
   }
@@ -101,6 +105,7 @@ body {
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
   border-radius: var(--radius, 12px);
+  box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,0.1));
   margin: 1rem auto;
   max-width: 1400px;
 }
@@ -147,6 +152,7 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: var(--radius, 12px);
+  box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,0.1));
   margin: 2rem auto 0;
   display: block;
 }
@@ -161,6 +167,7 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: var(--radius, 12px);
+  box-shadow: var(--shadow, 0 1px 3px rgba(0,0,0,0.1));
   margin-top: 1.5rem;
 }
 

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-02T11:36:35.151Z",
+  "generatedAt": "2026-08-02T11:44:10.611Z",
   "version": "1.0.0",
   "layout": {
-    "generatedAt": "2026-08-02T11:36:35.038Z",
+    "generatedAt": "2026-08-02T11:44:10.504Z",
     "totalNodes": 1566,
     "maxDepth": 23,
     "displayCounts": {
@@ -515,7 +515,7 @@
     "layoutModel": "flexbox-dominant"
   },
   "components": {
-    "generatedAt": "2026-08-02T11:36:35.048Z",
+    "generatedAt": "2026-08-02T11:44:10.514Z",
     "totalNodes": 1566,
     "totalComponents": 342,
     "tagStatistics": {
@@ -2765,7 +2765,7 @@
     ]
   },
   "design": {
-    "generatedAt": "2026-08-02T11:36:35.064Z",
+    "generatedAt": "2026-08-02T11:44:10.528Z",
     "totalElements": 1960,
     "palette": [
       {
@@ -2931,10 +2931,6 @@
     ],
     "shadows": [
       {
-        "value": "rgba(0, 0, 0, 0.1) 0px 0px 0px 0px, rgba(255, 255, 255, 0.5) 0px 10px 10px 0px inset, rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset, rgb(255, 255, 255) 0px 0px 90px 13px inset",
-        "count": 120
-      },
-      {
         "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
         "count": 7
       },
@@ -2943,14 +2939,19 @@
         "count": 6
       },
       {
-        "value": "rgba(0, 0, 0, 0.05) 0px 8px 32px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.1) 0px -1px 0px 0px inset, rgb(255, 255, 255) 0px 0px 20px 10px inset",
-        "count": 6
-      },
-      {
         "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(255, 255, 255, 0.25) 0px 0px 8px 0px",
         "count": 4
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px",
+        "count": 3
+      },
+      {
+        "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+        "count": 2
       }
     ],
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
     "primaryFont": "ui-sans-serif",
     "dominantColors": [
       "rgb(255,255,255)",
@@ -2961,7 +2962,7 @@
     ]
   },
   "interaction": {
-    "generatedAt": "2026-08-02T11:36:35.073Z",
+    "generatedAt": "2026-08-02T11:44:10.537Z",
     "clickable": 84,
     "forms": 1,
     "inputs": 5,
@@ -3960,7 +3961,7 @@
     ]
   },
   "vision": {
-    "generatedAt": "2026-08-02T11:36:35.074Z",
+    "generatedAt": "2026-08-02T11:44:10.538Z",
     "screenshotAvailable": true,
     "screenshot": {
       "path": "/Users/mac/capture/capture/raw/screenshots/home.png",
