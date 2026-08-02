@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T11:31:09.120Z",
+  "generatedAt": "2026-08-02T11:36:35.265Z",
   "version": "1.0.0",
   "projectName": "https://preny.ai",
   "pageType": "saas-ai-landing",
@@ -84,6 +84,7 @@
       "type": "section",
       "tag": "SECTION",
       "text": "AI bán hàng mạnh mẽ, giúp tăng hiệu quả chốt đơn lên đến 50%",
+      "eyebrow": "Bộ giải pháp AI bán hàng thế hệ mới",
       "image": null,
       "cta": {
         "text": "Xem demo",
@@ -94,6 +95,7 @@
       "type": "card",
       "tag": "SECTION",
       "text": "Dữ liệu không chia sẻ - không phụ thuộc nền tảng ngoài",
+      "eyebrow": "AI Mini CRM",
       "image": {
         "src": "/images/bot-demo.svg",
         "alt": "Truong Nguyen"
@@ -104,6 +106,7 @@
       "type": "card",
       "tag": "SECTION",
       "text": "Tập trung toàn bộ hội thoại bán hàng từ , , , , , ... vào một giao diện duy nhất. AI theo sát từng khách hàng, không bỏ sót cơ hội chốt đơn.",
+      "eyebrow": "Nền tảng AI giúp doanh nghiệp",
       "image": {
         "src": "/images/why-us.svg",
         "alt": "Platform Icons Background"
@@ -114,6 +117,7 @@
       "type": "section",
       "tag": "SECTION",
       "text": "Mọi thông tin khách hàng được tự động ghi nhận và đồng bộ vào mini CRM ngay trong lúc chat, giúp đội ngũ bán hàng theo sát khách hơn và tăng tỷ lệ chuyển đổi.",
+      "eyebrow": "Khám phá của Preny AI",
       "image": {
         "src": "/images/module.svg",
         "alt": "Background"
@@ -124,6 +128,7 @@
       "type": "card",
       "tag": "SECTION",
       "text": "AI Chatbot tư vấn sản phẩm trực quan qua hình ảnh 2 chiều, khách gửi AI tư vấn được ảnh và khách yêu cầu xem ảnh AI cũng sẽ gửi, giúp khách dễ hình dung và ra quyết định nhanh hơn.",
+      "eyebrow": "AI bán hàng của Preny được",
       "image": {
         "src": "/images/bg-removal.svg",
         "alt": null
@@ -137,6 +142,7 @@
       "type": "section",
       "tag": "SECTION",
       "text": "Những góc nhìn và đánh giá từ các đơn vị báo chí uy tín",
+      "eyebrow": "Hợp tác cùng các",
       "image": null,
       "cta": null
     },
@@ -144,6 +150,7 @@
       "type": "section",
       "tag": "SECTION",
       "text": "Nhận tư vấn từ chuyên gia AI để tối ưu tương tác và tăng trưởng doanh nghiệp",
+      "eyebrow": "cùng đội ngũ Preny",
       "image": null,
       "cta": null
     },
@@ -151,6 +158,7 @@
       "type": "section",
       "tag": "SECTION",
       "text": "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp (Live Chat)? Quy trình chuyển đổi diễn ra như thế nào?",
+      "eyebrow": "Câu hỏi thường gặp",
       "image": null,
       "cta": null
     },
@@ -158,6 +166,7 @@
       "type": "section",
       "tag": "SECTION",
       "text": null,
+      "eyebrow": null,
       "image": null,
       "cta": null
     }

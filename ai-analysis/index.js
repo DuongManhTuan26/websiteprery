@@ -124,6 +124,15 @@ function sectionText(allNodes, section) {
   return candidates[0] || null;
 }
 
+function sectionEyebrow(allNodes, section, mainText) {
+  const candidates = allNodes
+    .filter(n => n.index > section.index && n.index < section.endIndex && n.text)
+    .filter(n => n.text !== mainText && n.text.length <= 60)
+    .sort((a, b) => a.index - b.index);
+
+  return candidates[0]?.text || null;
+}
+
 function sectionImage(containedComponents) {
   const withImage = containedComponents.find(c => c.tag === 'IMG' && c.src);
   return withImage ? { src: withImage.src, alt: withImage.alt || null } : null;
@@ -165,11 +174,13 @@ function extractContentSections(layout, components, allNodes, interactionElement
 
   return bodySections.slice(0, 12).map(section => {
     const contained = allComponents.filter(c => c.index > section.index && c.index < section.endIndex);
+    const text = sectionText(allNodes, section);
 
     return {
       type: classifySection(contained),
       tag: section.tag,
-      text: sectionText(allNodes, section),
+      text,
+      eyebrow: sectionEyebrow(allNodes, section, text),
       image: sectionImage(contained),
       cta: sectionCta(interactionElements, section)
     };

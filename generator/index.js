@@ -127,6 +127,15 @@ body {
   margin-bottom: 1rem;
 }
 
+.eyebrow {
+  color: var(--accent, #6366f1);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
 .hero p {
   font-size: 1.125rem;
   opacity: 0.8;
@@ -252,10 +261,12 @@ function buildHeroSection(section, baseUrl, ctaHref) {
 
   const imageHtml = buildImageHtml(section.image, baseUrl, 'hero-image');
   const ctaHtml = buildCtaHtml(section, baseUrl, ctaHref);
+  const eyebrowHtml = section.eyebrow ? `<p class="eyebrow">${escapeHtml(section.eyebrow)}</p>` : '';
 
   return `
 <section class="hero" id="hero">
   <div class="container">
+    ${eyebrowHtml}
     <h1>${escapeHtml(section.text)}</h1>
     ${ctaHtml}
     ${imageHtml}
