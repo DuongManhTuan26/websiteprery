@@ -1,6 +1,7 @@
 import { prisma } from '../../db/client.js';
 import { ForbiddenError, NotFoundError } from '../../middleware/errorHandler.js';
 import { getProvider } from '../ai-providers/index.js';
+import { getDecryptedApiKey } from '../settings/service.js';
 import type { ChatMessage } from '../ai-providers/types.js';
 
 export interface PublicChatbotConfig {
@@ -52,7 +53,8 @@ export async function sendMessage(
 
   await prisma.message.create({ data: { conversationId: conversation.id, role: 'USER', content: message } });
 
-  const provider = getProvider(chatbot.aiProvider, undefined);
+  const apiKey = await getDecryptedApiKey(chatbot.workspaceId, chatbot.aiProvider);
+  const provider = getProvider(chatbot.aiProvider, apiKey);
   const reply = await provider.generateReply({
     systemPrompt: chatbot.systemPrompt,
     history,

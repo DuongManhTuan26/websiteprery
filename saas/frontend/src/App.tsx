@@ -5,6 +5,7 @@ import { DashboardPage } from './pages/Dashboard';
 import { ChatbotsPage } from './pages/Chatbots';
 import { ConversationsPage } from './pages/Conversations';
 import { ContactsPage } from './pages/Contacts';
+import { SettingsPage } from './pages/Settings';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { DashboardLayout } from './components/DashboardLayout';
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="chatbots" element={<ChatbotsPage />} />
         <Route path="conversations" element={<ConversationsPage />} />
         <Route path="crm" element={<ContactsPage />} />
+        <Route path="settings" element={<SettingsPage />} />
       </Route>
     </Routes>
   );

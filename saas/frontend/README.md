@@ -49,6 +49,11 @@ Requires `saas-backend` running (see `../backend/README.md`).
 - `src/pages/Contacts.tsx` — mini CRM (`/dashboard/crm`): create/list/
   delete contacts, and per-contact a notes editor + read-only list of
   linked conversations.
+- `src/pages/Settings.tsx` — workspace rename, member management (invite by
+  email, change role, remove — the UI for endpoints that have existed since
+  the workspace phase but never had a frontend), and AI provider API key
+  management (masked input, "Configured"/"Not configured" status, never
+  shows a saved key's value again).
 
 Routing is now nested (`DashboardLayout` renders `<Outlet/>`) so new
 authenticated pages are added as child routes in `App.tsx` rather than each

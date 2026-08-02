@@ -64,8 +64,27 @@ model Workspace {
   members  WorkspaceMember[]
   chatbots Chatbot[]
   contacts Contact[]
+  apiKeys  ApiKey[]
 
   @@map("workspaces")
+}
+
+// One key per (workspace, provider) — a workspace has at most one OpenAI
+// key, etc. encryptedKey is AES-256-GCM ciphertext (see
+// src/utils/encryption.ts); this table is never read back to the client in
+// plaintext, only "is a key configured" (see settings/service.ts).
+model ApiKey {
+  id           String         @id @default(uuid())
+  workspaceId  String
+  provider     AIProviderType
+  encryptedKey String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@unique([workspaceId, provider])
+  @@map("api_keys")
 }
 
 model WorkspaceMember {

@@ -205,6 +205,12 @@ export interface ContactDetail extends Contact {
   conversations: (ConversationSummary & { chatbot: { id: string; name: string } })[];
 }
 
+export interface ApiKeyStatus {
+  provider: 'OPENAI';
+  configured: boolean;
+  updatedAt: string | null;
+}
+
 export const api = {
   register: (email: string, password: string, name: string) =>
     request<AuthResult>('/auth/register', { method: 'POST', body: { email, password, name } }),
@@ -294,5 +300,28 @@ export const api = {
     }),
 
   deleteContact: (workspaceId: string, contactId: string) =>
-    request<void>(`/workspaces/${workspaceId}/contacts/${contactId}`, { method: 'DELETE', auth: true })
+    request<void>(`/workspaces/${workspaceId}/contacts/${contactId}`, { method: 'DELETE', auth: true }),
+
+  updateWorkspace: (workspaceId: string, name: string) =>
+    request<{ workspace: Workspace }>(`/workspaces/${workspaceId}`, { method: 'PATCH', body: { name }, auth: true }),
+
+  updateMemberRole: (workspaceId: string, userId: string, role: WorkspaceRole) =>
+    request<{ member: WorkspaceMemberEntry }>(`/workspaces/${workspaceId}/members/${userId}`, {
+      method: 'PATCH',
+      body: { role },
+      auth: true
+    }),
+
+  listApiKeys: (workspaceId: string) =>
+    request<{ apiKeys: ApiKeyStatus[] }>(`/workspaces/${workspaceId}/settings/api-keys`, { auth: true }),
+
+  setApiKey: (workspaceId: string, provider: string, apiKey: string) =>
+    request<{ apiKey: ApiKeyStatus }>(`/workspaces/${workspaceId}/settings/api-keys/${provider}`, {
+      method: 'PUT',
+      body: { apiKey },
+      auth: true
+    }),
+
+  deleteApiKey: (workspaceId: string, provider: string) =>
+    request<void>(`/workspaces/${workspaceId}/settings/api-keys/${provider}`, { method: 'DELETE', auth: true })
 };

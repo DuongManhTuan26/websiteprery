@@ -446,6 +446,62 @@ button {
   font-size: 13px;
 }
 
+.settings-section {
+  margin-bottom: 36px;
+}
+
+.settings-section h2 {
+  font-size: 16px;
+  color: var(--text-h);
+  margin: 0 0 12px;
+}
+
+.settings-hint {
+  font-size: 13px;
+  color: var(--text);
+  margin: 0 0 14px;
+}
+
+.settings-section .data-table select {
+  font: inherit;
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.api-key-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.api-key-status {
+  color: var(--text);
+  font-size: 12px;
+}
+
+.api-key-status.configured {
+  color: #16a34a;
+}
+
+.api-key-row input {
+  font: inherit;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  min-width: 200px;
+}
+
+.api-key-row button {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
 .test-reply-output {
   margin: 0;
   padding: 10px 12px;

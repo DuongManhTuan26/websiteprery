@@ -184,6 +184,30 @@ contact are independently verified to belong to `:workspaceId` — a
 `contactId` from a different tenant 404s rather than silently linking
 across tenants.
 
+## Settings (API keys)
+
+Nested under a workspace:
+
+- `GET /workspaces/:workspaceId/settings/api-keys` -> `200 {apiKeys}` (any
+  member) — `[{provider, configured, updatedAt}]`, **never** the key itself.
+- `PUT /workspaces/:workspaceId/settings/api-keys/:provider` `{apiKey}` ->
+  `200 {apiKey}` (`OWNER`/`ADMIN` only — a workspace-wide credential, same
+  restriction tier as deleting a chatbot) — upserts, encrypted at rest
+  (AES-256-GCM, `src/utils/encryption.ts`), response never echoes the value
+  back.
+- `DELETE /workspaces/:workspaceId/settings/api-keys/:provider` -> `204`
+  (`OWNER`/`ADMIN` only).
+
+Only `OPENAI` is a settable provider (`MOCK` needs no key and is rejected
+with 400 if attempted). This closes a TODO left open since the AI-provider-
+abstraction phase: `chatbots/service.ts`'s `testChatbotReply` and
+`widget/service.ts`'s `sendMessage` now call
+`settings/service.ts`'s `getDecryptedApiKey()` before building a provider,
+so a chatbot configured for `OPENAI` with a real key set here will actually
+call the real OpenAI API (verified with a mocked `fetch` — see
+`tests/settings.test.ts`'s "end-to-end wiring" test, which asserts the
+exact decrypted key reaches the `Authorization` header).
+
 ## Health check
 
 `GET /health` — checks DB connectivity via `SELECT 1`; returns `503` with
