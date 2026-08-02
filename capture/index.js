@@ -10,6 +10,7 @@ const { attachWebSocketLogger, flushWebSocketFrames } = require('./websocket');
 const { generateReport } = require('./report');
 const { getViewport } = require('./viewport');
 const { scrollFullPage } = require('./scroll');
+const { openAllInteractive } = require('./interact');
 const config = require('./config');
 
 (async () => {
@@ -34,6 +35,15 @@ const config = require('./config');
   // Trigger below-the-fold lazy-loaded assets before capturing anything,
   // so the HAR/DOM/styles snapshot reflects a fully-loaded page rather
   // than just what was visible in the first viewport.
+  await scrollFullPage(page);
+
+  // Open every accordion/tab/dropdown/menu/popup this pipeline can find so
+  // their real (currently lazy-mounted or hidden) content and any requests
+  // it triggers land in the DOM snapshot and the HAR.
+  await openAllInteractive(page);
+
+  // Newly-opened panels can themselves contain below-the-fold lazy images
+  // (e.g. a tall accordion panel) — scroll again to trigger those too.
   await scrollFullPage(page);
 
   await saveScreenshot(page);
