@@ -46,9 +46,18 @@ async function analyzeDesign() {
   const fontSizes = {};
   const borderRadii = {};
   const shadows = {};
+  const headingFontSizes = { H1: {}, H2: {}, H3: {} };
 
   for (const entry of styles) {
     const style = entry.style || {};
+
+    // Site-wide fontSizes below is dominated by body/paragraph text (there
+    // are far more <p>/<span> than <h1>) — using its most-common value for
+    // a heading would pick a body-text size, not a heading size. Track
+    // H1/H2/H3 font-size separately, keyed by their own tag.
+    if (headingFontSizes[entry.tag] && style.fontSize) {
+      headingFontSizes[entry.tag][style.fontSize] = (headingFontSizes[entry.tag][style.fontSize] || 0) + 1;
+    }
 
     const color = normalizeColor(style.color);
     const background = normalizeColor(style.background);
@@ -113,7 +122,12 @@ async function analyzeDesign() {
     accentColor,
     typography: {
       fonts: topEntries(fonts, 5),
-      fontSizes: topEntries(fontSizes, 10)
+      fontSizes: topEntries(fontSizes, 10),
+      headingSizes: {
+        h1: topEntries(headingFontSizes.H1, 1)[0]?.value || null,
+        h2: topEntries(headingFontSizes.H2, 1)[0]?.value || null,
+        h3: topEntries(headingFontSizes.H3, 1)[0]?.value || null
+      }
     },
     borderRadii: topEntries(borderRadii, 5),
     shadows: topEntries(shadows, 5),

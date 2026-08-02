@@ -34,7 +34,8 @@ function buildTokens(cssData, designData) {
     typography: {
       fonts,
       fontSizes,
-      primaryFont: designData.primaryFont
+      primaryFont: designData.primaryFont,
+      headingSizes: designData.typography.headingSizes
     },
     borderRadii: designData.borderRadii,
     shadows: designData.shadows,

@@ -60,6 +60,16 @@ function buildTokensCss(tokens) {
     lines.push(`  --font-size-${i + 1}: ${size.value};`);
   });
 
+  const headingSizes = tokens.typography.headingSizes || {};
+
+  if (headingSizes.h1) {
+    lines.push(`  --h1-size: ${headingSizes.h1};`);
+  }
+
+  if (headingSizes.h2) {
+    lines.push(`  --h2-size: ${headingSizes.h2};`);
+  }
+
   lines.push('}');
 
   return lines.join('\n');
@@ -113,7 +123,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, var(--h1-size, 3.5rem));
   margin-bottom: 1rem;
 }
 
@@ -162,7 +172,7 @@ body {
 }
 
 .section h2 {
-  font-size: 2rem;
+  font-size: var(--h2-size, 2rem);
   margin-bottom: 2rem;
   text-align: center;
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T11:19:52.599Z",
+  "generatedAt": "2026-08-02T11:26:43.693Z",
   "version": "1.0.0",
   "stack": {
     "framework": "static-html",
@@ -126,7 +126,12 @@
             "usage": 6
           }
         ],
-        "primaryFont": "ui-sans-serif"
+        "primaryFont": "ui-sans-serif",
+        "headingSizes": {
+          "h1": "60px",
+          "h2": "40px",
+          "h3": "16px"
+        }
       }
     },
     "primaryFont": "ui-sans-serif",

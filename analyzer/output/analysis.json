@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-02T11:19:52.465Z",
+  "generatedAt": "2026-08-02T11:26:43.555Z",
   "version": "1.0.0",
   "layout": {
-    "generatedAt": "2026-08-02T11:19:52.353Z",
+    "generatedAt": "2026-08-02T11:26:43.441Z",
     "totalNodes": 1566,
     "maxDepth": 23,
     "displayCounts": {
@@ -515,7 +515,7 @@
     "layoutModel": "flexbox-dominant"
   },
   "components": {
-    "generatedAt": "2026-08-02T11:19:52.363Z",
+    "generatedAt": "2026-08-02T11:26:43.452Z",
     "totalNodes": 1566,
     "totalComponents": 342,
     "tagStatistics": {
@@ -2765,7 +2765,7 @@
     ]
   },
   "design": {
-    "generatedAt": "2026-08-02T11:19:52.383Z",
+    "generatedAt": "2026-08-02T11:26:43.467Z",
     "totalElements": 1960,
     "palette": [
       {
@@ -2900,7 +2900,12 @@
           "value": "30px",
           "count": 6
         }
-      ]
+      ],
+      "headingSizes": {
+        "h1": "60px",
+        "h2": "40px",
+        "h3": "16px"
+      }
     },
     "borderRadii": [
       {
@@ -2956,7 +2961,7 @@
     ]
   },
   "interaction": {
-    "generatedAt": "2026-08-02T11:19:52.391Z",
+    "generatedAt": "2026-08-02T11:26:43.476Z",
     "clickable": 84,
     "forms": 1,
     "inputs": 5,
@@ -3955,7 +3960,7 @@
     ]
   },
   "vision": {
-    "generatedAt": "2026-08-02T11:19:52.392Z",
+    "generatedAt": "2026-08-02T11:26:43.477Z",
     "screenshotAvailable": true,
     "screenshot": {
       "path": "/Users/mac/capture/capture/raw/screenshots/home.png",
