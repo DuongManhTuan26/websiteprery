@@ -1,6 +1,6 @@
 # QA Report
 
-**Generated:** 2026-08-02T11:29:01.531Z
+**Generated:** 2026-08-02T11:30:34.823Z
 **Overall:** PASSED
 
 ## Output Validation
@@ -31,7 +31,7 @@ Build: PASSED
 
 No references to the original host (preny.ai) found outside metadata.
 
-Localized assets: 68/221 referenced (153 not present in the capture HAR — see manifest.json).
+Localized assets: 64/221 referenced (157 not present in the capture HAR — see manifest.json).
 
 ## Capture Status
 

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-02T11:28:57.231Z",
+  "generatedAt": "2026-08-02T11:30:31.339Z",
   "origin": "https://preny.ai",
   "harEntriesAvailable": 134,
   "referencedTotal": 221,
-  "localized": 68,
-  "notCaptured": 153,
+  "localized": 64,
+  "notCaptured": 157,
   "entries": [
     {
       "url": "https://preny.ai/images/why-us.svg",
@@ -98,8 +98,8 @@
     },
     {
       "url": "https://preny.ai/",
-      "found": true,
-      "localPath": "/assets/edae6fd1cb20d627.bin"
+      "found": false,
+      "localPath": null
     },
     {
       "url": "https://preny.ai/images/logo.svg",
@@ -108,8 +108,8 @@
     },
     {
       "url": "https://preny.ai/",
-      "found": true,
-      "localPath": "/assets/edae6fd1cb20d627.bin"
+      "found": false,
+      "localPath": null
     },
     {
       "url": "https://preny.ai/huong-dan",
@@ -918,8 +918,8 @@
     },
     {
       "url": "https://preny.ai/",
-      "found": true,
-      "localPath": "/assets/edae6fd1cb20d627.bin"
+      "found": false,
+      "localPath": null
     },
     {
       "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_logo-preny-white.png&w=256&q=75",
@@ -1078,8 +1078,8 @@
     },
     {
       "url": "https://preny.ai/",
-      "found": true,
-      "localPath": "/assets/edae6fd1cb20d627.bin"
+      "found": false,
+      "localPath": null
     },
     {
       "url": "http://online.gov.vn/Home/WebDetails/127585",

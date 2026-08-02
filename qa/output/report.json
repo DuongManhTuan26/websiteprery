@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T11:29:01.531Z",
+  "generatedAt": "2026-08-02T11:30:34.823Z",
   "passed": true,
   "outputChecks": [
     {
@@ -93,8 +93,8 @@
   },
   "assetManifest": {
     "referencedTotal": 221,
-    "localized": 68,
-    "notCaptured": 153
+    "localized": 64,
+    "notCaptured": 157
   },
   "captureStatus": {
     "available": true,

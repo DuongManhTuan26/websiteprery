@@ -23,6 +23,16 @@ const EXT_BY_MIME = {
 
 const NON_REWRITABLE_SCHEME = /^(data|mailto|tel|javascript|#):/i;
 
+// text/html responses in the HAR are page navigations (the captured page
+// itself, or other real routes) — never a fetchable sub-resource. Without
+// this guard, an internal nav link like href="/" (which matches the HAR
+// entry for the page itself) would get "localized" into a copy of the
+// entire captured HTML document. Those links should just stay same-origin
+// relative like any other uncaptured page route.
+function isDocumentResponse(mimeType) {
+  return mimeType === 'text/html';
+}
+
 // Loads capture/raw/har/preny.har (recorded with mode:'full' by capture/har.js)
 // and returns a Map<absoluteUrl, {buffer, mimeType}> for every entry that has
 // a real captured response body — this is the only source of real asset bytes
@@ -129,7 +139,7 @@ function createAssetLocalizer(outputDir) {
 
     const hit = harMap.get(absolute);
 
-    if (hit && hit.mimeType !== 'text/css') {
+    if (hit && hit.mimeType !== 'text/css' && !isDocumentResponse(hit.mimeType)) {
       manifest.push({ url: absolute, found: true, localPath: null });
       const localPath = writeBinary(hit.buffer, hit.mimeType, absolute);
       manifest[manifest.length - 1].localPath = localPath;
