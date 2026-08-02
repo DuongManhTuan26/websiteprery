@@ -1,6 +1,6 @@
 # QA Report
 
-**Generated:** 2026-08-02T11:05:22.070Z
+**Generated:** 2026-08-02T11:29:01.531Z
 **Overall:** PASSED
 
 ## Output Validation
@@ -27,10 +27,16 @@ No issues found.
 
 Build: PASSED
 
+## Origin Independence
+
+No references to the original host (preny.ai) found outside metadata.
+
+Localized assets: 68/221 referenced (153 not present in the capture HAR — see manifest.json).
+
 ## Capture Status
 
 Target: https://preny.ai
 Finished at: 2026-08-01T09:34:19.047Z
-Age: 25.5 hours
-⚠️ Dữ liệu capture đã 25.5 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công.
+Age: 25.9 hours
+⚠️ Dữ liệu capture đã 25.9 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công.
 ⚠️ Missing capture artifacts: websocket

@@ -1,0 +1,1115 @@
+{
+  "generatedAt": "2026-08-02T11:28:57.231Z",
+  "origin": "https://preny.ai",
+  "harEntriesAvailable": 134,
+  "referencedTotal": 221,
+  "localized": 68,
+  "notCaptured": 153,
+  "entries": [
+    {
+      "url": "https://preny.ai/images/why-us.svg",
+      "found": true,
+      "localPath": "/assets/2af7f32420272b1e.svg"
+    },
+    {
+      "url": "https://preny.ai/images/why-us-hover.svg",
+      "found": true,
+      "localPath": "/assets/990c5a9a738057e5.svg"
+    },
+    {
+      "url": "https://preny.ai/images/module.svg",
+      "found": true,
+      "localPath": "/assets/6ab68c640f48d5a7.svg"
+    },
+    {
+      "url": "https://preny.ai/images/bg-removal.svg",
+      "found": true,
+      "localPath": "/assets/0f11e42b46b52918.svg"
+    },
+    {
+      "url": "https://preny.ai/svg/baner-home-desktop.svg",
+      "found": true,
+      "localPath": "/assets/e8f772c7230e07cf.svg"
+    },
+    {
+      "url": "https://preny.ai/_next/static/media/ba9851c3c22cd980-s.woff2",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/static/media/21350d82a1f187e9-s.woff2",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/static/media/c5fe6dc8356a8c31-s.woff2",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/static/media/19cfc7226ec3afaa-s.woff2",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/static/media/df0a9ae256c0569c-s.p.woff2",
+      "found": true,
+      "localPath": "/assets/77e00e9f1cfba13e.woff2"
+    },
+    {
+      "url": "https://preny.ai/_next/static/media/8e9860b6e62d6359-s.woff2",
+      "found": true,
+      "localPath": "/assets/a394704209066914.woff2"
+    },
+    {
+      "url": "https://preny.ai/_next/static/media/e4af272ccee01ff0-s.woff2",
+      "found": true,
+      "localPath": "/assets/63740184a0787d22.woff2"
+    },
+    {
+      "url": "https://preny.ai/_next/static/css/b08975e2271109d7.css",
+      "found": true,
+      "localPath": "/assets/9b9fd3f356417d34.css"
+    },
+    {
+      "url": "https://preny.ai/_next/static/css/ef868c32ec1d8f69.css",
+      "found": true,
+      "localPath": "/assets/f23fb8bbea6ed610.css"
+    },
+    {
+      "url": "https://preny.ai/_next/static/css/3f07aaba1033de88.css",
+      "found": true,
+      "localPath": "/assets/021606fe3d82f8c9.css"
+    },
+    {
+      "url": "https://preny.ai/_next/static/css/8038a3a93a2741a1.css",
+      "found": true,
+      "localPath": "/assets/35bec9c766b15a2f.css"
+    },
+    {
+      "url": "https://preny.ai/favicon.ico",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/static/media/df0a9ae256c0569c-s.p.woff2",
+      "found": true,
+      "localPath": "/assets/77e00e9f1cfba13e.woff2"
+    },
+    {
+      "url": "https://preny.ai/",
+      "found": true,
+      "localPath": "/assets/edae6fd1cb20d627.bin"
+    },
+    {
+      "url": "https://preny.ai/images/logo.svg",
+      "found": true,
+      "localPath": "/assets/ae3fc17617b9c084.svg"
+    },
+    {
+      "url": "https://preny.ai/",
+      "found": true,
+      "localPath": "/assets/edae6fd1cb20d627.bin"
+    },
+    {
+      "url": "https://preny.ai/huong-dan",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/tinh-nang",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/bao-gia-dich-vu",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/tuyen-dung",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=GI4ALRSNceo",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/dang-ky",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/bot-demo.svg",
+      "found": true,
+      "localPath": "/assets/35782372b2f79f7e.svg"
+    },
+    {
+      "url": "https://preny.ai/images/mars.svg",
+      "found": true,
+      "localPath": "/assets/d80c608a966801f7.svg"
+    },
+    {
+      "url": "https://preny.ai/images/cube.svg",
+      "found": true,
+      "localPath": "/assets/0f390af91b601b96.svg"
+    },
+    {
+      "url": "https://preny.ai/images/chartbar.svg",
+      "found": true,
+      "localPath": "/assets/1fa0bfdd2aed8656.svg"
+    },
+    {
+      "url": "https://preny.ai/images/bot-zalo.svg",
+      "found": true,
+      "localPath": "/assets/fdb6f9cad5bb95ab.svg"
+    },
+    {
+      "url": "https://preny.ai/images/venus.svg",
+      "found": true,
+      "localPath": "/assets/377833ccdf58e427.svg"
+    },
+    {
+      "url": "https://preny.ai/images/cube.svg",
+      "found": true,
+      "localPath": "/assets/0f390af91b601b96.svg"
+    },
+    {
+      "url": "https://preny.ai/images/notification.svg",
+      "found": true,
+      "localPath": "/assets/f6e1d14f22f615c6.svg"
+    },
+    {
+      "url": "https://preny.ai/images/bot-demo.svg",
+      "found": true,
+      "localPath": "/assets/35782372b2f79f7e.svg"
+    },
+    {
+      "url": "https://preny.ai/images/mars.svg",
+      "found": true,
+      "localPath": "/assets/d80c608a966801f7.svg"
+    },
+    {
+      "url": "https://preny.ai/images/bot-message.svg",
+      "found": true,
+      "localPath": "/assets/e5fe9bc65365f657.svg"
+    },
+    {
+      "url": "https://preny.ai/images/lock.svg",
+      "found": true,
+      "localPath": "/assets/ddf6105f8c2eb768.svg"
+    },
+    {
+      "url": "https://preny.ai/images/stats.svg",
+      "found": true,
+      "localPath": "/assets/96ff53d968e116bc.svg"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=256&q=100",
+      "found": true,
+      "localPath": "/assets/4aa4a70678891cb9.avif"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/#left-card-connector-path-card-1-:Rjm57n7nkva:",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=32&q=75",
+      "found": true,
+      "localPath": "/assets/077519ddb6d1d199.avif"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/zalo.svg",
+      "found": true,
+      "localPath": "/assets/22c07728bac7cfeb.svg"
+    },
+    {
+      "url": "https://preny.ai/images/website.svg",
+      "found": true,
+      "localPath": "/assets/5c9deb9a352a560c.svg"
+    },
+    {
+      "url": "https://preny.ai/images/instagram.svg",
+      "found": true,
+      "localPath": "/assets/66c345ec67a1cbbf.svg"
+    },
+    {
+      "url": "https://preny.ai/images/facebook.svg",
+      "found": true,
+      "localPath": "/assets/cafb5c5a3f6f2d9f.svg"
+    },
+    {
+      "url": "https://preny.ai/images/tiktok-logo.svg",
+      "found": true,
+      "localPath": "/assets/884860a4fcc784a4.svg"
+    },
+    {
+      "url": "https://preny.ai/#left-card-connector-path-card-2-:Rlm57n7nkva:",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=256&q=100",
+      "found": true,
+      "localPath": "/assets/4aa4a70678891cb9.avif"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fexample.jpeg&w=384&q=100",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/#left-card-connector-path-card-1-:R4n57n7nkva:",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=32&q=75",
+      "found": true,
+      "localPath": "/assets/077519ddb6d1d199.avif"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Flazada.jpeg&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/zalo.svg",
+      "found": true,
+      "localPath": "/assets/22c07728bac7cfeb.svg"
+    },
+    {
+      "url": "https://preny.ai/images/website.svg",
+      "found": true,
+      "localPath": "/assets/5c9deb9a352a560c.svg"
+    },
+    {
+      "url": "https://preny.ai/images/instagram.svg",
+      "found": true,
+      "localPath": "/assets/66c345ec67a1cbbf.svg"
+    },
+    {
+      "url": "https://preny.ai/images/facebook.svg",
+      "found": true,
+      "localPath": "/assets/cafb5c5a3f6f2d9f.svg"
+    },
+    {
+      "url": "https://preny.ai/images/tiktok-logo.svg",
+      "found": true,
+      "localPath": "/assets/884860a4fcc784a4.svg"
+    },
+    {
+      "url": "https://preny.ai/#left-card-connector-path-card-2-:R5757n7nkva:",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/bot-demo.svg",
+      "found": true,
+      "localPath": "/assets/35782372b2f79f7e.svg"
+    },
+    {
+      "url": "https://preny.ai/images/mars.svg",
+      "found": true,
+      "localPath": "/assets/d80c608a966801f7.svg"
+    },
+    {
+      "url": "https://preny.ai/images/cube.svg",
+      "found": true,
+      "localPath": "/assets/0f390af91b601b96.svg"
+    },
+    {
+      "url": "https://preny.ai/images/chartbar.svg",
+      "found": true,
+      "localPath": "/assets/1fa0bfdd2aed8656.svg"
+    },
+    {
+      "url": "https://preny.ai/images/bot-zalo.svg",
+      "found": true,
+      "localPath": "/assets/fdb6f9cad5bb95ab.svg"
+    },
+    {
+      "url": "https://preny.ai/images/venus.svg",
+      "found": true,
+      "localPath": "/assets/377833ccdf58e427.svg"
+    },
+    {
+      "url": "https://preny.ai/images/cube.svg",
+      "found": true,
+      "localPath": "/assets/0f390af91b601b96.svg"
+    },
+    {
+      "url": "https://preny.ai/images/notification.svg",
+      "found": true,
+      "localPath": "/assets/f6e1d14f22f615c6.svg"
+    },
+    {
+      "url": "https://preny.ai/images/bot-demo.svg",
+      "found": true,
+      "localPath": "/assets/35782372b2f79f7e.svg"
+    },
+    {
+      "url": "https://preny.ai/images/mars.svg",
+      "found": true,
+      "localPath": "/assets/d80c608a966801f7.svg"
+    },
+    {
+      "url": "https://preny.ai/images/bot-message.svg",
+      "found": true,
+      "localPath": "/assets/e5fe9bc65365f657.svg"
+    },
+    {
+      "url": "https://preny.ai/#right-card-connector-path-primary-:R2v57n7nkva:",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/#right-card-connector-path-inline-:R3f57n7nkva:",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/lock.svg",
+      "found": true,
+      "localPath": "/assets/ddf6105f8c2eb768.svg"
+    },
+    {
+      "url": "https://preny.ai/#right-card-connector-path-secondary-:R3v57n7nkva:",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/stats.svg",
+      "found": true,
+      "localPath": "/assets/96ff53d968e116bc.svg"
+    },
+    {
+      "url": "https://preny.ai/images/why-us.svg",
+      "found": true,
+      "localPath": "/assets/2af7f32420272b1e.svg"
+    },
+    {
+      "url": "https://preny.ai/images/why-us-hover.svg",
+      "found": true,
+      "localPath": "/assets/990c5a9a738057e5.svg"
+    },
+    {
+      "url": "https://preny.ai/images/module.svg",
+      "found": true,
+      "localPath": "/assets/6ab68c640f48d5a7.svg"
+    },
+    {
+      "url": "https://preny.ai/images/phone-bg.svg",
+      "found": true,
+      "localPath": "/assets/60c16c6cb4381b09.svg"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=2048&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=16&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=32&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=64&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=128&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=256&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=384&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=640&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=750&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=828&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=1080&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=1200&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=1920&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=2048&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/send.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/group-message.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/dashboard.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/multichannel-mockup.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/phone-bg.svg",
+      "found": true,
+      "localPath": "/assets/60c16c6cb4381b09.svg"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=2048&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=16&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=32&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=64&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=128&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=256&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=384&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=640&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=750&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=828&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=1080&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=1200&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=1920&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2FPicture1.png&w=2048&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/send.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/group-message.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/dashboard.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/multichannel-mockup.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=61574111189034",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/bg-removal.svg",
+      "found": true,
+      "localPath": "/assets/0f11e42b46b52918.svg"
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=61588877132749",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/bg-removal-6.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.facebook.com/people/Page-test-Nha-Khoa/61588905631676/",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/bg-removal-4.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=61574543694643",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/bg-removal-5.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.facebook.com/profile.php?id=61577029167634",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fdoctor.png&w=2048&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fdoctor.png&w=640&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fdoctor.png&w=750&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fdoctor.png&w=828&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fdoctor.png&w=1080&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fdoctor.png&w=1200&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fdoctor.png&w=1920&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Fimages%2Fdoctor.png&w=2048&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/meta.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/tiktok.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://thanhnien.vn/ai-chatbot-preny-cuc-ky-thong-minh-tra-loi-tu-nhien-nhu-nguoi-that-185241205173221179.htm",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/thanhnien.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.24h.com.vn/kham-pha-cong-nghe/tang-ty-le-chot-don-tren-facebook-bang-ai-chatbot-preny-c675a1621948.html",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/24h.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://cafef.vn/ai-chatbot-preny-giup-tang-ty-le-chuyen-doi-khi-chay-quang-cao-188241206071154103.chn",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/cafe.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://soha.vn/chot-don-tu-dong-bang-ai-chatbot-preny-198241205180248257.htm",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/soha.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://thanhnien.vn/ai-chatbot-preny-cuc-ky-thong-minh-tra-loi-tu-nhien-nhu-nguoi-that-185241205173221179.htm",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/thanhnien.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.24h.com.vn/kham-pha-cong-nghe/tang-ty-le-chot-don-tren-facebook-bang-ai-chatbot-preny-c675a1621948.html",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/24h.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://cafef.vn/ai-chatbot-preny-giup-tang-ty-le-chuyen-doi-khi-chay-quang-cao-188241206071154103.chn",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/cafe.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://soha.vn/chot-don-tu-dong-bang-ai-chatbot-preny-198241205180248257.htm",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/soha.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://thanhnien.vn/ai-chatbot-preny-cuc-ky-thong-minh-tra-loi-tu-nhien-nhu-nguoi-that-185241205173221179.htm",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/thanhnien.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.24h.com.vn/kham-pha-cong-nghe/tang-ty-le-chot-don-tren-facebook-bang-ai-chatbot-preny-c675a1621948.html",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/24h.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://cafef.vn/ai-chatbot-preny-giup-tang-ty-le-chuyen-doi-khi-chay-quang-cao-188241206071154103.chn",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/cafe.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://soha.vn/chot-don-tu-dong-bang-ai-chatbot-preny-198241205180248257.htm",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/soha.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/images/logo-preny.svg",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.facebook.com/messages/t/prenychatbot",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_chat-messenger.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_chat-messenger.png&w=48&q=75",
+      "found": true,
+      "localPath": "/assets/38e982f12cb6151c.avif"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_chat-messenger.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://zalo.me/3555063027984707015",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_zalo.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_zalo.png&w=48&q=75",
+      "found": true,
+      "localPath": "/assets/e3847d97b5bf578a.avif"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_zalo.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/preny-tang-2000-tin-nhan-zalo-mien-phi",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/svg/baner-home-desktop.svg",
+      "found": true,
+      "localPath": "/assets/e8f772c7230e07cf.svg"
+    },
+    {
+      "url": "https://preny.ai/svg/baner-home-mobile.svg",
+      "found": true,
+      "localPath": "/assets/57c0cf60b6482d1a.svg"
+    },
+    {
+      "url": "https://preny.ai/",
+      "found": true,
+      "localPath": "/assets/edae6fd1cb20d627.bin"
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_logo-preny-white.png&w=256&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_logo-preny-white.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Fic_logo-preny-white.png&w=256&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/huong-dan",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/tinh-nang",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/chinh-sach-mua-hang",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/huong-dan-thanh-toan",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/dieu-khoan",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/chinh-sach-bao-mat",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/huong-dan-thanh-toan-vnpay",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/affiliate#dang-ky-affiliate",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.facebook.com/prenychatbot",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-facebook.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-facebook.png&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-facebook.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://zalo.me/3555063027984707015",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-zalo.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-zalo.png&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-zalo.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.instagram.com/chatbotai_preny/",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-instagram.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-instagram.png&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-instagram.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://www.youtube.com/@PrenyAIChatbot",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-youtube.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-youtube.png&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-youtube.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://x.com/AICHATBOTPRENY",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-x.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-x.png&w=48&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=%2Ficons%2Ffooter%2Fic_footer-x.png&w=96&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/",
+      "found": true,
+      "localPath": "/assets/edae6fd1cb20d627.bin"
+    },
+    {
+      "url": "http://online.gov.vn/Home/WebDetails/127585",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=http%3A%2F%2Fonline.gov.vn%2FContent%2FEndUser%2FLogoCCDVSaleNoti%2FlogoSaleNoti.png&w=384&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=http%3A%2F%2Fonline.gov.vn%2FContent%2FEndUser%2FLogoCCDVSaleNoti%2FlogoSaleNoti.png&w=256&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/_next/image?url=http%3A%2F%2Fonline.gov.vn%2FContent%2FEndUser%2FLogoCCDVSaleNoti%2FlogoSaleNoti.png&w=384&q=75",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/chinh-sach-bao-mat",
+      "found": false,
+      "localPath": null
+    },
+    {
+      "url": "https://preny.ai/dieu-khoan",
+      "found": false,
+      "localPath": null
+    }
+  ]
+}

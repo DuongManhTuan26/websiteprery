@@ -9,6 +9,7 @@ const { saveStyles } = require('./style');
 const { attachWebSocketLogger, flushWebSocketFrames } = require('./websocket');
 const { generateReport } = require('./report');
 const { getViewport } = require('./viewport');
+const { scrollFullPage } = require('./scroll');
 const config = require('./config');
 
 (async () => {
@@ -29,6 +30,11 @@ const config = require('./config');
   await page.goto(config.target, {
     waitUntil: 'networkidle'
   });
+
+  // Trigger below-the-fold lazy-loaded assets before capturing anything,
+  // so the HAR/DOM/styles snapshot reflects a fully-loaded page rather
+  // than just what was visible in the first viewport.
+  await scrollFullPage(page);
 
   await saveScreenshot(page);
 

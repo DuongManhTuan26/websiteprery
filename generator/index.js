@@ -3,6 +3,8 @@ const path = require('path');
 const paths = require('../shared/paths');
 const { readJson, ensureDir } = require('../shared/load');
 const { buildFaithfulClone } = require('./faithfulClone');
+const { createAssetLocalizer } = require('./harAssets');
+const { buildInteractionsJs } = require('./runtimeInteractions');
 
 function escapeHtml(text) {
   if (!text) return '';
@@ -313,6 +315,7 @@ ${clone.headHtml}
 </head>
 <body${bodyAttrs ? ' ' + bodyAttrs : ''}>
 ${clone.bodyHtml}
+<script src="/assets/interactions.js" defer></script>
 </body>
 </html>`;
 }
@@ -356,12 +359,33 @@ async function generateCode() {
   const semantic = readJson(paths.aiAnalysis.semantic);
   const tokens = readJson(paths.styleExtraction.tokens);
 
-  const clone = buildFaithfulClone(dataset);
+  const localizer = createAssetLocalizer(outputDir);
+  const clone = buildFaithfulClone(dataset, localizer);
   let indexHtml;
 
   if (clone.ok) {
     indexHtml = buildFaithfulIndexHtml(clone);
-    console.log('Code generator: using faithful clone (real captured HTML, origin', clone.origin + ')');
+    fs.writeFileSync(path.join(outputDir, 'public', 'assets', 'interactions.js'), buildInteractionsJs());
+
+    const manifest = localizer.getManifest();
+    const found = manifest.filter(m => m.found).length;
+    fs.writeFileSync(
+      path.join(outputDir, 'public', 'assets', 'manifest.json'),
+      JSON.stringify({
+        generatedAt: new Date().toISOString(),
+        origin: clone.origin,
+        harEntriesAvailable: localizer.harEntryCount,
+        referencedTotal: manifest.length,
+        localized: found,
+        notCaptured: manifest.length - found,
+        entries: manifest
+      }, null, 2)
+    );
+
+    console.log(
+      'Code generator: using faithful clone (real captured HTML, origin', clone.origin + ') —',
+      found, '/', manifest.length, 'referenced assets localized from capture HAR'
+    );
   } else {
     const text = dataset.normalize.text?.text || '';
     const interaction = dataset.analysis?.interaction || { elements: [], forms: 0 };

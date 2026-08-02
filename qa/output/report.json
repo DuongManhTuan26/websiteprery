@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T11:05:22.070Z",
+  "generatedAt": "2026-08-02T11:29:01.531Z",
   "passed": true,
   "outputChecks": [
     {
@@ -86,22 +86,33 @@
     "passed": true,
     "distExists": true
   },
+  "originDependency": {
+    "checked": true,
+    "host": "preny.ai",
+    "issues": []
+  },
+  "assetManifest": {
+    "referencedTotal": 221,
+    "localized": 68,
+    "notCaptured": 153
+  },
   "captureStatus": {
     "available": true,
     "target": "https://preny.ai",
     "finishedAt": "2026-08-01T09:34:19.047Z",
-    "ageHours": 25.5,
+    "ageHours": 25.9,
     "stale": true,
     "missingFiles": [
       "websocket"
     ],
-    "warning": "Dữ liệu capture đã 25.5 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công."
+    "warning": "Dữ liệu capture đã 25.9 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công."
   },
   "summary": {
     "totalChecks": 13,
     "passedChecks": 13,
     "analysisIssues": 0,
     "rebuildBuildPassed": true,
+    "originDependencyIssues": 0,
     "captureStale": true
   }
 }

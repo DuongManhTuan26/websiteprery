@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const cheerio = require('cheerio');
 const paths = require('../shared/paths');
 const { readJson, writeJson, ensureDir } = require('../shared/load');
 
@@ -127,6 +128,81 @@ function validateRebuildBuild() {
   }
 }
 
+// Enforces the "no dependency on the original site" requirement: nothing in
+// the generated rebuild may fetch CSS/JS/fonts/images/icons/favicon from the
+// captured origin at build or runtime. `<link rel=canonical/alternate>` and
+// og:*/twitter:* meta `content` values are metadata read by crawlers/social
+// previews, never fetched by a browser rendering the page, so they're the
+// only allowed references to the original host — everything else (src/href/
+// action/srcset/inline style url(), plus the text of every localized CSS
+// file) must be free of it.
+function validateNoOriginDependency() {
+  const indexPath = path.join(paths.generator.output, 'index.html');
+
+  if (!fs.existsSync(paths.capture.report) || !fs.existsSync(indexPath)) {
+    return { checked: false, host: null, issues: [] };
+  }
+
+  const report = readJson(paths.capture.report);
+  let host;
+
+  try {
+    host = new URL(report.target).host;
+  } catch {
+    return { checked: false, host: null, issues: [] };
+  }
+
+  const issues = [];
+  const html = fs.readFileSync(indexPath, 'utf8');
+  const $ = cheerio.load(html);
+
+  const allowedEls = new Set($('link[rel="canonical"], link[rel="alternate"], meta[property^="og:"], meta[name^="twitter:"]').toArray());
+
+  $('*').each((_, el) => {
+    if (allowedEls.has(el)) return;
+
+    const attribs = el.attribs || {};
+    for (const attr of ['src', 'href', 'action', 'srcset', 'style']) {
+      const value = attribs[attr];
+      if (!value || !value.includes(host)) continue;
+      if (/^(mailto|tel):/i.test(value)) continue; // contact info, not a fetch
+
+      issues.push(`<${el.tagName}> ${attr}="${value.slice(0, 140)}"`);
+    }
+  });
+
+  const assetsDir = path.join(paths.generator.output, 'public', 'assets');
+
+  if (fs.existsSync(assetsDir)) {
+    for (const file of fs.readdirSync(assetsDir)) {
+      if (!file.endsWith('.css') && !file.endsWith('.js')) continue;
+
+      const text = fs.readFileSync(path.join(assetsDir, file), 'utf8');
+      if (text.includes(host)) {
+        issues.push(`public/assets/${file} still contains a reference to ${host}`);
+      }
+    }
+  }
+
+  return { checked: true, host, issues };
+}
+
+function getAssetManifestSummary() {
+  const manifestPath = path.join(paths.generator.output, 'public', 'assets', 'manifest.json');
+
+  if (!fs.existsSync(manifestPath)) {
+    return null;
+  }
+
+  const manifest = readJson(manifestPath);
+
+  return {
+    referencedTotal: manifest.referencedTotal,
+    localized: manifest.localized,
+    notCaptured: manifest.notCaptured
+  };
+}
+
 function toMarkdown(report) {
   const lines = [
     '# QA Report',
@@ -155,6 +231,21 @@ function toMarkdown(report) {
 
   if (report.rebuildBuild.error) {
     lines.push(`Error: ${report.rebuildBuild.error}`);
+  }
+
+  lines.push('', '## Origin Independence', '');
+
+  if (!report.originDependency.checked) {
+    lines.push('Not checked (capture report or generated index.html missing).');
+  } else if (report.originDependency.issues.length === 0) {
+    lines.push(`No references to the original host (${report.originDependency.host}) found outside metadata.`);
+  } else {
+    lines.push(`⚠️ References to ${report.originDependency.host} found:`);
+    report.originDependency.issues.forEach(issue => lines.push(`- ${issue}`));
+  }
+
+  if (report.assetManifest) {
+    lines.push('', `Localized assets: ${report.assetManifest.localized}/${report.assetManifest.referencedTotal} referenced (${report.assetManifest.notCaptured} not present in the capture HAR — see manifest.json).`);
   }
 
   lines.push('', '## Capture Status', '');
@@ -187,22 +278,28 @@ async function runQA() {
   const analysisIssues = validateAnalysis();
   const rebuildBuild = validateRebuildBuild();
   const captureStatus = getCaptureStatus();
+  const originDependency = validateNoOriginDependency();
+  const assetManifest = getAssetManifestSummary();
 
   const allOutputsExist = outputChecks.every(c => c.passed);
   const noPlaceholders = analysisIssues.length === 0;
+  const noOriginDependency = !originDependency.checked || originDependency.issues.length === 0;
 
   const report = {
     generatedAt: new Date().toISOString(),
-    passed: allOutputsExist && noPlaceholders && rebuildBuild.passed,
+    passed: allOutputsExist && noPlaceholders && rebuildBuild.passed && noOriginDependency,
     outputChecks,
     analysisIssues,
     rebuildBuild,
+    originDependency,
+    assetManifest,
     captureStatus,
     summary: {
       totalChecks: outputChecks.length,
       passedChecks: outputChecks.filter(c => c.passed).length,
       analysisIssues: analysisIssues.length,
       rebuildBuildPassed: rebuildBuild.passed,
+      originDependencyIssues: originDependency.issues.length,
       captureStale: captureStatus.stale
     }
   };
