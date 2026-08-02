@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T11:26:43.645Z",
+  "generatedAt": "2026-08-02T11:31:09.095Z",
   "branding": {
     "title": "AI chatbot Preny tăng 50% tỷ lệ mua hàng",
     "logo": {
@@ -59,7 +59,11 @@
       "type": "section",
       "tag": "SECTION",
       "text": "AI bán hàng mạnh mẽ, giúp tăng hiệu quả chốt đơn lên đến 50%",
-      "image": null
+      "image": null,
+      "cta": {
+        "text": "Xem demo",
+        "href": "https://www.youtube.com/watch?v=GI4ALRSNceo"
+      }
     },
     {
       "type": "card",
@@ -68,7 +72,8 @@
       "image": {
         "src": "/images/bot-demo.svg",
         "alt": "Truong Nguyen"
-      }
+      },
+      "cta": null
     },
     {
       "type": "card",
@@ -77,7 +82,8 @@
       "image": {
         "src": "/images/why-us.svg",
         "alt": "Platform Icons Background"
-      }
+      },
+      "cta": null
     },
     {
       "type": "section",
@@ -86,7 +92,8 @@
       "image": {
         "src": "/images/module.svg",
         "alt": "Background"
-      }
+      },
+      "cta": null
     },
     {
       "type": "card",
@@ -95,31 +102,39 @@
       "image": {
         "src": "/images/bg-removal.svg",
         "alt": null
+      },
+      "cta": {
+        "text": "Nhắn thử ngay",
+        "href": "https://www.facebook.com/profile.php?id=61574111189034"
       }
     },
     {
       "type": "section",
       "tag": "SECTION",
       "text": "Những góc nhìn và đánh giá từ các đơn vị báo chí uy tín",
-      "image": null
+      "image": null,
+      "cta": null
     },
     {
       "type": "section",
       "tag": "SECTION",
       "text": "Nhận tư vấn từ chuyên gia AI để tối ưu tương tác và tăng trưởng doanh nghiệp",
-      "image": null
+      "image": null,
+      "cta": null
     },
     {
       "type": "section",
       "tag": "SECTION",
       "text": "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp (Live Chat)? Quy trình chuyển đổi diễn ra như thế nào?",
-      "image": null
+      "image": null,
+      "cta": null
     },
     {
       "type": "section",
       "tag": "SECTION",
       "text": null,
-      "image": null
+      "image": null,
+      "cta": null
     }
   ],
   "recommendations": {

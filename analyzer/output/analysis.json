@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-02T11:26:43.555Z",
+  "generatedAt": "2026-08-02T11:31:09.006Z",
   "version": "1.0.0",
   "layout": {
-    "generatedAt": "2026-08-02T11:26:43.441Z",
+    "generatedAt": "2026-08-02T11:31:08.891Z",
     "totalNodes": 1566,
     "maxDepth": 23,
     "displayCounts": {
@@ -515,7 +515,7 @@
     "layoutModel": "flexbox-dominant"
   },
   "components": {
-    "generatedAt": "2026-08-02T11:26:43.452Z",
+    "generatedAt": "2026-08-02T11:31:08.901Z",
     "totalNodes": 1566,
     "totalComponents": 342,
     "tagStatistics": {
@@ -2765,7 +2765,7 @@
     ]
   },
   "design": {
-    "generatedAt": "2026-08-02T11:26:43.467Z",
+    "generatedAt": "2026-08-02T11:31:08.923Z",
     "totalElements": 1960,
     "palette": [
       {
@@ -2961,7 +2961,7 @@
     ]
   },
   "interaction": {
-    "generatedAt": "2026-08-02T11:26:43.476Z",
+    "generatedAt": "2026-08-02T11:31:08.931Z",
     "clickable": 84,
     "forms": 1,
     "inputs": 5,
@@ -3960,7 +3960,7 @@
     ]
   },
   "vision": {
-    "generatedAt": "2026-08-02T11:26:43.477Z",
+    "generatedAt": "2026-08-02T11:31:08.932Z",
     "screenshotAvailable": true,
     "screenshot": {
       "path": "/Users/mac/capture/capture/raw/screenshots/home.png",

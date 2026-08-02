@@ -150,7 +150,16 @@ function extractBranding(layout, components, allNodes) {
   };
 }
 
-function extractContentSections(layout, components, allNodes) {
+function sectionCta(interactionElements, section) {
+  const link = (interactionElements || []).find(el =>
+    el.index > section.index && el.index < section.endIndex &&
+    el.tag === 'A' && el.href && el.text
+  );
+
+  return link ? { text: link.text, href: link.href } : null;
+}
+
+function extractContentSections(layout, components, allNodes, interactionElements) {
   const allComponents = components.components || [];
   const bodySections = findTopLevelBodySections(layout?.semanticSections);
 
@@ -161,7 +170,8 @@ function extractContentSections(layout, components, allNodes) {
       type: classifySection(contained),
       tag: section.tag,
       text: sectionText(allNodes, section),
-      image: sectionImage(contained)
+      image: sectionImage(contained),
+      cta: sectionCta(interactionElements, section)
     };
   });
 }
@@ -177,7 +187,7 @@ async function analyzeSemantic() {
   const features = detectFeatures(analysis.components, analysis.interaction, text);
   const userFlows = mapUserFlows(features, analysis.interaction);
   const allNodes = dataset.normalize.dom?.nodes || [];
-  const contentSections = extractContentSections(analysis.layout, analysis.components, allNodes);
+  const contentSections = extractContentSections(analysis.layout, analysis.components, allNodes, analysis.interaction?.elements);
   const branding = extractBranding(analysis.layout, analysis.components, allNodes);
 
   const semantic = {

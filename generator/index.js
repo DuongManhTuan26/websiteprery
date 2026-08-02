@@ -177,19 +177,6 @@ body {
   text-align: center;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  padding: 1.5rem;
-  border-radius: var(--radius, 12px);
-  border: 1px solid rgba(0,0,0,0.1);
-  background: #fff;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -249,13 +236,22 @@ function buildHeaderSection(semantic, interaction, ctaHref, baseUrl) {
 </header>`.trim();
 }
 
+function buildCtaHtml(section, baseUrl, fallbackHref) {
+  if (section?.cta) {
+    const resolvedHref = resolveUrl(section.cta.href, baseUrl) || section.cta.href;
+    return `<a href="${escapeHtml(resolvedHref)}" class="btn">${escapeHtml(section.cta.text)}</a>`;
+  }
+
+  return fallbackHref ? `<a href="${fallbackHref}" class="btn">Learn More</a>` : '';
+}
+
 function buildHeroSection(section, baseUrl, ctaHref) {
   if (!section || !section.text) {
     return '';
   }
 
   const imageHtml = buildImageHtml(section.image, baseUrl, 'hero-image');
-  const ctaHtml = ctaHref ? `<a href="${ctaHref}" class="btn">Learn More</a>` : '';
+  const ctaHtml = buildCtaHtml(section, baseUrl, ctaHref);
 
   return `
 <section class="hero" id="hero">
@@ -294,12 +290,14 @@ function buildBodySections(bodySections, baseUrl) {
     }
 
     const imageHtml = buildImageHtml(s.image, baseUrl, 'section-image');
+    const ctaHtml = buildCtaHtml(s, baseUrl, null);
 
     return `
 <section class="section" id="${s.type}-${i}">
   <div class="container">
     <h2>${escapeHtml(heading)}</h2>
     <p>${escapeHtml(s.text)}</p>
+    ${ctaHtml}
     ${imageHtml}
   </div>
 </section>`.trim();
