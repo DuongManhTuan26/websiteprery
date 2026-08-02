@@ -71,6 +71,20 @@ npm run build    # production build → dist/
 
 (`npm run qa` already does `npm install && npm run build` inside `rebuild/output/` as part of validation — a passing QA report is proof the generated project builds.)
 
+### Deploy the generated site
+
+`rebuild/output/dist/` (produced by `npm run build`) is a plain static site — no server-side code, no API routes, no build-time secrets. It deploys to any static host as-is:
+
+```bash
+cd rebuild/output
+npm install && npm run build
+# then upload/point your static host at rebuild/output/dist/
+```
+
+Works unmodified on Vercel/Netlify/Cloudflare Pages (build command `npm run build`, output directory `dist`), GitHub Pages, or any plain object-storage/CDN static host (S3+CloudFront, etc.) — there's no framework-specific config file to write because `vite.config.js` already declares `outDir: 'dist'` and nothing else is required.
+
+**Known limitation, not a bug:** interactive elements captured from the source site (e.g. the contact `<form>`) render with their real fields but have no real `action`/`method` — the source site's own form had none in its static HTML either (its submit behavior lives in client-side JavaScript that a DOM snapshot can't capture). The generator never fabricates a fake endpoint; wiring the form to a real backend is an integration step for whoever deploys this, not something the pipeline can infer from a page snapshot.
+
 ---
 
 ## 3. Architecture
