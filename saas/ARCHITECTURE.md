@@ -163,12 +163,19 @@ Every phase in this build is committed only after, on this machine:
 4. For phases with a UI, the relevant page is loaded and the API round-trip
    exercised (documented in that phase's commit message).
 
-Docker/production deployment (final phase) is verified by static
-correctness of the Dockerfiles/compose file plus `docker build` where the
-sandbox allows it; the Docker **daemon** is not running in this development
-sandbox (`docker ps` fails to reach `/var/run/docker.sock`), which is
-disclosed rather than silently assumed working — see that phase's commit
-message for exactly what was and wasn't exercised.
+Docker/production deployment (final phase): the daemon **does** run in
+this sandbox (started directly via `dockerd`, even though the `service
+docker start` init script fails on an unrelated `ulimit` permission error —
+worth knowing precisely rather than concluding "Docker doesn't work here"
+from the init script alone) — but pulling base images from Docker Hub is
+blocked by the same egress allowlist that blocked every other external
+host all session (`production.cloudfront.docker.com` returns the identical
+403 signature as everything else). See `saas/DEPLOYMENT.md` for exactly
+what was and wasn't verified as a result — `docker compose config`, `docker
+compose build --dry-run`, and isolated `npm ci` reproductions all ran for
+real and caught a genuine Dockerfile bug (see "Known rough edges" below);
+a full `docker compose up --build` needs an environment with real internet
+access to Docker Hub.
 
 ## Known rough edges (worth checking before assuming behavior)
 
@@ -192,3 +199,21 @@ message for exactly what was and wasn't exercised.
   — a single global policy can't simultaneously restrict the dashboard to
   one origin (credentialed) and allow the widget to be embedded anywhere
   (uncredentialed, token-scoped).
+- The backend's `GET /widget.js` route resolves the widget bundle's
+  directory from `env.WIDGET_DIST_DIR`, falling back to a monorepo-relative
+  path (`dist/app.js` -> `../../widget/dist`) only when that env var is
+  unset. Local dev relies on the fallback (real sibling directories on
+  disk); the Docker image sets `WIDGET_DIST_DIR` explicitly because the
+  built widget lands at a different path inside the image than the
+  source-tree layout (see `backend/Dockerfile`'s `widget-builder` stage).
+  Don't remove the env var thinking the relative-path fallback is "good
+  enough" — it silently 404s `GET /widget.js` inside the container without it.
+- `backend/Dockerfile`'s dependency-install layer must copy `prisma/` (and
+  `prisma.config.ts`) alongside `package.json`/`package-lock.json` *before*
+  `npm ci` — package.json's `postinstall` script runs `prisma generate`,
+  which fails without `prisma/schema.prisma` present. This looks like a
+  harmless Docker layer-caching optimization (copy manifest files first,
+  install, then copy the rest of the source) and silently isn't for any
+  package with a schema-dependent postinstall hook. Caught by actually
+  reproducing `npm ci` against an isolated directory containing only what
+  that Docker layer would have at that point — see `saas/DEPLOYMENT.md`.

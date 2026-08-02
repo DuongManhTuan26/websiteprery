@@ -11,8 +11,17 @@ const envSchema = z.object({
   JWT_REFRESH_SECRET: z.string().min(16, 'JWT_REFRESH_SECRET must be at least 16 characters'),
   ACCESS_TOKEN_TTL: z.string().default('15m'),
   REFRESH_TOKEN_TTL_DAYS: z.coerce.number().int().positive().default(30),
-  ENCRYPTION_KEY: z.string().min(32, 'ENCRYPTION_KEY must be at least 32 characters').optional(),
-  DASHBOARD_ORIGIN: z.string().default('http://localhost:5173')
+  // Required, not optional: the settings module (encryption.ts) depends on
+  // it for real functionality (storing AI provider API keys), so a missing
+  // key should fail the whole process at boot, not fail confusingly later
+  // the first time someone tries to save a key.
+  ENCRYPTION_KEY: z.string().min(32, 'ENCRYPTION_KEY must be at least 32 characters'),
+  DASHBOARD_ORIGIN: z.string().default('http://localhost:5173'),
+  // Absolute path to the built widget bundle's directory (containing
+  // widget.js). Unset in local dev (app.ts falls back to the monorepo-
+  // relative path); set explicitly in the Docker image, where the widget
+  // is built into a different location than the source-tree layout.
+  WIDGET_DIST_DIR: z.string().optional()
 });
 
 export type Env = z.infer<typeof envSchema>;

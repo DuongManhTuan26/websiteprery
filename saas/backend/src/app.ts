@@ -15,7 +15,10 @@ import { crmRouter } from './modules/crm/router.js';
 import { settingsRouter } from './modules/settings/router.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const WIDGET_DIST_DIR = path.resolve(__dirname, '../../widget/dist');
+// Local dev: monorepo-relative (dist/app.js -> ../../widget/dist). Docker:
+// WIDGET_DIST_DIR is set explicitly since the image copies the built
+// widget into a different location — see backend/Dockerfile.
+const WIDGET_DIST_DIR = env.WIDGET_DIST_DIR || path.resolve(__dirname, '../../widget/dist');
 
 // Factory (not a module-level singleton) so tests can build a fresh app
 // instance without binding a port.
