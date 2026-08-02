@@ -1,10 +1,17 @@
 import { Router } from 'express';
+import { prisma } from '../../db/client.js';
 
 export const healthRouter = Router();
 
-// Extended in the database phase to also verify DB connectivity — kept
-// dependency-free for now so the server has a working liveness check from
-// the very first commit.
-healthRouter.get('/', (_req, res) => {
-  res.json({ status: 'ok', uptimeSeconds: process.uptime() });
+healthRouter.get('/', async (_req, res) => {
+  let dbOk = true;
+
+  try {
+    await prisma.$queryRaw`SELECT 1`;
+  } catch {
+    dbOk = false;
+  }
+
+  const status = dbOk ? 'ok' : 'degraded';
+  res.status(dbOk ? 200 : 503).json({ status, uptimeSeconds: process.uptime(), db: dbOk ? 'ok' : 'unreachable' });
 });

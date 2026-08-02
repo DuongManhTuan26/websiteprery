@@ -42,7 +42,7 @@ do not share code, dependencies, or build output.
 | Backend runtime | Node.js 22 + TypeScript | Matches the rest of this repo's toolchain; no context-switch for whoever maintains both. |
 | HTTP framework | Express 4 | Minimal, extremely well understood, easy to audit — this system doesn't need a heavier framework's opinions. |
 | Database | PostgreSQL 16 | Relational integrity for tenant/user/billing-adjacent data, JSON columns where flexibility is genuinely needed (e.g. contact custom fields later). |
-| ORM / migrations | Prisma | Schema-as-code, generated migrations checked into git, type-safe client — avoids hand-written SQL drift between environments. |
+| ORM / migrations | Prisma 7 (`@prisma/adapter-pg` driver adapter) | Schema-as-code, generated migrations checked into git, type-safe client — avoids hand-written SQL drift between environments. Prisma 7 requires an explicit driver adapter at runtime (no more implicit connection-string-from-schema) — see `src/db/client.ts`. |
 | Auth | JWT access token (short-lived, 15 min) + rotating refresh token (stored hashed in DB, 30 days) | Stateless API auth without keeping sessions in memory, while refresh tokens remain revocable (DB-backed) unlike a pure-stateless refresh JWT. |
 | Password hashing | bcrypt | Industry-standard, no reason to roll anything custom. |
 | Frontend (dashboard) | React 18 + Vite + TypeScript | Fast dev loop, same ecosystem as the widget bundle. |
