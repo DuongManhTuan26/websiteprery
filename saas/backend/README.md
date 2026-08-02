@@ -134,16 +134,35 @@ CORS (`origin: true`) since a real embed is loaded from arbitrary
 third-party origins.
 
 - `GET /widget/:widgetToken/config` -> `200 {name, isActive}`
-- `POST /widget/:widgetToken/message` `{message, history?}` -> `200 {reply}`
-  — `history` is client-supplied (capped at 20 entries, `role` restricted to
-  `user`/`assistant` only — a client cannot inject a `system` message to
-  override the chatbot's real system prompt) since there's no server-side
-  conversation persistence yet (conversation-storage phase).
+- `POST /widget/:widgetToken/message` `{message, conversationId?}` -> `200
+  {reply, conversationId}` — omit `conversationId` to start a new,
+  server-persisted conversation; pass the returned id on every subsequent
+  message in the same session. History sent to the AI provider is always
+  loaded from real storage (`Message` rows), never trusted from the client
+  — this replaced an earlier client-supplied `history` array design from
+  when the widget phase shipped without persistence.
 - `GET /widget.js` — serves the built widget bundle
   (`../widget/dist/widget.js`) with `Cross-Origin-Resource-Policy:
   cross-origin` explicitly set, overriding helmet's default `same-origin`
   policy for this one route so a third-party page's `<script src=...>` can
   actually execute it.
+
+## Conversations (dashboard, read-only)
+
+Nested under a workspace, any member:
+
+- `GET /workspaces/:workspaceId/conversations` -> `200 {conversations}` —
+  every conversation across every chatbot in the workspace, most recently
+  updated first, with a message count and last-message preview.
+- `GET /workspaces/:workspaceId/conversations/:conversationId` -> `200
+  {conversation}` — full message thread, oldest first.
+
+Both are populated entirely by the public widget API (`POST
+/widget/:widgetToken/message`) — there's no separate "create conversation"
+endpoint on the dashboard side. Every query filters by `chatbot:
+{workspaceId}` (not just the conversation id), so a conversation id from a
+different tenant 404s even for an authenticated member of some other
+workspace.
 
 ## Health check
 

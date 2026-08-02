@@ -1,15 +1,11 @@
 import { z } from 'zod';
 
-const historyEntrySchema = z.object({
-  role: z.enum(['user', 'assistant']),
-  content: z.string().min(1).max(4000)
-});
-
 export const widgetMessageSchema = z.object({
   message: z.string().min(1).max(4000),
-  // No server-side persistence yet (that's the conversation-storage phase)
-  // — the widget keeps its own short-lived history client-side and resends
-  // it so replies have context. Capped so a malicious client can't force
-  // unbounded token usage against a configured AI provider.
-  history: z.array(historyEntrySchema).max(20).optional()
+  // Omitted on the first message of a session; the server creates a new
+  // Conversation and returns its id, which the widget then sends on every
+  // subsequent message so history is loaded from real storage rather than
+  // trusted from the client (see conversations phase — this replaced an
+  // earlier client-supplied `history` array design).
+  conversationId: z.string().uuid().optional()
 });

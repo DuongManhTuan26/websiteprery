@@ -34,11 +34,12 @@ generates this exact snippet with the real token filled in.
 - `src/widget.ts` — reads `data-token`/`data-api-url` off its own
   `<script>` tag (`document.currentScript`), renders a floating bubble +
   chat panel into a **Shadow DOM** host (so the widget's styles can never
-  leak into, or be broken by, the host page's own CSS), and keeps
-  conversation history in memory (capped to the last 20 messages sent per
-  request — no server-side persistence yet; that's the conversation-storage
-  phase, which will extend the same `/widget/:token/message` endpoint to
-  also save messages rather than replacing this client).
+  leak into, or be broken by, the host page's own CSS). Conversation
+  history is owned by the server: the first message omits `conversationId`,
+  the backend creates a real `Conversation` and returns its id, and the
+  widget passes that id on every subsequent message so the AI always sees
+  history loaded from real storage — the client no longer sends its own
+  history array (an earlier, pre-persistence design).
 
 ## Manual cross-origin test fixture
 

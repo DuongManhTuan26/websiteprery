@@ -3,9 +3,9 @@ export interface WidgetConfig {
   isActive: boolean;
 }
 
-export interface HistoryEntry {
-  role: 'user' | 'assistant';
-  content: string;
+export interface SendMessageResult {
+  reply: string;
+  conversationId: string;
 }
 
 export class WidgetApiError extends Error {
@@ -27,9 +27,12 @@ export class WidgetApi {
     return this.request<WidgetConfig>('GET', `/widget/${this.token}/config`);
   }
 
-  async sendMessage(message: string, history: HistoryEntry[]): Promise<string> {
-    const res = await this.request<{ reply: string }>('POST', `/widget/${this.token}/message`, { message, history });
-    return res.reply;
+  // conversationId is omitted on the first message; the server creates a
+  // real, persisted conversation and returns its id, which the caller
+  // should pass on every subsequent message so history is loaded from
+  // storage rather than kept only in this tab's memory.
+  async sendMessage(message: string, conversationId?: string): Promise<SendMessageResult> {
+    return this.request<SendMessageResult>('POST', `/widget/${this.token}/message`, { message, conversationId });
   }
 
   private async request<T>(method: string, path: string, body?: unknown): Promise<T> {

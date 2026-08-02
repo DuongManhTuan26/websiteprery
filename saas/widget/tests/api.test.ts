@@ -17,17 +17,28 @@ describe('WidgetApi', () => {
     expect(fetchMock).toHaveBeenCalledWith('https://api.example.com/widget/tok123/config', expect.objectContaining({ method: 'GET' }));
   });
 
-  it('sends a message with history and returns the reply', async () => {
-    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ reply: 'Hello!' }) });
+  it('sends a message with no conversationId on the first call', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ reply: 'Hello!', conversationId: 'c1' }) });
     vi.stubGlobal('fetch', fetchMock);
 
     const api = new WidgetApi('https://api.example.com', 'tok123');
-    const reply = await api.sendMessage('Hi', [{ role: 'user', content: 'earlier' }]);
+    const result = await api.sendMessage('Hi');
 
-    expect(reply).toBe('Hello!');
+    expect(result).toEqual({ reply: 'Hello!', conversationId: 'c1' });
     const [url, options] = fetchMock.mock.calls[0];
     expect(url).toBe('https://api.example.com/widget/tok123/message');
-    expect(JSON.parse(options.body)).toEqual({ message: 'Hi', history: [{ role: 'user', content: 'earlier' }] });
+    expect(JSON.parse(options.body)).toEqual({ message: 'Hi', conversationId: undefined });
+  });
+
+  it('sends the conversationId on subsequent calls', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => ({ reply: 'Again!', conversationId: 'c1' }) });
+    vi.stubGlobal('fetch', fetchMock);
+
+    const api = new WidgetApi('https://api.example.com', 'tok123');
+    await api.sendMessage('Second message', 'c1');
+
+    const [, options] = fetchMock.mock.calls[0];
+    expect(JSON.parse(options.body)).toEqual({ message: 'Second message', conversationId: 'c1' });
   });
 
   it('throws WidgetApiError with the server message on failure', async () => {

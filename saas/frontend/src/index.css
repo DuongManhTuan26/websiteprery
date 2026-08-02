@@ -318,6 +318,86 @@ button {
   word-break: break-all;
 }
 
+.conversations-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.conversation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.conversation-list-item {
+  width: 100%;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.conversation-list-item.active {
+  border-color: var(--accent);
+}
+
+.conversation-preview {
+  font-size: 12px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-time {
+  font-size: 11px;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.conversation-meta {
+  font-size: 12px;
+  color: var(--text);
+  margin: 0 0 16px;
+}
+
+.conversation-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.saas-msg {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.saas-msg.user {
+  align-self: flex-end;
+  background: var(--accent);
+  color: #fff;
+}
+
+.saas-msg.assistant {
+  align-self: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
 .test-reply-output {
   margin: 0;
   padding: 10px 12px;

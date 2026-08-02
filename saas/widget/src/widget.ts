@@ -1,8 +1,7 @@
-import { WidgetApi, WidgetApiError, type HistoryEntry } from './api.js';
+import { WidgetApi, WidgetApiError } from './api.js';
 import { WIDGET_STYLES } from './styles.js';
 
 const DEFAULT_API_URL = 'http://localhost:4000';
-const MAX_HISTORY_SENT = 20;
 
 interface WidgetOptions {
   token: string;
@@ -25,7 +24,9 @@ function el<K extends keyof HTMLElementTagNameMap>(tag: K, attrs: Record<string,
 
 class SaasChatWidget {
   private api: WidgetApi;
-  private history: HistoryEntry[] = [];
+  // Set once the first message's response comes back; the server owns real
+  // conversation history from then on (see the widget backend module).
+  private conversationId?: string;
   private root: ShadowRoot;
   private bubble: HTMLButtonElement;
   private panel: HTMLDivElement;
@@ -109,13 +110,12 @@ class SaasChatWidget {
 
     this.input.value = '';
     this.addMessage('user', message);
-    this.history.push({ role: 'user', content: message });
     this.sendButton.disabled = true;
 
     try {
-      const reply = await this.api.sendMessage(message, this.history.slice(-MAX_HISTORY_SENT));
-      this.addMessage('assistant', reply);
-      this.history.push({ role: 'assistant', content: reply });
+      const result = await this.api.sendMessage(message, this.conversationId);
+      this.conversationId = result.conversationId;
+      this.addMessage('assistant', result.reply);
     } catch (err) {
       const text = err instanceof WidgetApiError ? err.message : 'Something went wrong. Please try again.';
       this.addMessage('error', text);

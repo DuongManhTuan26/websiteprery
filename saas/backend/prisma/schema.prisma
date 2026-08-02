@@ -104,8 +104,48 @@ model Chatbot {
   createdAt    DateTime       @default(now())
   updatedAt    DateTime       @updatedAt
 
-  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  workspace     Workspace      @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  conversations Conversation[]
 
   @@index([workspaceId])
   @@map("chatbots")
+}
+
+// Real, server-persisted conversation history — replaces the widget's
+// earlier client-supplied `history` array entirely (that array was a
+// stopgap for the widget phase, before this model existed; trusting the
+// server's own stored messages instead of whatever a client claims its
+// history was is both more correct and removes a prompt-injection surface,
+// see widget/service.ts). contactId (mini CRM) is added in that phase's own
+// migration rather than forward-referencing a model that doesn't exist yet.
+model Conversation {
+  id        String   @id @default(uuid())
+  chatbotId String
+  channel   String   @default("widget")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  chatbot  Chatbot   @relation(fields: [chatbotId], references: [id], onDelete: Cascade)
+  messages Message[]
+
+  @@index([chatbotId])
+  @@map("conversations")
+}
+
+enum MessageRole {
+  USER
+  ASSISTANT
+}
+
+model Message {
+  id             String      @id @default(uuid())
+  conversationId String
+  role           MessageRole
+  content        String
+  createdAt      DateTime    @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId])
+  @@map("messages")
 }

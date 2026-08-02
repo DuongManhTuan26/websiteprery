@@ -151,6 +151,29 @@ export interface ChatbotUpdateInput {
   isActive?: boolean;
 }
 
+export type MessageRole = 'USER' | 'ASSISTANT';
+
+export interface Message {
+  id: string;
+  role: MessageRole;
+  content: string;
+  createdAt: string;
+}
+
+export interface ConversationSummary {
+  id: string;
+  channel: string;
+  createdAt: string;
+  updatedAt: string;
+  chatbot: { id: string; name: string };
+  messageCount: number;
+  lastMessage: Message | null;
+}
+
+export interface ConversationDetail extends ConversationSummary {
+  messages: Message[];
+}
+
 export const api = {
   register: (email: string, password: string, name: string) =>
     request<AuthResult>('/auth/register', { method: 'POST', body: { email, password, name } }),
@@ -206,6 +229,14 @@ export const api = {
     request<{ reply: string }>(`/workspaces/${workspaceId}/chatbots/${chatbotId}/test-reply`, {
       method: 'POST',
       body: { message },
+      auth: true
+    }),
+
+  listConversations: (workspaceId: string) =>
+    request<{ conversations: ConversationSummary[] }>(`/workspaces/${workspaceId}/conversations`, { auth: true }),
+
+  getConversation: (workspaceId: string, conversationId: string) =>
+    request<{ conversation: ConversationDetail }>(`/workspaces/${workspaceId}/conversations/${conversationId}`, {
       auth: true
     })
 };

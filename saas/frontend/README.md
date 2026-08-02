@@ -38,6 +38,10 @@ Requires `saas-backend` running (see `../backend/README.md`).
   (`/dashboard/chatbots`), plus per-chatbot "Test" (calls
   `/test-reply` inline) and "Embed" (shows the real `<script>` snippet,
   with the actual widget token filled in, to copy onto any page).
+- `src/pages/Conversations.tsx` — master-detail view of every real
+  conversation the widget has recorded (`/dashboard/conversations`):
+  a list (chatbot name, last-message preview, updated time) and, on
+  selection, the full message thread for that conversation.
 
 Routing is now nested (`DashboardLayout` renders `<Outlet/>`) so new
 authenticated pages are added as child routes in `App.tsx` rather than each

@@ -3,6 +3,7 @@ import { LoginPage } from './pages/Login';
 import { RegisterPage } from './pages/Register';
 import { DashboardPage } from './pages/Dashboard';
 import { ChatbotsPage } from './pages/Chatbots';
+import { ConversationsPage } from './pages/Conversations';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { DashboardLayout } from './components/DashboardLayout';
 
@@ -22,6 +23,7 @@ function App() {
       >
         <Route index element={<DashboardPage />} />
         <Route path="chatbots" element={<ChatbotsPage />} />
+        <Route path="conversations" element={<ConversationsPage />} />
       </Route>
     </Routes>
   );

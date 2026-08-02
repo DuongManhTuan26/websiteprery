@@ -21,9 +21,9 @@ widgetRouter.get('/:widgetToken/config', async (req, res, next) => {
 
 widgetRouter.post('/:widgetToken/message', async (req, res, next) => {
   try {
-    const { message, history } = parseOrThrow(widgetMessageSchema, req.body);
-    const reply = await widgetService.sendMessage(String(req.params.widgetToken), message, history);
-    res.json({ reply });
+    const { message, conversationId } = parseOrThrow(widgetMessageSchema, req.body);
+    const result = await widgetService.sendMessage(String(req.params.widgetToken), message, conversationId);
+    res.json(result);
   } catch (err) {
     next(err);
   }
