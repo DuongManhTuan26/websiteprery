@@ -20,5 +20,26 @@ model User {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 
+  refreshTokens RefreshToken[]
+
   @@map("users")
+}
+
+// Refresh tokens are stored as a SHA-256 hash, never plaintext — a DB leak
+// alone doesn't let an attacker mint sessions. Rotated on every use (the old
+// row is revoked, a new one issued) so a stolen-then-reused token is
+// detectable (revokedAt already set) rather than silently accepted forever.
+model RefreshToken {
+  id         String    @id @default(uuid())
+  userId     String
+  tokenHash  String    @unique
+  expiresAt  DateTime
+  revokedAt  DateTime?
+  replacedBy String?
+  createdAt  DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("refresh_tokens")
 }

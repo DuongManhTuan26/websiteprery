@@ -41,6 +41,22 @@ npm run prisma:deploy     # apply existing migrations without prompting (CI/prod
 Tests apply the same migrations to the separate `saas_test` database — see
 "Tests" above.
 
+## Auth
+
+- `POST /auth/register` `{email, password, name}` -> `201 {user, tokens}`
+- `POST /auth/login` `{email, password}` -> `200 {user, tokens}`
+- `POST /auth/refresh` `{refreshToken}` -> `200 {accessToken, refreshToken}` (rotates; the presented token is revoked)
+- `POST /auth/logout` `{refreshToken}` -> `204`
+- `GET /auth/me` (`Authorization: Bearer <accessToken>`) -> `200 {user}`
+
+Access tokens are JWTs (15m default, `ACCESS_TOKEN_TTL`). Refresh tokens are
+opaque random strings; only their SHA-256 hash is stored, and every refresh
+rotates the token (old one revoked) so reuse of a stolen-then-rotated token
+is rejected rather than silently accepted. `requireAuth` middleware
+(`src/middleware/requireAuth.ts`) protects any route that needs a logged-in
+user; workspace-scoped role checks (`requireRole`) land in the workspace
+phase, built on top of this.
+
 ## Health check
 
 `GET /health` — checks DB connectivity via `SELECT 1`; returns `503` with
