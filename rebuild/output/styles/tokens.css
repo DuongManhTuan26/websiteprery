@@ -16,6 +16,7 @@
   --color-15: rgba(255,255,255,0.5);
   --accent: rgb(94,31,183);
   --text-primary: rgb(3,7,18);
+  --radius: 16px;
   --font-primary: "ui-sans-serif", system-ui, sans-serif;
   --font-size-1: 16px;
   --font-size-2: 12px;

@@ -30,6 +30,7 @@ function buildTokens(cssData, designData) {
     colors,
     accentColor: designData.accentColor,
     textColor: designData.textColors?.[0]?.value || null,
+    radius: designData.borderRadii?.[0]?.value || null,
     typography: {
       fonts,
       fontSizes,

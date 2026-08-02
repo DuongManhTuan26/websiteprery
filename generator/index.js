@@ -48,6 +48,10 @@ function buildTokensCss(tokens) {
     lines.push(`  --text-primary: ${tokens.textColor};`);
   }
 
+  if (tokens.radius) {
+    lines.push(`  --radius: ${tokens.radius};`);
+  }
+
   if (tokens.typography.primaryFont) {
     lines.push(`  --font-primary: "${tokens.typography.primaryFont}", system-ui, sans-serif;`);
   }
@@ -86,7 +90,7 @@ body {
   padding: 0.5rem 1rem;
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
-  border-radius: 12px;
+  border-radius: var(--radius, 12px);
   margin: 1rem auto;
   max-width: 1400px;
 }
@@ -123,7 +127,7 @@ body {
 .hero-image {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: var(--radius, 12px);
   margin: 2rem auto 0;
   display: block;
 }
@@ -137,7 +141,7 @@ body {
 .section-image {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: var(--radius, 12px);
   margin-top: 1.5rem;
 }
 
@@ -171,7 +175,7 @@ body {
 
 .card {
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: var(--radius, 12px);
   border: 1px solid rgba(0,0,0,0.1);
   background: #fff;
 }
