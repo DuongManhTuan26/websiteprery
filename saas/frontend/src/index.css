@@ -127,6 +127,51 @@ button {
   padding: 0 10px 20px;
 }
 
+.workspace-switcher {
+  padding: 0 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.workspace-switcher select {
+  font: inherit;
+  padding: 7px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.workspace-create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.workspace-create-form input {
+  font: inherit;
+  padding: 7px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.workspace-create-form button[type='submit'] {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  padding: 2px 0;
+  text-align: left;
+}
+
 .dashboard-sidebar nav {
   display: flex;
   flex-direction: column;

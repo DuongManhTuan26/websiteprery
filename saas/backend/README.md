@@ -57,6 +57,31 @@ is rejected rather than silently accepted. `requireAuth` middleware
 user; workspace-scoped role checks (`requireRole`) land in the workspace
 phase, built on top of this.
 
+## Workspaces (tenants)
+
+All routes require `Authorization: Bearer <accessToken>`.
+
+- `POST /workspaces` `{name}` -> `201 {workspace}` — creator becomes `OWNER`
+- `GET /workspaces` -> `200 {workspaces}` — every workspace the caller belongs to, with their role
+- `GET /workspaces/:workspaceId` -> `200 {workspace}` (any member)
+- `PATCH /workspaces/:workspaceId` `{name}` -> `200 {workspace}` (`OWNER`/`ADMIN`)
+- `DELETE /workspaces/:workspaceId` -> `204` (`OWNER` only)
+- `GET /workspaces/:workspaceId/members` -> `200 {members}` (any member)
+- `POST /workspaces/:workspaceId/members` `{email, role?}` -> `201 {member}` (`OWNER`/`ADMIN`) — adds an *existing* registered user by email; there's no invite-email flow yet, so the person must already have an account
+- `PATCH /workspaces/:workspaceId/members/:userId` `{role}` -> `200 {member}` (`OWNER`/`ADMIN`, see RBAC below)
+- `DELETE /workspaces/:workspaceId/members/:userId` -> `204` (`OWNER`/`ADMIN`, see RBAC below)
+
+Every `:workspaceId` route is guarded by `requireWorkspaceMember` — a 403 if
+the caller has no membership row, never a filtered/empty result. Role
+enforcement is two-layered: route-level `requireRole()` gates who can even
+attempt an action, and the service layer additionally checks the *target's*
+role for member mutations:
+- `ADMIN` can remove/change the role of a plain `MEMBER`, never another
+  `ADMIN` or an `OWNER`.
+- Only `OWNER` can grant `OWNER`, and the last remaining `OWNER` of a
+  workspace can never be removed or demoted (would leave the tenant
+  ownerless).
+
 ## Health check
 
 `GET /health` — checks DB connectivity via `SELECT 1`; returns `503` with

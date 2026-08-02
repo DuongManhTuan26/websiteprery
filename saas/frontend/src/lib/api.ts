@@ -106,6 +106,21 @@ export interface AuthResult {
   tokens: { accessToken: string; refreshToken: string };
 }
 
+export type WorkspaceRole = 'OWNER' | 'ADMIN' | 'MEMBER';
+
+export interface Workspace {
+  id: string;
+  name: string;
+  slug: string;
+  role: WorkspaceRole;
+}
+
+export interface WorkspaceMemberEntry {
+  userId: string;
+  role: WorkspaceRole;
+  user: User;
+}
+
 export const api = {
   register: (email: string, password: string, name: string) =>
     request<AuthResult>('/auth/register', { method: 'POST', body: { email, password, name } }),
@@ -121,5 +136,23 @@ export const api = {
     clearTokens();
   },
 
-  me: () => request<{ user: User }>('/auth/me', { auth: true })
+  me: () => request<{ user: User }>('/auth/me', { auth: true }),
+
+  listWorkspaces: () => request<{ workspaces: Workspace[] }>('/workspaces', { auth: true }),
+
+  createWorkspace: (name: string) =>
+    request<{ workspace: Workspace }>('/workspaces', { method: 'POST', body: { name }, auth: true }),
+
+  listMembers: (workspaceId: string) =>
+    request<{ members: WorkspaceMemberEntry[] }>(`/workspaces/${workspaceId}/members`, { auth: true }),
+
+  addMember: (workspaceId: string, email: string, role: 'ADMIN' | 'MEMBER') =>
+    request<{ member: WorkspaceMemberEntry }>(`/workspaces/${workspaceId}/members`, {
+      method: 'POST',
+      body: { email, role },
+      auth: true
+    }),
+
+  removeMember: (workspaceId: string, userId: string) =>
+    request<void>(`/workspaces/${workspaceId}/members/${userId}`, { method: 'DELETE', auth: true })
 };

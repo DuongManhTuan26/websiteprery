@@ -1,12 +1,14 @@
 import { type ReactNode } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useWorkspace } from '../context/WorkspaceContext';
+import { WorkspaceSwitcher } from './WorkspaceSwitcher';
+import { CreateWorkspacePrompt } from './CreateWorkspacePrompt';
 
-// Shared shell for every authenticated page. Nav items beyond "Overview"
-// are placeholders wired up in later phases (Workspace, Chatbots,
-// Conversations, CRM, Settings) — kept visible now so the information
-// architecture is established from this phase onward rather than bolted on
-// later.
+// Nav items beyond "Overview" are placeholders wired up in later phases
+// (Chatbots, Conversations, CRM, Settings) — kept visible now so the
+// information architecture is established from this phase onward rather
+// than bolted on later.
 const NAV_ITEMS = [
   { to: '/dashboard', label: 'Overview', end: true },
   { to: '/dashboard/chatbots', label: 'Chatbots' },
@@ -17,6 +19,7 @@ const NAV_ITEMS = [
 
 export function DashboardLayout({ children }: { children: ReactNode }) {
   const { user, logout } = useAuth();
+  const { workspaces, loading } = useWorkspace();
   const navigate = useNavigate();
 
   async function handleLogout() {
@@ -24,10 +27,19 @@ export function DashboardLayout({ children }: { children: ReactNode }) {
     navigate('/login');
   }
 
+  if (loading) {
+    return <div className="loading-screen">Loading…</div>;
+  }
+
+  if (workspaces.length === 0) {
+    return <CreateWorkspacePrompt />;
+  }
+
   return (
     <div className="dashboard-shell">
       <aside className="dashboard-sidebar">
         <div className="brand">SaaS Console</div>
+        <WorkspaceSwitcher />
         <nav>
           {NAV_ITEMS.map(item => (
             <NavLink key={item.to} to={item.to} end={item.end} className={({ isActive }) => (isActive ? 'nav-item active' : 'nav-item')}>

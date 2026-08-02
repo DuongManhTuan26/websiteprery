@@ -27,6 +27,13 @@ Requires `saas-backend` running (see `../backend/README.md`).
   authenticated page; nav items beyond "Overview" are wired up as their
   phases land (Chatbots, Conversations, Contacts, Settings).
 - `src/pages/` — Login, Register, Dashboard (overview).
+- `src/context/WorkspaceContext.tsx` — loads the user's workspaces, tracks
+  the selected one (persisted in `localStorage`), exposes `createWorkspace`.
+- `src/components/CreateWorkspacePrompt.tsx` — shown instead of the
+  dashboard when the user has zero workspaces (every account needs at least
+  one tenant before anything else makes sense to show).
+- `src/components/WorkspaceSwitcher.tsx` — sidebar dropdown + inline
+  "create new workspace" form.
 
 ## Tests
 
