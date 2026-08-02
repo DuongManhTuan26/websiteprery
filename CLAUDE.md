@@ -71,6 +71,14 @@ All downstream stages (`normalize` onward) resolve paths via `shared/paths.js`, 
 
 `generator/index.js` emits a runnable static Vite project into `rebuild/output/` (`index.html`, CSS built from design tokens, `package.json` with `vite` as the only dependency, `vite.config.js`). This directory is a build artifact, not hand-maintained source — regenerate it via `npm run generate` rather than editing it directly.
 
+`generator/index.js` builds `index.html` from `generator/faithfulClone.js`'s `buildFaithfulClone(dataset)` when possible — this is the primary path, not a fallback. It takes `dataset.normalize.dom.html` (the **full, untruncated** real captured HTML — already present in `dataset.json` via `collector`, no new stage or path needed) and `dataset.source.target` (the captured origin), and produces a literal clone: real `<head>` (title, meta/OG/twitter, canonical, favicon, real stylesheet `<link>`s, real inline `<style>` blocks) + real `<body>` (real DOM structure, real classes, real text, in document order) with every root-relative URL (`src`, `href`, `action`, `srcset`, inline `style="...url(...)"`) rewritten to an absolute URL against the captured origin. `<script>`, `<noscript>`, and dangling `<link rel=preload as=script>` tags are stripped (no JS runtime — matches the `'static-html'` architecture decision already committed in `spec/technical`). `styles/tokens.css` and `styles/main.css` are still generated and linked **first** in `<head>`, ahead of the real hotlinked stylesheets, so they act as a font/color fallback baseline only if the real stylesheets fail to load — real stylesheets win the cascade for anything they both touch (same specificity, later source order).
+
+**Why hotlink instead of download real assets**: this pipeline has no code path that downloads binary assets from the live target (and outbound network to arbitrary hosts is often unavailable in sandboxed runs — verified blocked by the egress proxy in this environment even to the capture target itself). Rewriting root-relative URLs to absolute `<captured-origin>/...` is the non-fabricating choice: real files, real paths, exactly as referenced by the real captured markup — it just requires the origin to still be reachable at deploy/view time. This is a disclosed, deliberate trade-off, not a bug; do not "fix" it by inventing local placeholder assets.
+
+`buildFaithfulClone()` returns `{ ok: false, reason }` (never throws) when `dataset.normalize.dom.html` or `dataset.source.target` is missing/invalid — `generator/index.js` falls back to the original synthetic-template builder (`buildHeaderSection`/`buildHeroSection`/`buildBodySections`/`buildFormSection`/`buildFooterSection`, unchanged) in that case. This keeps the old path alive as a defensive fallback for malformed/partial capture data rather than crashing the pipeline; it should not fire on any real capture, since `collector/index.js` always embeds the full `normalize/output/dom.json` and `capture/report.json.target` when they exist.
+
+Verified: `elements(cheerio '*')` traversal order over `capture/raw/dom/dom.html` is index-for-index identical to `capture/raw/style/styles.json`'s capture order (both are document/preorder traversal — `document.querySelectorAll('*')` in `capture/style.js` vs. cheerio's `$('*')` — checked with a 1960-element real capture, zero mismatches). This alignment is **not currently used** by `faithfulClone.js` (it clones structure/classes/text and relies on hotlinked real CSS for appearance, not per-element inline computed styles — injecting per-element inline styles would out-specificity the real classes and kill their responsive/hover behavior), but is documented here since it's a validated building block if a future change needs per-element computed-style fallback (e.g. for a site whose stylesheets can't be hotlinked for some reason).
+
 ### Module directory reference
 
 | Stage | Reads from | Writes to |
@@ -83,7 +91,7 @@ All downstream stages (`normalize` onward) resolve paths via `shared/paths.js`, 
 | `ai-analysis/` | `collector/output/dataset.json`, `normalize/output/text.json` | `ai-analysis/output/semantic.json` |
 | `spec/functional/` | `ai-analysis/output/semantic.json`, `analyzer/output/analysis.json` | `spec/functional/output/{spec.json,spec.md}` |
 | `spec/technical/` | all prior outputs | `spec/technical/output/{spec.json,spec.md}` |
-| `generator/` | technical spec, tokens, analysis | `rebuild/output/` |
+| `generator/` | `dataset.json` (primarily `normalize.dom.html` + `source.target`), `semantic.json`, `tokens.json` | `rebuild/output/` |
 | `qa/` | every stage's output + builds `rebuild/output/` | `qa/output/{report.json,report.md}` |
 
 ### Known rough edges (worth checking before assuming behavior)

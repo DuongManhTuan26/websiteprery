@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-08-02T07:40:53.486Z",
+  "generatedAt": "2026-08-02T11:04:31.910Z",
   "source": {
     "captureReport": {
       "target": "https://preny.ai",
@@ -73368,51 +73368,51 @@
     "assets": {
       "screenshot": {
         "exists": true,
-        "path": "/Users/mac/capture/capture/raw/screenshots/home.png",
+        "path": "/home/user/websiteprery/capture/raw/screenshots/home.png",
         "size": 2184149
       },
       "har": {
         "exists": true,
-        "path": "/Users/mac/capture/capture/raw/har/preny.har",
+        "path": "/home/user/websiteprery/capture/raw/har/preny.har",
         "size": 37733711
       },
       "cookies": {
         "exists": true,
-        "path": "/Users/mac/capture/capture/raw/cookies/cookies.json",
+        "path": "/home/user/websiteprery/capture/raw/cookies/cookies.json",
         "size": 3276
       },
       "localStorage": {
         "exists": true,
-        "path": "/Users/mac/capture/capture/raw/storage/localStorage.json",
+        "path": "/home/user/websiteprery/capture/raw/storage/localStorage.json",
         "size": 412
       },
       "sessionStorage": {
         "exists": true,
-        "path": "/Users/mac/capture/capture/raw/storage/sessionStorage.json",
+        "path": "/home/user/websiteprery/capture/raw/storage/sessionStorage.json",
         "size": 183
       },
       "indexedDB": {
         "exists": true,
-        "path": "/Users/mac/capture/capture/raw/storage/indexedDB.json",
+        "path": "/home/user/websiteprery/capture/raw/storage/indexedDB.json",
         "size": 2
       },
       "styles": {
         "exists": true,
-        "path": "/Users/mac/capture/capture/raw/style/styles.json",
+        "path": "/home/user/websiteprery/capture/raw/style/styles.json",
         "size": 1507273
       },
       "websocket": {
         "exists": true,
-        "path": "/Users/mac/capture/capture/raw/websocket/frames.json",
+        "path": "/home/user/websiteprery/capture/raw/websocket/frames.json",
         "size": 95
       }
     }
   },
   "analysis": {
-    "generatedAt": "2026-08-02T07:40:53.472Z",
+    "generatedAt": "2026-08-02T11:04:31.901Z",
     "version": "1.0.0",
     "layout": {
-      "generatedAt": "2026-08-02T07:40:53.358Z",
+      "generatedAt": "2026-08-02T11:04:31.800Z",
       "totalNodes": 1566,
       "maxDepth": 23,
       "displayCounts": {
@@ -73925,7 +73925,7 @@
       "layoutModel": "flexbox-dominant"
     },
     "components": {
-      "generatedAt": "2026-08-02T07:40:53.368Z",
+      "generatedAt": "2026-08-02T11:04:31.807Z",
       "totalNodes": 1566,
       "totalComponents": 342,
       "tagStatistics": {
@@ -75775,7 +75775,7 @@
       ]
     },
     "design": {
-      "generatedAt": "2026-08-02T07:40:53.388Z",
+      "generatedAt": "2026-08-02T11:04:31.815Z",
       "totalElements": 1960,
       "palette": [
         {
@@ -75943,7 +75943,7 @@
       ]
     },
     "interaction": {
-      "generatedAt": "2026-08-02T07:40:53.396Z",
+      "generatedAt": "2026-08-02T11:04:31.821Z",
       "clickable": 84,
       "forms": 1,
       "inputs": 5,
@@ -76942,10 +76942,10 @@
       ]
     },
     "vision": {
-      "generatedAt": "2026-08-02T07:40:53.396Z",
+      "generatedAt": "2026-08-02T11:04:31.822Z",
       "screenshotAvailable": true,
       "screenshot": {
-        "path": "/Users/mac/capture/capture/raw/screenshots/home.png",
+        "path": "/home/user/websiteprery/capture/raw/screenshots/home.png",
         "width": 1440,
         "height": 8406,
         "format": "png",
@@ -76979,7 +76979,7 @@
     }
   },
   "tokens": {
-    "generatedAt": "2026-08-02T07:40:53.485Z",
+    "generatedAt": "2026-08-02T11:04:31.909Z",
     "colors": [
       {
         "name": "primary",

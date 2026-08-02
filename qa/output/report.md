@@ -1,23 +1,23 @@
 # QA Report
 
-**Generated:** 2026-08-02T08:35:41.804Z
+**Generated:** 2026-08-02T11:05:22.070Z
 **Overall:** PASSED
 
 ## Output Validation
 
-- [x] capture: /Users/mac/capture/capture/report.json
-- [x] normalize: /Users/mac/capture/normalize/output/dom.json
-- [x] normalize: /Users/mac/capture/normalize/output/css.json
-- [x] normalize: /Users/mac/capture/normalize/output/text.json
-- [x] normalize: /Users/mac/capture/normalize/output/assets.json
-- [x] analyzer: /Users/mac/capture/analyzer/output/analysis.json
-- [x] style-extraction: /Users/mac/capture/style-extraction/output/tokens.json
-- [x] collector: /Users/mac/capture/collector/output/dataset.json
-- [x] ai-analysis: /Users/mac/capture/ai-analysis/output/semantic.json
-- [x] functional-spec: /Users/mac/capture/spec/functional/output/spec.json
-- [x] technical-spec: /Users/mac/capture/spec/technical/output/spec.json
-- [x] generator: /Users/mac/capture/rebuild/output/index.html
-- [x] generator: /Users/mac/capture/rebuild/output/package.json
+- [x] capture: /home/user/websiteprery/capture/report.json
+- [x] normalize: /home/user/websiteprery/normalize/output/dom.json
+- [x] normalize: /home/user/websiteprery/normalize/output/css.json
+- [x] normalize: /home/user/websiteprery/normalize/output/text.json
+- [x] normalize: /home/user/websiteprery/normalize/output/assets.json
+- [x] analyzer: /home/user/websiteprery/analyzer/output/analysis.json
+- [x] style-extraction: /home/user/websiteprery/style-extraction/output/tokens.json
+- [x] collector: /home/user/websiteprery/collector/output/dataset.json
+- [x] ai-analysis: /home/user/websiteprery/ai-analysis/output/semantic.json
+- [x] functional-spec: /home/user/websiteprery/spec/functional/output/spec.json
+- [x] technical-spec: /home/user/websiteprery/spec/technical/output/spec.json
+- [x] generator: /home/user/websiteprery/rebuild/output/index.html
+- [x] generator: /home/user/websiteprery/rebuild/output/package.json
 
 ## Analysis Validation
 
@@ -31,6 +31,6 @@ Build: PASSED
 
 Target: https://preny.ai
 Finished at: 2026-08-01T09:34:19.047Z
-Age: 23 hours
-Capture data is fresh.
+Age: 25.5 hours
+⚠️ Dữ liệu capture đã 25.5 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công.
 ⚠️ Missing capture artifacts: websocket

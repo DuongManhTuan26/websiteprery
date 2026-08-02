@@ -1,81 +1,81 @@
 {
-  "generatedAt": "2026-08-02T08:35:41.804Z",
+  "generatedAt": "2026-08-02T11:05:22.070Z",
   "passed": true,
   "outputChecks": [
     {
-      "path": "/Users/mac/capture/capture/report.json",
+      "path": "/home/user/websiteprery/capture/report.json",
       "stage": "capture",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/normalize/output/dom.json",
+      "path": "/home/user/websiteprery/normalize/output/dom.json",
       "stage": "normalize",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/normalize/output/css.json",
+      "path": "/home/user/websiteprery/normalize/output/css.json",
       "stage": "normalize",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/normalize/output/text.json",
+      "path": "/home/user/websiteprery/normalize/output/text.json",
       "stage": "normalize",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/normalize/output/assets.json",
+      "path": "/home/user/websiteprery/normalize/output/assets.json",
       "stage": "normalize",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/analyzer/output/analysis.json",
+      "path": "/home/user/websiteprery/analyzer/output/analysis.json",
       "stage": "analyzer",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/style-extraction/output/tokens.json",
+      "path": "/home/user/websiteprery/style-extraction/output/tokens.json",
       "stage": "style-extraction",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/collector/output/dataset.json",
+      "path": "/home/user/websiteprery/collector/output/dataset.json",
       "stage": "collector",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/ai-analysis/output/semantic.json",
+      "path": "/home/user/websiteprery/ai-analysis/output/semantic.json",
       "stage": "ai-analysis",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/spec/functional/output/spec.json",
+      "path": "/home/user/websiteprery/spec/functional/output/spec.json",
       "stage": "functional-spec",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/spec/technical/output/spec.json",
+      "path": "/home/user/websiteprery/spec/technical/output/spec.json",
       "stage": "technical-spec",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/rebuild/output/index.html",
+      "path": "/home/user/websiteprery/rebuild/output/index.html",
       "stage": "generator",
       "exists": true,
       "passed": true
     },
     {
-      "path": "/Users/mac/capture/rebuild/output/package.json",
+      "path": "/home/user/websiteprery/rebuild/output/package.json",
       "stage": "generator",
       "exists": true,
       "passed": true
@@ -90,18 +90,18 @@
     "available": true,
     "target": "https://preny.ai",
     "finishedAt": "2026-08-01T09:34:19.047Z",
-    "ageHours": 23,
-    "stale": false,
+    "ageHours": 25.5,
+    "stale": true,
     "missingFiles": [
       "websocket"
     ],
-    "warning": null
+    "warning": "Dữ liệu capture đã 25.5 giờ — vượt ngưỡng 24h. Các stage sau có thể đang chạy trên dữ liệu capture cũ (vd. dùng --skip-capture) chứ không phải một lần capture mới thành công."
   },
   "summary": {
     "totalChecks": 13,
     "passedChecks": 13,
     "analysisIssues": 0,
     "rebuildBuildPassed": true,
-    "captureStale": false
+    "captureStale": true
   }
 }

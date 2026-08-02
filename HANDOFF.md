@@ -8,9 +8,10 @@ Snapshot tại: 2026-08-02, 15:58 +07.
 
 ## 1. TRẠNG THÁI HIỆN TẠI
 
-- Repo không dùng git (chưa `git init`).
+- Repo dùng git thật (branch làm việc `claude/preny-website-recreation-2vz5cz`).
 - Không có test suite tự động. Xác minh = chạy pipeline + đọc `qa/output/report.json`.
-- Lần chạy QA gần nhất: `passed: true`, `13/13` output check, `0` analysis issue, `rebuildBuild.passed: true` (build Vite thật thành công).
+- `generator/` giờ có 2 đường: **faithful clone** (`generator/faithfulClone.js`, đường chính — clone HTML/class/text thật + hotlink CSS/asset thật về origin đã capture, không còn khung trang tổng hợp cố định) và builder tổng hợp cũ (fallback khi thiếu dữ liệu). Chi tiết ở Stage 9 bên dưới và CLAUDE.md.
+- Lần chạy QA gần nhất (sau khi thêm faithful clone, verify lại từ trạng thái sạch hoàn toàn): `passed: true`, `13/13` output check, `0` analysis issue, `rebuildBuild.passed: true` (build Vite thật thành công, `rebuild/output/index.html` giờ ~250KB — clone thật của trang preny.ai thay vì template tổng hợp nhỏ trước đây).
 - Dữ liệu capture chuẩn hiện có trong repo: `https://preny.ai`, capture lúc `2026-08-01T09:34:19Z`, tuổi dữ liệu tại thời điểm snapshot: 23h (`stale: false`, ngưỡng stale là 24h).
 - Số liệu thật từ lần chạy chuẩn: `dom.nodes = 1566`, `components.totalComponents = 342`, `layoutModel = flexbox-dominant`, `interaction.totalInteractive = 90`, `design.primaryFont = "ui-sans-serif"`, `design.palette = 15 màu`, `ai-analysis.pageType = "saas-ai-landing"`, `ai-analysis.contentSections = 9` (8 section thân trang + 1 section rỗng bị loại ở tầng generator), `language = "vi"`.
 - `rebuild/output/` chứa project Vite tĩnh đã sinh từ dữ liệu preny.ai ở trên; đã build thử thành công ra `dist/`.
@@ -129,7 +130,17 @@ Input: `dataset.json`, `semantic.json`. Output: `spec/functional/output/{spec.js
 Input: `dataset.json`, `semantic.json`, `spec/functional/output/spec.json`, `tokens.json`. Output: `spec/technical/output/{spec.json,spec.md}`.
 
 ### Stage 9 — `generator/` (Code Generator)
-`index.js`: `generateCode()` đọc `dataset.json` (dùng `.normalize.text.text` và `.analysis.interaction`), `semantic.json`, `tokens.json`.
+`index.js`: `generateCode()` đọc `dataset.json`, `semantic.json`, `tokens.json`.
+
+**Đường chính (faithful clone) — `generator/faithfulClone.js`.** `buildFaithfulClone(dataset)` dùng `dataset.normalize.dom.html` (HTML thật đầy đủ, không cắt — đã có sẵn trong `dataset.json` qua `collector`, không cần stage/path mới) + `dataset.source.target` (origin đã capture) để dựng ra 1 bản clone THẬT theo nghĩa đen: `<head>` thật (title/meta/OG/twitter/canonical/favicon/`<link rel=stylesheet>` thật/`<style>` inline thật) + `<body>` thật (đúng cấu trúc DOM thật, đúng class thật, đúng text thật, đúng thứ tự tài liệu) — mọi URL root-relative (`src`, `href`, `action`, `srcset`, `style="...url(...)"`) được viết lại thành URL tuyệt đối trỏ về origin đã capture. `<script>`, `<noscript>`, `<link rel=preload as=script>` bị loại (không có JS runtime — khớp quyết định kiến trúc `'static-html'` đã chốt ở `spec/technical`). `styles/tokens.css`+`styles/main.css` vẫn được sinh và nạp TRƯỚC các stylesheet thật trong `<head>` — chỉ đóng vai trò fallback font/màu cơ bản nếu stylesheet thật không tải được; stylesheet thật thắng cascade nhờ thứ tự nạp sau (cùng độ đặc hiệu).
+
+**Vì sao hotlink thay vì tải file thật về:** pipeline hiện không có bước tải asset nhị phân từ target sống (và trong môi trường sandbox hiện tại, truy cập mạng ra ngoài tới các domain tuỳ ý — kể cả chính target đã capture — bị egress proxy chặn, đã xác minh bằng thực nghiệm). Viết lại URL root-relative thành `<origin đã capture>/...` là lựa chọn KHÔNG fabricate: file thật, đường dẫn thật, y hệt như trong markup thật — chỉ cần origin còn truy cập được lúc deploy/xem. Đây là đánh đổi có chủ đích, đã ghi chép rõ, không phải bug — không "sửa" bằng cách tạo asset giả cục bộ.
+
+`buildFaithfulClone()` trả `{ ok:false, reason }` (không bao giờ throw) khi thiếu `dataset.normalize.dom.html` hoặc `dataset.source.target` — lúc đó `generator/index.js` rơi về builder tổng hợp cũ (`buildHeaderSection`/`buildHeroSection`/`buildBodySections`/`buildFormSection`/`buildFooterSection`, giữ nguyên không đổi) làm fallback phòng vệ cho dữ liệu capture thiếu/hỏng, không nên xảy ra với dữ liệu capture thật hợp lệ.
+
+Đã verify: thứ tự duyệt `cheerio('*')` trên `capture/raw/dom/dom.html` khớp 1-1 theo index với thứ tự trong `capture/raw/style/styles.json` (cả 2 đều là document-order/preorder — `document.querySelectorAll('*')` trong `capture/style.js` so với `cheerio $('*')` — kiểm tra thực nghiệm trên 1960 phần tử capture thật, 0 sai lệch). Alignment này CHƯA được `faithfulClone.js` dùng tới (clone hiện dựa vào class+CSS thật hotlink cho hình thức, không inline computed-style từng phần tử — vì làm vậy sẽ thắng độ đặc hiệu so với class thật, phá hỏng hover/responsive) — ghi lại ở đây vì đã verify sẵn, có thể dùng làm fallback computed-style-per-element nếu sau này có site không hotlink được stylesheet thật.
+
+Nhánh tổng hợp cũ (dùng khi faithful clone không khả dụng), đọc `.normalize.text.text` và `.analysis.interaction`:
 
 - `escapeHtml(text)`.
 - `buildTokensCss(tokens)`: `:root{--colorname:value;...;--font-primary...(chỉ khi primaryFont có giá trị thật);--font-size-N...}`.
@@ -408,7 +419,8 @@ capture-rebuild-pipeline/
 | `ai-analysis/index.js` | `shared/paths.js`, `shared/load.js`, `collector/output/dataset.json` |
 | `spec/functional/index.js` | `shared/paths.js`(`../../shared/paths`), `shared/load.js`, `collector/output/dataset.json`, `ai-analysis/output/semantic.json` |
 | `spec/technical/index.js` | như trên + `spec/functional/output/spec.json`, `style-extraction/output/tokens.json` |
-| `generator/index.js` | `shared/paths.js`, `shared/load.js`, `collector/output/dataset.json`, `ai-analysis/output/semantic.json`, `style-extraction/output/tokens.json` |
+| `generator/index.js` | `shared/paths.js`, `shared/load.js`, `collector/output/dataset.json`, `ai-analysis/output/semantic.json`, `style-extraction/output/tokens.json`, `generator/faithfulClone.js` |
+| `generator/faithfulClone.js` | `cheerio`; đọc `dataset.normalize.dom.html` + `dataset.source.target` (đã có sẵn trong `dataset.json`, không cần path mới) |
 | `qa/index.js` | `shared/paths.js`, `shared/load.js`, mọi output 9 stage trước, `child_process.execSync` (npm install/build trong rebuild/output) |
 | `pipeline/index.js` | `child_process.execSync` (cho capture), `require()` từng stage's `index.js` |
 
@@ -443,6 +455,7 @@ Dependency ngoài (`package.json`): `playwright` (capture), `cheerio` (shared/do
 23. Tạo `README.md` (mới), cập nhật `CLAUDE.md` liên tục theo từng thay đổi, thêm `.gitignore`.
 24. Dọn `rebuild/output/{node_modules,dist,package-lock.json}` (build-artifact tái tạo được), chạy lại QA lần cuối để report khớp đĩa thật.
 25. Đóng gói 2 lần (`.zip`) — bản gần nhất kèm `README.md`+`CLAUDE.md` cập nhật.
+26. **Thêm `generator/faithfulClone.js` — clone HTML thật thay cho khung trang tổng hợp cố định (giải quyết Backlog #1 cũ).** Xác nhận `dataset.normalize.dom.html` (đầy đủ, không cắt) và `dataset.source.target` đã sẵn có trong `dataset.json` qua `collector` — không cần stage/path mới, không phá kiến trúc hiện có. Verify thực nghiệm: `cheerio('*')` khớp 1-1 theo index với `styles.json` (1960 phần tử, 0 sai lệch) — ghi lại làm building block dù chưa dùng tới trong bản hiện tại. Đường chính: real `<head>` (title/meta/OG/canonical/favicon/stylesheet thật) + real `<body>` (cấu trúc/class/text thật) + rewrite mọi URL root-relative (`src`/`href`/`action`/`srcset`/`style url()`) thành absolute về origin đã capture (không tải file thật về được vì egress proxy sandbox chặn mọi domain ngoài allowlist, kể cả chính `preny.ai` — đã verify bằng `curl`/proxy status endpoint). Loại `<script>`/`<noscript>`/`link[as=script]` (không JS runtime, khớp quyết định `'static-html'` đã chốt). Fallback về builder tổng hợp cũ khi thiếu dữ liệu (không throw). Test thêm bằng fixture tổng hợp khác cấu trúc (site giả kiểu docs, origin khác) để xác nhận không hardcode theo preny.ai. Verify lại toàn bộ theo mục 19 — `qa/output/report.json.passed: true`, `13/13`, `0` analysis issue, build Vite pass.
 
 ---
 
@@ -450,13 +463,14 @@ Dependency ngoài (`package.json`): `playwright` (capture), `cheerio` (shared/do
 
 | # | Mô tả | Mức độ | Lý do chưa làm |
 |---|---|---|---|
-| 1 | `generator/index.js` vẫn dùng khung trang cố định (header→hero→body sections→contact→footer) — chưa tự quyết định vùng cấu trúc nào (nhiều `<main>`, `<aside>`) xứng đáng xử lý riêng ngoài section/aside | Kiến trúc, trung bình | Cần thiết kế riêng, rủi ro cao hơn nếu làm vội |
-| 2 | `analyzer/component.js`: class chứa cả `cta` và `banner` (vd `"cta-banner"`) bị nhận `hero` (do check `banner` trước `cta` trong thứ tự heuristic) | Nhỏ | Ảnh hưởng thấp, chưa có bằng chứng gây sai lệch thật trên 2 site test |
-| 3 | `buildHeaderSection` đôi khi bắt cả link tiện ích accessibility (vd `#__docusaurus_skipToContent_fallback` của Docusaurus) làm mục nav vì không phân biệt được link menu thật với link tiện ích | Nhỏ, thẩm mỹ | Chưa có bằng chứng ảnh hưởng chức năng |
+| 1 | ~~`generator/index.js` vẫn dùng khung trang cố định~~ — **ĐÃ GIẢI QUYẾT**: thêm `generator/faithfulClone.js`, đường chính giờ clone HTML thật (đúng cấu trúc/class/text thật, không còn khung tổng hợp cố định) + hotlink CSS/asset thật về origin đã capture. Builder tổng hợp cũ vẫn giữ nguyên làm fallback khi thiếu dữ liệu. Xem CLAUDE.md mục "Generated output" + HANDOFF.md Stage 9. | — | Đã làm trong phiên này |
+| 2 | `analyzer/component.js`: class chứa cả `cta` và `banner` (vd `"cta-banner"`) bị nhận `hero` (do check `banner` trước `cta` trong thứ tự heuristic) | Nhỏ | Ảnh hưởng thấp, chưa có bằng chứng gây sai lệch thật trên 2 site test; không ảnh hưởng đường faithful-clone mới (đường đó không dùng `component.js` để dựng HTML) |
+| 3 | `buildHeaderSection` (nhánh tổng hợp cũ, fallback) đôi khi bắt cả link tiện ích accessibility làm mục nav | Nhỏ, thẩm mỹ | Chỉ ảnh hưởng nhánh fallback, không ảnh hưởng đường faithful-clone chính |
 | 4 | Capture đa trang/đa route | Chưa triển khai | Chưa đủ bằng chứng nhu cầu, từ chối có chủ đích |
 | 5 | `ignoreHTTPSErrors` cho capture (để vượt qua site có cert lỗi/hết hạn) | Chưa triển khai | Chỉ đạo rõ ràng: không thêm trừ khi đã có sẵn — hiện chưa có |
 | 6 | Test suite tự động | Chưa có | Chưa được yêu cầu; xác minh hiện tại dựa vào chạy pipeline+QA thật |
-| 7 | `git init` | Chưa làm | Chưa được yêu cầu; `.gitignore` đã sẵn sàng |
+| 7 | `git init` | Đã có (repo git thật, branch `claude/preny-website-recreation-2vz5cz`) | — |
+| 8 | Faithful clone hotlink CSS/asset về origin gốc thay vì tải file thật — nếu origin gốc sập hoặc đổi hash file build (`_next/static/css/*.css`), phần trực quan sẽ vỡ dù HTML/text vẫn đúng | Đã biết, chấp nhận | Sandbox hiện tại chặn egress ra mọi domain ngoài allowlist (kể cả chính target đã capture) — không thể tải asset nhị phân thật về trong phiên này; xem CLAUDE.md |
 
 ---
 

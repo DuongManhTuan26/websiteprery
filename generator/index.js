@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const paths = require('../shared/paths');
 const { readJson, ensureDir } = require('../shared/load');
+const { buildFaithfulClone } = require('./faithfulClone');
 
 function escapeHtml(text) {
   if (!text) return '';
@@ -291,6 +292,31 @@ ${sections.join('\n\n')}
 </html>`;
 }
 
+// Literal clone of the captured page: real head (meta/title/OG/canonical/real
+// stylesheet links) + real body (real DOM structure, classes, text), with
+// root-relative URLs rewritten to the captured origin. Our own tokens.css/
+// main.css load first as a fallback baseline (font/color only) — the real
+// hotlinked stylesheet(s) load after and win the cascade for any class they
+// both touch, so this only matters if the origin's assets become unreachable.
+function buildFaithfulIndexHtml(clone) {
+  const bodyAttrs = Object.entries(clone.bodyAttribs || {})
+    .map(([key, value]) => (value === '' ? key : `${key}="${escapeHtml(value)}"`))
+    .join(' ');
+
+  return `<!DOCTYPE html>
+<html${clone.lang ? ` lang="${escapeHtml(clone.lang)}"` : ''}>
+<head>
+${clone.charsetHtml}
+<link rel="stylesheet" href="/styles/tokens.css">
+<link rel="stylesheet" href="/styles/main.css">
+${clone.headHtml}
+</head>
+<body${bodyAttrs ? ' ' + bodyAttrs : ''}>
+${clone.bodyHtml}
+</body>
+</html>`;
+}
+
 function buildPackageJson() {
   return {
     name: 'rebuilt-site',
@@ -329,18 +355,30 @@ async function generateCode() {
   const dataset = readJson(paths.collector.dataset);
   const semantic = readJson(paths.aiAnalysis.semantic);
   const tokens = readJson(paths.styleExtraction.tokens);
-  const text = dataset.normalize.text?.text || '';
-  const interaction = dataset.analysis?.interaction || { elements: [], forms: 0 };
 
-  const sections = [
-    buildHeaderSection(semantic, interaction),
-    buildHeroSection(text),
-    ...buildBodySections(semantic),
-    buildFormSection(interaction),
-    buildFooterSection()
-  ].filter(Boolean);
+  const clone = buildFaithfulClone(dataset);
+  let indexHtml;
 
-  fs.writeFileSync(path.join(outputDir, 'index.html'), buildIndexHtml(sections));
+  if (clone.ok) {
+    indexHtml = buildFaithfulIndexHtml(clone);
+    console.log('Code generator: using faithful clone (real captured HTML, origin', clone.origin + ')');
+  } else {
+    const text = dataset.normalize.text?.text || '';
+    const interaction = dataset.analysis?.interaction || { elements: [], forms: 0 };
+
+    const sections = [
+      buildHeaderSection(semantic, interaction),
+      buildHeroSection(text),
+      ...buildBodySections(semantic),
+      buildFormSection(interaction),
+      buildFooterSection()
+    ].filter(Boolean);
+
+    indexHtml = buildIndexHtml(sections);
+    console.log('Code generator: faithful clone unavailable (' + clone.reason + '), using synthetic template fallback');
+  }
+
+  fs.writeFileSync(path.join(outputDir, 'index.html'), indexHtml);
   fs.writeFileSync(path.join(outputDir, 'styles', 'tokens.css'), buildTokensCss(tokens));
   fs.writeFileSync(path.join(outputDir, 'styles', 'main.css'), buildMainCss());
   fs.writeFileSync(path.join(outputDir, 'package.json'), JSON.stringify(buildPackageJson(), null, 2));
