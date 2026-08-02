@@ -61,7 +61,8 @@ model Workspace {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  members WorkspaceMember[]
+  members  WorkspaceMember[]
+  chatbots Chatbot[]
 
   @@map("workspaces")
 }
@@ -79,4 +80,32 @@ model WorkspaceMember {
   @@unique([workspaceId, userId])
   @@index([userId])
   @@map("workspace_members")
+}
+
+// Which AI backend replies for a given chatbot. MOCK is deterministic and
+// needs no external credentials — the default so the system is runnable and
+// testable with zero setup; OPENAI is a real, optional integration (see the
+// ai-providers module) enabled per-chatbot once a workspace has configured
+// an API key.
+enum AIProviderType {
+  MOCK
+  OPENAI
+}
+
+model Chatbot {
+  id           String         @id @default(uuid())
+  workspaceId  String
+  name         String
+  systemPrompt String         @default("You are a helpful assistant.")
+  aiProvider   AIProviderType @default(MOCK)
+  aiModel      String?
+  widgetToken  String         @unique @default(uuid())
+  isActive     Boolean        @default(true)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId])
+  @@map("chatbots")
 }

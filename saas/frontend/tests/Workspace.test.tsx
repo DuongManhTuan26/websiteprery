@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import { AuthProvider } from '../src/context/AuthContext';
 import { WorkspaceProvider } from '../src/context/WorkspaceContext';
@@ -25,12 +25,14 @@ function renderLayout() {
   localStorage.setItem('saas.refreshToken', 'fake');
 
   return render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={['/dashboard']}>
       <AuthProvider>
         <WorkspaceProvider>
-          <DashboardLayout>
-            <div>Dashboard body</div>
-          </DashboardLayout>
+          <Routes>
+            <Route path="/dashboard" element={<DashboardLayout />}>
+              <Route index element={<div>Dashboard body</div>} />
+            </Route>
+          </Routes>
         </WorkspaceProvider>
       </AuthProvider>
     </MemoryRouter>

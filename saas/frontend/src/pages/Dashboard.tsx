@@ -1,4 +1,3 @@
-import { DashboardLayout } from '../components/DashboardLayout';
 import { useAuth } from '../context/AuthContext';
 import { useWorkspace } from '../context/WorkspaceContext';
 
@@ -7,11 +6,11 @@ export function DashboardPage() {
   const { currentWorkspace } = useWorkspace();
 
   return (
-    <DashboardLayout>
+    <>
       <h1>Welcome, {user?.name}</h1>
       <p>
-        Chatbot, conversation, CRM, and settings screens are built out in their own phases and will
-        appear in the sidebar above.
+        Conversation, CRM, and settings screens are built out in their own phases and will appear in
+        the sidebar above.
       </p>
       <dl className="account-info">
         <dt>Account email</dt>
@@ -23,6 +22,6 @@ export function DashboardPage() {
         <dt>Your role</dt>
         <dd>{currentWorkspace?.role}</dd>
       </dl>
-    </DashboardLayout>
+    </>
   );
 }

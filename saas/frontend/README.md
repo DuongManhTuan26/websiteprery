@@ -34,6 +34,12 @@ Requires `saas-backend` running (see `../backend/README.md`).
   one tenant before anything else makes sense to show).
 - `src/components/WorkspaceSwitcher.tsx` — sidebar dropdown + inline
   "create new workspace" form.
+- `src/pages/Chatbots.tsx` — CRUD for the current workspace's chatbots
+  (`/dashboard/chatbots`).
+
+Routing is now nested (`DashboardLayout` renders `<Outlet/>`) so new
+authenticated pages are added as child routes in `App.tsx` rather than each
+page re-implementing the shell.
 
 ## Tests
 

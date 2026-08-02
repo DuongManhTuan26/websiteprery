@@ -1,14 +1,13 @@
-import { type ReactNode } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useWorkspace } from '../context/WorkspaceContext';
 import { WorkspaceSwitcher } from './WorkspaceSwitcher';
 import { CreateWorkspacePrompt } from './CreateWorkspacePrompt';
 
 // Nav items beyond "Overview" are placeholders wired up in later phases
-// (Chatbots, Conversations, CRM, Settings) — kept visible now so the
-// information architecture is established from this phase onward rather
-// than bolted on later.
+// (Conversations, CRM, Settings) — kept visible now so the information
+// architecture is established from this phase onward rather than bolted on
+// later.
 const NAV_ITEMS = [
   { to: '/dashboard', label: 'Overview', end: true },
   { to: '/dashboard/chatbots', label: 'Chatbots' },
@@ -17,7 +16,7 @@ const NAV_ITEMS = [
   { to: '/dashboard/settings', label: 'Settings' }
 ];
 
-export function DashboardLayout({ children }: { children: ReactNode }) {
+export function DashboardLayout() {
   const { user, logout } = useAuth();
   const { workspaces, loading } = useWorkspace();
   const navigate = useNavigate();
@@ -53,7 +52,9 @@ export function DashboardLayout({ children }: { children: ReactNode }) {
           <span>{user?.name}</span>
           <button onClick={handleLogout}>Log out</button>
         </header>
-        <main className="dashboard-content">{children}</main>
+        <main className="dashboard-content">
+          <Outlet />
+        </main>
       </div>
     </div>
   );

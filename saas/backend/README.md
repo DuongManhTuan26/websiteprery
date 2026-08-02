@@ -82,6 +82,27 @@ role for member mutations:
   workspace can never be removed or demoted (would leave the tenant
   ownerless).
 
+## Chatbots
+
+Nested under a workspace (`Authorization: Bearer <accessToken>`, caller must
+be a member of `:workspaceId`):
+
+- `POST /workspaces/:workspaceId/chatbots` `{name, systemPrompt?, aiProvider?, aiModel?}` -> `201 {chatbot}` (any member)
+- `GET /workspaces/:workspaceId/chatbots` -> `200 {chatbots}` (any member)
+- `GET /workspaces/:workspaceId/chatbots/:chatbotId` -> `200 {chatbot}` (any member)
+- `PATCH /workspaces/:workspaceId/chatbots/:chatbotId` -> `200 {chatbot}` (any member)
+- `DELETE /workspaces/:workspaceId/chatbots/:chatbotId` -> `204` (`OWNER`/`ADMIN` only)
+
+Every chatbot lookup is scoped by *both* `id` and `workspaceId`
+(`findFirst({where: {id, workspaceId}})`) — knowing another workspace's
+chatbot id is not enough to read or mutate it even though `:workspaceId`
+membership is already separately enforced; this is the same tenant-isolation
+discipline as every other module.
+
+A chatbot gets a random `widgetToken` (UUID) at creation — this is what the
+embeddable widget (a later phase) uses to authenticate publicly, scoped to
+that one chatbot only, never to the workspace or a user session.
+
 ## Health check
 
 `GET /health` — checks DB connectivity via `SELECT 1`; returns `503` with

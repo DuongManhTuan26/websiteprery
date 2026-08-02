@@ -121,6 +121,36 @@ export interface WorkspaceMemberEntry {
   user: User;
 }
 
+export type AIProviderType = 'MOCK' | 'OPENAI';
+
+export interface Chatbot {
+  id: string;
+  workspaceId: string;
+  name: string;
+  systemPrompt: string;
+  aiProvider: AIProviderType;
+  aiModel: string | null;
+  widgetToken: string;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ChatbotInput {
+  name: string;
+  systemPrompt?: string;
+  aiProvider?: AIProviderType;
+  aiModel?: string;
+}
+
+export interface ChatbotUpdateInput {
+  name?: string;
+  systemPrompt?: string;
+  aiProvider?: AIProviderType;
+  aiModel?: string | null;
+  isActive?: boolean;
+}
+
 export const api = {
   register: (email: string, password: string, name: string) =>
     request<AuthResult>('/auth/register', { method: 'POST', body: { email, password, name } }),
@@ -154,5 +184,21 @@ export const api = {
     }),
 
   removeMember: (workspaceId: string, userId: string) =>
-    request<void>(`/workspaces/${workspaceId}/members/${userId}`, { method: 'DELETE', auth: true })
+    request<void>(`/workspaces/${workspaceId}/members/${userId}`, { method: 'DELETE', auth: true }),
+
+  listChatbots: (workspaceId: string) =>
+    request<{ chatbots: Chatbot[] }>(`/workspaces/${workspaceId}/chatbots`, { auth: true }),
+
+  createChatbot: (workspaceId: string, input: ChatbotInput) =>
+    request<{ chatbot: Chatbot }>(`/workspaces/${workspaceId}/chatbots`, { method: 'POST', body: input, auth: true }),
+
+  updateChatbot: (workspaceId: string, chatbotId: string, input: ChatbotUpdateInput) =>
+    request<{ chatbot: Chatbot }>(`/workspaces/${workspaceId}/chatbots/${chatbotId}`, {
+      method: 'PATCH',
+      body: input,
+      auth: true
+    }),
+
+  deleteChatbot: (workspaceId: string, chatbotId: string) =>
+    request<void>(`/workspaces/${workspaceId}/chatbots/${chatbotId}`, { method: 'DELETE', auth: true })
 };
