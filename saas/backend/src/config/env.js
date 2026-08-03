@@ -36,5 +36,12 @@ export const env = {
   stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || null,
   // Where Stripe redirects the browser back to after checkout/portal —
   // must be the frontend's real origin, not the API's.
-  frontendUrl: process.env.FRONTEND_URL || 'http://localhost:5173'
+  frontendUrl: process.env.FRONTEND_URL || 'http://localhost:5173',
+  // Real SMTP credentials required — without them, password-reset emails
+  // are logged server-side instead of sent (see email.service.js).
+  smtpHost: process.env.SMTP_HOST || null,
+  smtpPort: Number(process.env.SMTP_PORT || 587),
+  smtpUser: process.env.SMTP_USER || null,
+  smtpPassword: process.env.SMTP_PASSWORD || null,
+  smtpFrom: process.env.SMTP_FROM || 'no-reply@preny-clone.example'
 };

@@ -3,7 +3,15 @@ import rateLimit from 'express-rate-limit';
 import { z } from 'zod';
 import { prisma } from '../lib/prisma.js';
 import { hashPassword, verifyPassword } from '../lib/password.js';
-import { signAccessToken, issueRefreshToken, rotateRefreshToken, revokeRefreshToken } from '../lib/jwt.js';
+import {
+  signAccessToken,
+  issueRefreshToken,
+  rotateRefreshToken,
+  revokeRefreshToken,
+  revokeAllRefreshTokens
+} from '../lib/jwt.js';
+import { issuePasswordResetToken, consumePasswordResetToken } from '../lib/passwordReset.js';
+import { sendPasswordResetEmail } from '../services/email.service.js';
 import { asyncHandler, ApiError } from '../middleware/errorHandler.js';
 import { requireAuth } from '../middleware/auth.js';
 import { env } from '../config/env.js';
@@ -25,6 +33,16 @@ const loginLimiter = rateLimit({
 const registerLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
   limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false
+});
+
+// Same reasoning as loginLimiter — this is also anonymous and, unlike
+// login, actually sends a real email when SMTP is configured, so it's
+// also real protection against using this endpoint to spam an inbox.
+const forgotPasswordLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  limit: 5,
   standardHeaders: true,
   legacyHeaders: false
 });
@@ -146,6 +164,51 @@ authRouter.post('/logout', asyncHandler(async (req, res) => {
   }
 
   res.clearCookie(REFRESH_COOKIE, { path: '/api/auth' });
+  res.status(204).send();
+}));
+
+const forgotPasswordSchema = z.object({ email: z.string().email() });
+
+// Always responds with the same generic message regardless of whether the
+// email exists or whether SMTP is actually configured — a different
+// response in either case would let an anonymous caller enumerate real
+// accounts or probe this deployment's email configuration. The real
+// (or logged, if unconfigured) outcome only ever reaches the account
+// owner's own inbox / this server's own logs, never the HTTP response.
+authRouter.post('/forgot-password', forgotPasswordLimiter, asyncHandler(async (req, res) => {
+  const { email } = forgotPasswordSchema.parse(req.body);
+  const user = await prisma.user.findUnique({ where: { email } });
+
+  if (user) {
+    const token = await issuePasswordResetToken(user.id);
+    const resetUrl = `${env.frontendUrl}/dat-lai-mat-khau?token=${token}`;
+    await sendPasswordResetEmail(user.email, resetUrl);
+  }
+
+  res.json({ message: 'Nếu email tồn tại, chúng tôi đã gửi liên kết đặt lại mật khẩu.' });
+}));
+
+const resetPasswordSchema = z.object({
+  token: z.string().min(1),
+  password: z.string().min(8).max(200)
+});
+
+authRouter.post('/reset-password', asyncHandler(async (req, res) => {
+  const body = resetPasswordSchema.parse(req.body);
+  const userId = await consumePasswordResetToken(body.token);
+
+  if (!userId) {
+    throw new ApiError(400, 'Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn');
+  }
+
+  const passwordHash = await hashPassword(body.password);
+
+  await prisma.user.update({ where: { id: userId }, data: { passwordHash } });
+  // A password reset should end every existing session, not just let the
+  // device that performed the reset keep going — this is exactly the
+  // scenario (e.g. a stolen device) the reset is often performed for.
+  await revokeAllRefreshTokens(userId);
+
   res.status(204).send();
 }));
 

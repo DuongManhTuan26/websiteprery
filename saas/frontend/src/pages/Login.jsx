@@ -35,6 +35,7 @@ export function Login() {
         <button className="btn" type="submit" disabled={submitting}>
           {submitting ? 'Đang đăng nhập...' : 'Đăng nhập'}
         </button>
+        <p><Link to="/quen-mat-khau">Quên mật khẩu?</Link></p>
         <p>Chưa có tài khoản? <Link to="/dang-ky">Đăng ký</Link></p>
       </form>
     </div>

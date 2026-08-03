@@ -59,3 +59,13 @@ export async function revokeRefreshToken(token) {
     data: { revokedAt: new Date() }
   });
 }
+
+// Used after a password reset — every existing session should end, not
+// just the browser that performed the reset (e.g. a stolen/lost device
+// where the password was changed specifically to lock it out).
+export async function revokeAllRefreshTokens(userId) {
+  await prisma.refreshToken.updateMany({
+    where: { userId, revokedAt: null },
+    data: { revokedAt: new Date() }
+  });
+}
