@@ -13,7 +13,7 @@ Everything below was extracted, verbatim or near-verbatim, from the real capture
   3. "Mọi thông tin khách hàng được tự động ghi nhận và đồng bộ vào mini CRM ngay trong lúc chat" — auto CRM.
   4. "AI Chatbot tư vấn sản phẩm trực quan qua hình ảnh hai chiều — khách gửi ảnh để AI tư vấn, và khách có thể yêu cầu AI gửi lại ảnh sản phẩm" — two-way image consultation.
   5. "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp" — documented bot→human handoff.
-- **Real nav**: Trang chủ / Hướng dẫn / Tính năng / Bảng giá / Tuyển dụng, plus header "Đăng nhập"/"Đăng ký" buttons — implies real auth and a real pricing page.
+- **Real nav**: Trang chủ / Hướng dẫn / Tính năng / Bảng giá / Tuyển dụng, plus header "Đăng nhập"/"Đăng ký" buttons — implies real auth and a real pricing page. This repo's capture only recorded the homepage's real content, not the "Hướng dẫn" (guide) or "Tuyển dụng" (careers) subpages' — those two nav items are deliberately omitted here rather than linked to fabricated content. "Trang chủ" and "Bảng giá" (`/bao-gia-dich-vu`, matching the real observed route) are real, working pages; "Tính năng" anchors to the homepage's own real feature sections.
 - **Real contact form fields** (5 inputs): full name, username, phone, category — a pre-signup lead/demo-request form.
 
 **Everything not observable from the public marketing page** (database schema, API contracts, internal business logic, the real AI implementation, the real CRM's exact fields) **is this project's own original design** — see `backend/prisma/schema.prisma` for the reasoning behind each model, tied back to the feature bullet above that motivated it.

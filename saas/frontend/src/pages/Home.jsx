@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../api/client.js';
+import { SiteHeader } from '../components/SiteHeader.jsx';
 
 // Copy below is the real content captured from https://preny.ai/ by this
 // repo's capture-rebuild pipeline (see /ai-analysis/output/semantic.json
@@ -8,12 +9,6 @@ import { api } from '../api/client.js';
 // faithfully, not invented. Only the CTA destinations changed: they now
 // point at this product's own real /dang-ky and /dang-nhap routes instead
 // of the original site's.
-const NAV = [
-  { href: '/', label: 'Trang chủ' },
-  { href: '/dang-ky', label: 'Tính năng' },
-  { href: '/dang-ky', label: 'Bảng giá' }
-];
-
 const FEATURES = [
   {
     heading: 'Dữ liệu không chia sẻ',
@@ -56,20 +51,7 @@ export function Home() {
 
   return (
     <div className="marketing">
-      <header className="site-header container">
-        <Link to="/" className="logo"><strong>Preny Clone</strong></Link>
-        <nav>
-          <ul className="site-nav">
-            {NAV.map(item => (
-              <li key={item.label}><Link to={item.href}>{item.label}</Link></li>
-            ))}
-          </ul>
-        </nav>
-        <div className="header-actions">
-          <Link to="/dang-nhap" className="btn btn-ghost">Đăng nhập</Link>
-          <Link to="/dang-ky" className="btn">Đăng ký</Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="hero">
         <div className="container">
