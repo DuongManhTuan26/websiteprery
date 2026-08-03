@@ -23,6 +23,22 @@ import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 export function createApp() {
   const app = express();
 
+  // The embeddable widget (see widget.routes.js, public/widget.js) is
+  // designed to run on arbitrary third-party sites, not just this app's
+  // own frontend — its public, widgetKey-scoped endpoints must accept
+  // cross-origin requests from anywhere. No cookies are sent by the widget
+  // script, so this stays credentials:false. Registered before the
+  // strict, single-origin CORS below so it wins for both these paths
+  // (matched first, and cors() ends OPTIONS preflights immediately).
+  const widgetCors = cors({ origin: true });
+  app.use('/api/widget', widgetCors);
+  app.use('/api/uploads/widget', widgetCors);
+
+  // Everything else (dashboard SPA, admin, billing, the refresh-token
+  // cookie flow) is only ever called from this app's own real frontend
+  // origin — reflecting an arbitrary origin here with credentials:true
+  // would let any third-party page ride an authenticated visitor's
+  // session (CORS-based CSRF), so this intentionally stays strict.
   app.use(cors({ origin: env.corsOrigin, credentials: true }));
   app.use(cookieParser());
 

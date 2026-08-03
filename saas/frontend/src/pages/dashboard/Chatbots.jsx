@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../api/client.js';
 
-const WIDGET_SNIPPET = (widgetKey) => `<script src="https://your-domain.example/widget.js" data-widget-key="${widgetKey}"></script>`;
+// widget.js falls back to window.location.origin (the third-party site's
+// own origin) when data-api-base is missing — always pass this app's real
+// origin explicitly, or an embedded widget silently calls a host that has
+// no /api/widget/* routes at all. Backend CORS (see backend/src/app.js)
+// separately allows this cross-origin call from any embedding site.
+const WIDGET_SNIPPET = (widgetKey) =>
+  `<script src="${window.location.origin}/widget.js" data-widget-key="${widgetKey}" data-api-base="${window.location.origin}"></script>`;
 
 export function Chatbots() {
   const [chatbots, setChatbots] = useState([]);

@@ -30,7 +30,7 @@ saas/
 │   │                              plan.service.js (subscription/limit enforcement),
 │   │                              billing.service.js (real Stripe checkout/portal/webhooks),
 │   │                              storage.service.js (local-disk / S3 upload abstraction)
-│   ├── src/**/*.test.js       — node --test suite (25 tests) against a real dedicated test DB
+│   ├── src/**/*.test.js       — node --test suite (29 tests) against a real dedicated test DB
 │   ├── scripts/dev-db.sh      — local Postgres bootstrap for development
 │   ├── scripts/promote-admin.js — CLI-only platform-admin promotion (no self-service path)
 │   └── Dockerfile
@@ -86,7 +86,7 @@ npm run dev                    # http://localhost:5173 — proxies /api, /upload
 cd saas/backend
 createdb preny_clone_test      # once, after dev-db.sh has started Postgres
 npx prisma migrate deploy      # DATABASE_URL=postgresql://localhost:5432/preny_clone_test
-npm test                       # 25 tests, node's built-in test runner
+npm test                       # 29 tests, node's built-in test runner
 
 # 5. Promote a real registered user to platform admin (to see /admin/leads)
 node scripts/promote-admin.js you@example.com
@@ -102,4 +102,4 @@ Verified end-to-end on this machine: register → login (JWT + rotating refresh 
 
 - Actually build/run/test the Docker images and compose stack against a Docker-capable environment (this sandbox can't).
 - Actually run a real Stripe Checkout/webhook round-trip against a live (or `stripe-mock`/test-mode) Stripe account — this sandbox has no Stripe credentials, so `billing.service.js` is verified up to the "not configured" boundary (real 501s, tested) but the actual payment flow has never executed.
-- Broader test coverage: the current 25 tests cover auth, plan enforcement, the admin/platform-admin boundary, and billing's not-configured paths; the AI tool-use loop, Facebook webhook signature/OAuth paths, the realtime Socket.io inbox, and a real Stripe webhook payload are still verified manually (or not at all) rather than by automated test — each requires either a real third-party credential or heavier mocking than this project has taken on.
+- Broader test coverage: the current 29 tests cover auth, plan enforcement, the admin/platform-admin boundary, and billing's not-configured paths; the AI tool-use loop, Facebook webhook signature/OAuth paths, the realtime Socket.io inbox, and a real Stripe webhook payload are still verified manually (or not at all) rather than by automated test — each requires either a real third-party credential or heavier mocking than this project has taken on.
