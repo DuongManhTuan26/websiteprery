@@ -62,6 +62,47 @@ export async function appendMessage({ conversationId, senderType, contentType = 
   return message;
 }
 
+// Real delivery to the actual Facebook Messenger customer — shared by bot
+// replies (maybeGenerateBotReply, below) and human-agent replies
+// (conversations.routes.js's POST /:id/messages). A no-op for WIDGET-
+// channel conversations, or a FACEBOOK one missing a real fanpage/PSID.
+export async function forwardToFacebook(conversation, { text, imageUrl }) {
+  if (conversation.channel !== 'FACEBOOK' || !conversation.fanpageId) {
+    return;
+  }
+
+  const fanpage = await prisma.fanpage.findUnique({ where: { id: conversation.fanpageId } });
+  const customer = await prisma.customer.findUnique({ where: { id: conversation.customerId } });
+
+  if (!fanpage || !customer?.facebookPsid) {
+    return;
+  }
+
+  // Errors here are logged, not thrown — the message is already saved
+  // locally (the caller already awaited appendMessage before this runs),
+  // so a Facebook API failure must never turn that into an HTTP 500 or an
+  // unhandled rejection for whichever caller triggered it (the widget
+  // endpoint, the webhook processor, or a human agent's manual reply).
+  if (text) {
+    await sendMessengerMessage({ pageAccessToken: fanpage.accessToken, recipientPsid: customer.facebookPsid, text })
+      .catch(err => console.error('Facebook text send failed:', err.message));
+  }
+
+  if (imageUrl && !imageUrl.startsWith('/uploads/')) {
+    // A local "/uploads/..." path (storage.service.js's fallback when
+    // S3_BUCKET isn't configured) only resolves on this server, not on
+    // Facebook's — only forward genuinely public image URLs. Configure
+    // S3_BUCKET/S3_PUBLIC_BASE_URL (see .env.example) to make images
+    // reach real Messenger customers; uploads then produce a public URL
+    // automatically and this check simply passes.
+    await sendMessengerMessage({
+      pageAccessToken: fanpage.accessToken,
+      recipientPsid: customer.facebookPsid,
+      imageUrl
+    }).catch(err => console.error('Facebook image send failed:', err.message));
+  }
+}
+
 // The documented "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân
 // viên hỗ trợ trực tiếp" feature: once a conversation is HUMAN, the bot
 // stops auto-replying entirely — an agent owns it until they close it or
@@ -125,32 +166,7 @@ export async function maybeGenerateBotReply({ conversation, chatbot, incomingMes
     io?.to(`account:${conversation.accountId}`).emit('message:new', productImageMessage);
   }
 
-  if (conversation.channel === 'FACEBOOK') {
-    const fanpage = await prisma.fanpage.findUnique({ where: { id: conversation.fanpageId } });
-    const customer = await prisma.customer.findUnique({ where: { id: conversation.customerId } });
-
-    if (fanpage && customer?.facebookPsid) {
-      await sendMessengerMessage({
-        pageAccessToken: fanpage.accessToken,
-        recipientPsid: customer.facebookPsid,
-        text: reply.text
-      });
-
-      if (reply.imageUrl && !reply.imageUrl.startsWith('/uploads/')) {
-        // A local "/uploads/..." path (storage.service.js's fallback when
-        // S3_BUCKET isn't configured) only resolves on this server, not on
-        // Facebook's — only forward genuinely public image URLs. Configure
-        // S3_BUCKET/S3_PUBLIC_BASE_URL (see .env.example) to make product
-        // images reach real Messenger customers; uploads then produce a
-        // public URL automatically and this check simply passes.
-        await sendMessengerMessage({
-          pageAccessToken: fanpage.accessToken,
-          recipientPsid: customer.facebookPsid,
-          imageUrl: reply.imageUrl
-        }).catch(err => console.error('Facebook image send failed:', err.message));
-      }
-    }
-  }
+  await forwardToFacebook(conversation, { text: reply.text, imageUrl: reply.imageUrl });
 
   // Callers that only care about the text reply (the Facebook webhook
   // doesn't use the return value at all) can keep destructuring `.text`;

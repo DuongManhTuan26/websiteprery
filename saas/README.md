@@ -12,7 +12,7 @@ Everything below was extracted, verbatim or near-verbatim, from the real capture
   2. "Tập trung toàn bộ hội thoại bán hàng từ nhiều kênh vào một giao diện duy nhất" — unified inbox.
   3. "Mọi thông tin khách hàng được tự động ghi nhận và đồng bộ vào mini CRM ngay trong lúc chat" — auto CRM.
   4. "AI Chatbot tư vấn sản phẩm trực quan qua hình ảnh hai chiều — khách gửi ảnh để AI tư vấn, và khách có thể yêu cầu AI gửi lại ảnh sản phẩm" — two-way image consultation.
-  5. "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp" — documented bot→human handoff.
+  5. "Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp" — documented bot→human handoff. `conversation.service.js`'s `forwardToFacebook` delivers both bot *and* human-agent replies to the real Messenger customer on a FACEBOOK-channel conversation — it originally only fired for bot replies (an oversight found and fixed here), which would have silently broken this exact feature for its most important case: an agent taking over from the bot and typing a manual reply.
 - **Real nav**: Trang chủ / Hướng dẫn / Tính năng / Bảng giá / Tuyển dụng, plus header "Đăng nhập"/"Đăng ký" buttons — implies real auth and a real pricing page. This repo's capture only recorded the homepage's real content, not the "Hướng dẫn" (guide) or "Tuyển dụng" (careers) subpages' — those two nav items are deliberately omitted here rather than linked to fabricated content. "Trang chủ" and "Bảng giá" (`/bao-gia-dich-vu`, matching the real observed route) are real, working pages; "Tính năng" anchors to the homepage's own real feature sections.
 - **Real contact form fields** (5 inputs): full name, username, phone, category — a pre-signup lead/demo-request form.
 
@@ -30,7 +30,7 @@ saas/
 │   │                              plan.service.js (subscription/limit enforcement),
 │   │                              billing.service.js (real Stripe checkout/portal/webhooks),
 │   │                              storage.service.js (local-disk / S3 upload abstraction)
-│   ├── src/**/*.test.js       — node --test suite (34 tests) against a real dedicated test DB
+│   ├── src/**/*.test.js       — node --test suite (36 tests) against a real dedicated test DB
 │   ├── scripts/dev-db.sh      — local Postgres bootstrap for development
 │   ├── scripts/promote-admin.js — CLI-only platform-admin promotion (no self-service path)
 │   └── Dockerfile
@@ -95,7 +95,7 @@ npm run dev                    # http://localhost:5173 — proxies /api, /upload
 cd saas/backend
 createdb preny_clone_test      # once, after dev-db.sh has started Postgres
 npx prisma migrate deploy      # DATABASE_URL=postgresql://localhost:5432/preny_clone_test
-npm test                       # 34 tests, node's built-in test runner
+npm test                       # 36 tests, node's built-in test runner
 
 # 5. Promote a real registered user to platform admin (to see /admin/leads)
 node scripts/promote-admin.js you@example.com
@@ -111,4 +111,4 @@ Verified end-to-end on this machine: register → login (JWT + rotating refresh 
 
 - Actually build/run/test the Docker images and compose stack against a Docker-capable environment (this sandbox can't).
 - Actually run a real Stripe Checkout/webhook round-trip against a live (or `stripe-mock`/test-mode) Stripe account — this sandbox has no Stripe credentials, so `billing.service.js` is verified up to the "not configured" boundary (real 501s, tested) but the actual payment flow has never executed.
-- Broader test coverage: the current 34 tests cover auth, plan enforcement, the admin/platform-admin boundary, and billing's not-configured paths; the AI tool-use loop, Facebook webhook signature/OAuth paths, the realtime Socket.io inbox, and a real Stripe webhook payload are still verified manually (or not at all) rather than by automated test — each requires either a real third-party credential or heavier mocking than this project has taken on.
+- Broader test coverage: the current 36 tests cover auth, plan enforcement, the admin/platform-admin boundary, and billing's not-configured paths; the AI tool-use loop, Facebook webhook signature/OAuth paths, the realtime Socket.io inbox, and a real Stripe webhook payload are still verified manually (or not at all) rather than by automated test — each requires either a real third-party credential or heavier mocking than this project has taken on.

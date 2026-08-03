@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { prisma } from '../lib/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { asyncHandler, ApiError } from '../middleware/errorHandler.js';
-import { appendMessage } from '../services/conversation.service.js';
+import { appendMessage, forwardToFacebook } from '../services/conversation.service.js';
 
 export const conversationsRouter = Router();
 conversationsRouter.use(requireAuth);
@@ -72,6 +72,14 @@ conversationsRouter.post('/:id/messages', asyncHandler(async (req, res) => {
   });
 
   req.app.get('io')?.to(`account:${req.user.accountId}`).emit('message:new', message);
+
+  // A human agent's reply is exactly as real as a bot's — a
+  // FACEBOOK-channel conversation must actually deliver it to the real
+  // customer, not just save it locally. Previously only bot replies were
+  // forwarded (see conversation.service.js's maybeGenerateBotReply),
+  // silently breaking the documented handoff feature for its most
+  // important case: an agent taking over from the bot.
+  await forwardToFacebook(conversation, { text: body.content, imageUrl: body.imageUrl });
 
   res.status(201).json(message);
 }));
