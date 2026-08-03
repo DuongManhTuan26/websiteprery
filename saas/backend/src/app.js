@@ -19,6 +19,7 @@ import { productsRouter } from './routes/products.routes.js';
 import { adminRouter } from './routes/admin.routes.js';
 import { billingRouter } from './routes/billing.routes.js';
 import { publicPlansRouter } from './routes/plans.routes.js';
+import { demoRouter } from './routes/demo.routes.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
 export function createApp() {
@@ -80,6 +81,7 @@ export function createApp() {
   app.use('/api/admin', adminRouter);
   app.use('/api/billing', billingRouter);
   app.use('/api/plans', publicPlansRouter);
+  app.use('/api/demo', demoRouter);
 
   app.use(notFoundHandler);
   app.use(errorHandler);

@@ -1,7 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../api/client.js';
 import { SiteHeader } from '../components/SiteHeader.jsx';
+
+// The real preny.ai homepage embeds its own live chat widget (a real
+// "bot-embed.js" script observed in the capture — see
+// normalize/output/dom.json at the repo root) so a visitor can try the
+// product without signing up first. This does the same thing with a real
+// (not fabricated) demo Chatbot this platform's own operators run — see
+// prisma/seed.js and routes/demo.routes.js. If a fresh deployment hasn't
+// run the seed yet, the endpoint 404s and this silently renders nothing
+// extra rather than a broken script tag.
+function useDemoWidget() {
+  useEffect(() => {
+    let cancelled = false;
+
+    fetch('/api/demo/widget-key')
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => {
+        if (cancelled || !data?.widgetKey || document.querySelector('script[data-widget-key]')) {
+          return;
+        }
+
+        const script = document.createElement('script');
+        script.src = `${window.location.origin}/widget.js`;
+        script.setAttribute('data-widget-key', data.widgetKey);
+        script.setAttribute('data-api-base', window.location.origin);
+        document.body.appendChild(script);
+      })
+      .catch(() => {});
+
+    return () => { cancelled = true; };
+  }, []);
+}
 
 // Copy below is the real content captured from https://preny.ai/ by this
 // repo's capture-rebuild pipeline (see /ai-analysis/output/semantic.json
@@ -37,6 +68,8 @@ export function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
 
+  useDemoWidget();
+
   async function handleSubmit(e) {
     e.preventDefault();
     setError(null);
@@ -69,6 +102,41 @@ export function Home() {
           </div>
         </section>
       ))}
+
+      {/*
+        The real capture (ai-analysis/output/semantic.json) also recorded a
+        "Hợp tác cùng các đơn vị báo chí uy tín" section on the source
+        site, backed by real links to thanhnien.vn/24h.com.vn/cafef.vn/
+        soha.vn articles — but those articles are real press coverage OF
+        preny.ai specifically, not of this independent product. Reusing
+        them here would misattribute that coverage to a site that never
+        received it, which is a different failure mode than reproducing
+        generic marketing copy (the feature descriptions above genuinely
+        describe capabilities this product also has). Deliberately
+        omitted rather than faithfully reproduced.
+      */}
+
+      <section className="section">
+        <div className="container">
+          <p className="eyebrow">Câu hỏi thường gặp</p>
+          <h2>Khi nào cần chuyển đổi hội thoại từ Chatbot sang nhân viên hỗ trợ trực tiếp?</h2>
+          <p>
+            Bất kỳ lúc nào — trong Hộp thư đến (Inbox) của Dashboard, một nhân viên có thể chuyển trạng thái
+            hội thoại sang "Nhân viên" ngay giữa cuộc trò chuyện. Ngay khi chuyển đổi, Chatbot AI sẽ ngừng
+            tự động trả lời hội thoại đó — nhân viên tiếp quản hoàn toàn, giữ nguyên toàn bộ lịch sử trò chuyện
+            trước đó — cho đến khi đóng hội thoại hoặc chuyển lại cho Chatbot.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <p className="eyebrow">Cùng đội ngũ Preny Clone</p>
+          <h2>Nhận tư vấn để tối ưu tương tác và tăng trưởng doanh nghiệp</h2>
+          <p>Để lại thông tin bên dưới, đội ngũ sẽ liên hệ tư vấn miễn phí.</p>
+          <a href="#contact" className="btn">Yêu cầu tư vấn</a>
+        </div>
+      </section>
 
       <section className="section" id="contact">
         <div className="container">
