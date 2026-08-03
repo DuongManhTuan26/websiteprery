@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import rateLimit from 'express-rate-limit';
 import { z } from 'zod';
 import { prisma } from '../lib/prisma.js';
 import { asyncHandler, ApiError } from '../middleware/errorHandler.js';
@@ -14,6 +15,22 @@ import {
 // entirely by widgetKey, which only ever identifies one Chatbot/Account
 // pair and grants no access beyond "start/continue a chat with this bot".
 export const widgetRouter = Router();
+
+// widgetKey is visible client-side (it's literally in the embed <script>
+// tag on any site using the widget), so it isn't a secret — anyone who
+// can view page source could otherwise spam POST /start to burn through
+// a victim account's monthly conversation quota (enforceConversationLimit
+// runs per genuinely NEW conversation) and deny bot service to that
+// account's real customers. Generous limit (widget traffic can
+// legitimately burst from a shared corporate/NAT IP), but real.
+const widgetLimiter = rateLimit({
+  windowMs: 5 * 60 * 1000,
+  limit: 60,
+  standardHeaders: true,
+  legacyHeaders: false
+});
+
+widgetRouter.use(widgetLimiter);
 
 const startSchema = z.object({ widgetKey: z.string().uuid() });
 

@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import rateLimit from 'express-rate-limit';
 import { z } from 'zod';
 import { prisma } from '../lib/prisma.js';
 import { asyncHandler } from '../middleware/errorHandler.js';
@@ -10,9 +11,17 @@ export const leadsRouter = Router();
 // platform itself (someone considering signing up), not to any existing
 // Account, so — unlike every other route in this API — it is deliberately
 // NOT scoped by requireAuth/accountId. Reading the Lead list back out is a
-// platform-operator concern (the preny-clone team, not a tenant business)
-// and is intentionally out of scope here: this repo has no platform-admin
-// role/UI yet, only capture. Documented, not an oversight.
+// real platform-operator feature (see admin.routes.js, requirePlatformAdmin)
+// — a separate authorization boundary from tenant accounts, not missing.
+const leadLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  limit: 20,
+  standardHeaders: true,
+  legacyHeaders: false
+});
+
+leadsRouter.use(leadLimiter);
+
 const leadSchema = z.object({
   fullName: z.string().max(200).optional(),
   username: z.string().max(200).optional(),

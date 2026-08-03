@@ -30,7 +30,7 @@ saas/
 │   │                              plan.service.js (subscription/limit enforcement),
 │   │                              billing.service.js (real Stripe checkout/portal/webhooks),
 │   │                              storage.service.js (local-disk / S3 upload abstraction)
-│   ├── src/**/*.test.js       — node --test suite (36 tests) against a real dedicated test DB
+│   ├── src/**/*.test.js       — node --test suite (39 tests) against a real dedicated test DB
 │   ├── scripts/dev-db.sh      — local Postgres bootstrap for development
 │   ├── scripts/promote-admin.js — CLI-only platform-admin promotion (no self-service path)
 │   └── Dockerfile
@@ -53,6 +53,8 @@ Auth: JWT access token (in-memory only on the frontend, never localStorage) + ht
 - **`helmet`** security headers on every response, with `crossOriginResourcePolicy` deliberately relaxed to `cross-origin` (the default would silently break Facebook's servers and third-party widget embeds loading `/uploads/*` images).
 - **Tenant isolation on every widget/webhook endpoint**: `POST /api/widget/message` and `GET /api/widget/:id/messages` both cross-check the conversation against the calling `widgetKey`'s own account — the history endpoint originally didn't do this (any known conversation UUID could read another tenant's messages) until it was found and fixed here; regression-tested (`widget.routes.test.js`).
 - **`isPlatformAdmin`** is re-checked from the database on every request rather than cached in the JWT, so a demotion takes effect immediately, not just after the access token naturally expires (regression-tested in `admin.test.js`).
+- **Fanpage ownership is enforced across tenants, not just within one**: connecting a real Facebook Page already owned by a *different* account on this platform is rejected (`409`) rather than silently reassigned — the original code did a global upsert keyed only on Facebook's `pageId`, which would have overwritten another tenant's real `accessToken`. Found while auditing tenant isolation, fixed in `fanpage.service.js`, regression-tested.
+- **Rate limiting also covers public, no-auth endpoints that create real DB rows or send real email**: `POST /api/leads` (20/hour/IP) and the widget's `/start`+`/message` (60/5min/IP) — a `widgetKey` is visible in any embedding site's page source, so without this an attacker could spam a victim account's public widget to burn through its monthly conversation quota and deny bot service to its real customers.
 
 ## Why these tech choices
 
@@ -95,7 +97,7 @@ npm run dev                    # http://localhost:5173 — proxies /api, /upload
 cd saas/backend
 createdb preny_clone_test      # once, after dev-db.sh has started Postgres
 npx prisma migrate deploy      # DATABASE_URL=postgresql://localhost:5432/preny_clone_test
-npm test                       # 36 tests, node's built-in test runner
+npm test                       # 39 tests, node's built-in test runner
 
 # 5. Promote a real registered user to platform admin (to see /admin/leads)
 node scripts/promote-admin.js you@example.com
@@ -111,4 +113,4 @@ Verified end-to-end on this machine: register → login (JWT + rotating refresh 
 
 - Actually build/run/test the Docker images and compose stack against a Docker-capable environment (this sandbox can't).
 - Actually run a real Stripe Checkout/webhook round-trip against a live (or `stripe-mock`/test-mode) Stripe account — this sandbox has no Stripe credentials, so `billing.service.js` is verified up to the "not configured" boundary (real 501s, tested) but the actual payment flow has never executed.
-- Broader test coverage: the current 36 tests cover auth, plan enforcement, the admin/platform-admin boundary, and billing's not-configured paths; the AI tool-use loop, Facebook webhook signature/OAuth paths, the realtime Socket.io inbox, and a real Stripe webhook payload are still verified manually (or not at all) rather than by automated test — each requires either a real third-party credential or heavier mocking than this project has taken on.
+- Broader test coverage: the current 39 tests cover auth, plan enforcement, the admin/platform-admin boundary, and billing's not-configured paths; the AI tool-use loop, Facebook webhook signature/OAuth paths, the realtime Socket.io inbox, and a real Stripe webhook payload are still verified manually (or not at all) rather than by automated test — each requires either a real third-party credential or heavier mocking than this project has taken on.

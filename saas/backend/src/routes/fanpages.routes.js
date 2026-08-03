@@ -5,7 +5,7 @@ import { prisma } from '../lib/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { asyncHandler, ApiError } from '../middleware/errorHandler.js';
 import { buildOAuthUrl, exchangeCodeForPageTokens } from '../services/facebook.service.js';
-import { enforceResourceLimit } from '../services/plan.service.js';
+import { connectFanpages } from '../services/fanpage.service.js';
 
 export const fanpagesRouter = Router();
 fanpagesRouter.use(requireAuth);
@@ -40,29 +40,7 @@ fanpagesRouter.post('/connect/facebook/callback', asyncHandler(async (req, res) 
   const { code } = callbackSchema.parse(req.body);
   const redirectUri = `${req.protocol}://${req.get('host')}/api/fanpages/connect/facebook/callback`;
   const pages = await exchangeCodeForPageTokens(code, redirectUri);
-
-  const existingPageIds = new Set(
-    (await prisma.fanpage.findMany({ where: { pageId: { in: pages.map(p => p.pageId) } }, select: { pageId: true } }))
-      .map(f => f.pageId)
-  );
-  const newPageCount = pages.filter(p => !existingPageIds.has(p.pageId)).length;
-
-  if (newPageCount > 0) {
-    await enforceResourceLimit(req.user.accountId, 'fanpage', newPageCount);
-  }
-
-  const created = await Promise.all(pages.map(page =>
-    prisma.fanpage.upsert({
-      where: { pageId: page.pageId },
-      create: {
-        accountId: req.user.accountId,
-        pageId: page.pageId,
-        pageName: page.pageName,
-        accessToken: page.accessToken
-      },
-      update: { accessToken: page.accessToken, pageName: page.pageName, status: 'CONNECTED' }
-    })
-  ));
+  const created = await connectFanpages(req.user.accountId, pages);
 
   res.status(201).json(created);
 }));
