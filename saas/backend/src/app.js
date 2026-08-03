@@ -16,6 +16,7 @@ import { uploadsRouter } from './routes/uploads.routes.js';
 import { uploadsDir } from './services/storage.service.js';
 import { productsRouter } from './routes/products.routes.js';
 import { adminRouter } from './routes/admin.routes.js';
+import { billingRouter } from './routes/billing.routes.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
 export function createApp() {
@@ -47,6 +48,7 @@ export function createApp() {
   app.use('/api/uploads', uploadsRouter);
   app.use('/api/products', productsRouter);
   app.use('/api/admin', adminRouter);
+  app.use('/api/billing', billingRouter);
 
   app.use(notFoundHandler);
   app.use(errorHandler);

@@ -3,22 +3,39 @@
 // marketing site has a "Bảng giá" page); tier names/limits below are this
 // project's own design, not copied from preny.ai's real (inaccessible)
 // pricing.
+import 'dotenv/config';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
+// Real Stripe Price IDs, if a real Stripe account has been set up (see
+// .env.example) — left null otherwise, which billing.service.js treats as
+// "not available for checkout yet" rather than fabricating a price.
 const plans = [
-  { name: 'Starter', priceMonthly: 0, maxFanpages: 1, maxChatbots: 1, maxConversations: 200 },
-  { name: 'Growth', priceMonthly: 499000, maxFanpages: 3, maxChatbots: 3, maxConversations: 2000 },
-  { name: 'Business', priceMonthly: 1499000, maxFanpages: 10, maxChatbots: 10, maxConversations: 20000 }
+  { name: 'Starter', priceMonthly: 0, maxFanpages: 1, maxChatbots: 1, maxConversations: 200, stripePriceId: null },
+  {
+    name: 'Growth', priceMonthly: 499000, maxFanpages: 3, maxChatbots: 3, maxConversations: 2000,
+    stripePriceId: process.env.STRIPE_PRICE_ID_GROWTH || null
+  },
+  {
+    name: 'Business', priceMonthly: 1499000, maxFanpages: 10, maxChatbots: 10, maxConversations: 20000,
+    stripePriceId: process.env.STRIPE_PRICE_ID_BUSINESS || null
+  }
 ];
 
 async function main() {
   for (const plan of plans) {
+    // Never overwrite an already-set stripePriceId with null just because
+    // this run's environment didn't have the corresponding env var — that
+    // would silently break checkout for a plan a real Stripe account was
+    // already wired up for.
+    const { stripePriceId, ...update } = plan;
+    if (stripePriceId) update.stripePriceId = stripePriceId;
+
     await prisma.plan.upsert({
       where: { name: plan.name },
       create: plan,
-      update: plan
+      update
     });
   }
 

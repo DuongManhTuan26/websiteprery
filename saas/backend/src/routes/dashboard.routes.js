@@ -62,10 +62,27 @@ dashboardRouter.get('/subscription', asyncHandler(async (req, res) => {
     plan: subscription.plan.name,
     status: subscription.status,
     currentPeriodEnd: subscription.currentPeriodEnd,
+    hasBillingAccount: Boolean(subscription.stripeCustomerId),
     usage: {
       fanpages: { used: fanpageCount, limit: subscription.plan.maxFanpages },
       chatbots: { used: chatbotCount, limit: subscription.plan.maxChatbots },
       conversationsThisPeriod: { used: conversationCount, limit: subscription.plan.maxConversations }
     }
   });
+}));
+
+// Public within the dashboard (still requireAuth'd above) — used to render
+// upgrade options. stripePriceId is intentionally omitted; the frontend
+// never needs it, only whether a plan is checkout-able.
+dashboardRouter.get('/plans', asyncHandler(async (req, res) => {
+  const plans = await prisma.plan.findMany({ orderBy: { priceMonthly: 'asc' } });
+
+  res.json(plans.map(p => ({
+    name: p.name,
+    priceMonthly: p.priceMonthly,
+    maxFanpages: p.maxFanpages,
+    maxChatbots: p.maxChatbots,
+    maxConversations: p.maxConversations,
+    checkoutAvailable: Boolean(p.stripePriceId)
+  })));
 }));

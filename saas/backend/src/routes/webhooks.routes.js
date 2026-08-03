@@ -1,6 +1,7 @@
 import { Router, raw } from 'express';
 import { prisma } from '../lib/prisma.js';
 import { verifyWebhookSignature, verifyWebhookChallenge } from '../services/facebook.service.js';
+import { constructWebhookEvent, applyStripeEvent } from '../services/billing.service.js';
 import {
   findOrCreateCustomer,
   findOrCreateConversation,
@@ -9,6 +10,28 @@ import {
 } from '../services/conversation.service.js';
 
 export const webhooksRouter = Router();
+
+// Real Stripe billing events (checkout completed, subscription
+// updated/cancelled — see billing.service.js). Needs the exact raw bytes
+// to verify Stripe's signature, same reasoning as the Facebook route below.
+webhooksRouter.post('/stripe', raw({ type: 'application/json' }), async (req, res) => {
+  let event;
+
+  try {
+    event = constructWebhookEvent(req.body, req.headers['stripe-signature']);
+  } catch (err) {
+    console.error('Stripe webhook signature check failed:', err.message);
+    return res.status(err.status || 400).json({ error: err.message });
+  }
+
+  res.sendStatus(200);
+
+  try {
+    await applyStripeEvent(event);
+  } catch (err) {
+    console.error('Stripe webhook processing failed:', err.message);
+  }
+});
 
 // Facebook's verification handshake when the webhook URL is first
 // registered in the Meta App dashboard.

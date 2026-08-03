@@ -48,6 +48,11 @@ services:
       S3_BUCKET: ${S3_BUCKET:-}
       AWS_REGION: ${AWS_REGION:-us-east-1}
       S3_PUBLIC_BASE_URL: ${S3_PUBLIC_BASE_URL:-}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
+      STRIPE_PRICE_ID_GROWTH: ${STRIPE_PRICE_ID_GROWTH:-}
+      STRIPE_PRICE_ID_BUSINESS: ${STRIPE_PRICE_ID_BUSINESS:-}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:8080}
     volumes:
       - uploads:/app/uploads
     depends_on:

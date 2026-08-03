@@ -29,5 +29,12 @@ export const env = {
   // S3 — a CloudFront distribution or the bucket's public website endpoint.
   // Required alongside S3_BUCKET; without it uploads would succeed but
   // produce URLs nothing can actually load.
-  s3PublicBaseUrl: process.env.S3_PUBLIC_BASE_URL || null
+  s3PublicBaseUrl: process.env.S3_PUBLIC_BASE_URL || null,
+  // Real Stripe account required — without these, /api/billing/* returns
+  // 501 rather than a fabricated checkout flow (see billing.service.js).
+  stripeSecretKey: process.env.STRIPE_SECRET_KEY || null,
+  stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || null,
+  // Where Stripe redirects the browser back to after checkout/portal —
+  // must be the frontend's real origin, not the API's.
+  frontendUrl: process.env.FRONTEND_URL || 'http://localhost:5173'
 };

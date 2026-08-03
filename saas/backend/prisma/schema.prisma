@@ -302,6 +302,12 @@ model Plan {
   maxFanpages     Int
   maxChatbots     Int
   maxConversations Int
+  // The real Stripe Price object this plan checks out against — null for
+  // Starter (free, no checkout) and for any paid plan until a real Stripe
+  // account provides one (see prisma/seed.js, STRIPE_PRICE_ID_* env vars).
+  // billing.service.js refuses to create a checkout session when this is
+  // unset rather than guessing/fabricating a price.
+  stripePriceId   String?  @unique
   createdAt       DateTime @default(now())
 
   subscriptions Subscription[]
@@ -310,14 +316,19 @@ model Plan {
 }
 
 model Subscription {
-  id               String              @id @default(uuid())
-  accountId        String
-  account          Account             @relation(fields: [accountId], references: [id], onDelete: Cascade)
-  planId           String
-  plan             Plan                @relation(fields: [planId], references: [id])
-  status           SubscriptionStatus  @default(TRIALING)
-  currentPeriodEnd DateTime
-  createdAt        DateTime            @default(now())
+  id                   String              @id @default(uuid())
+  accountId            String
+  account              Account             @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  planId               String
+  plan                 Plan                @relation(fields: [planId], references: [id])
+  status               SubscriptionStatus  @default(TRIALING)
+  currentPeriodEnd     DateTime
+  // Set once a real Stripe Checkout session completes (see
+  // billing.service.js) — null for every account still on the free
+  // trial/Starter plan that has never gone through real Stripe checkout.
+  stripeCustomerId     String?
+  stripeSubscriptionId String?             @unique
+  createdAt            DateTime            @default(now())
 
   @@map("subscriptions")
 }
