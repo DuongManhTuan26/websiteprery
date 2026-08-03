@@ -72,7 +72,7 @@ widgetRouter.post('/message', asyncHandler(async (req, res) => {
   const io = req.app.get('io');
   io?.to(`account:${chatbot.accountId}`).emit('message:new', message);
 
-  const botMessage = await maybeGenerateBotReply({
+  const botReply = await maybeGenerateBotReply({
     conversation,
     chatbot,
     incomingMessage: body.text,
@@ -80,12 +80,40 @@ widgetRouter.post('/message', asyncHandler(async (req, res) => {
     io
   });
 
-  res.status(201).json({ message, botReply: botMessage });
+  res.status(201).json({
+    message,
+    botReply: botReply?.text || null,
+    botImageReply: botReply?.image || null
+  });
 }));
 
+const historyQuerySchema = z.object({ widgetKey: z.string().uuid() });
+
+// widgetKey is required as a query param and cross-checked against the
+// conversation, not just used to look up messages by conversationId alone
+// — conversationId is a real UUID (hard to guess, but not secret: it's
+// visible to the browser and persisted in localStorage, see
+// public/widget.js), and without this check any caller who obtained one
+// could read a completely different account's widget conversation. Same
+// ownership check POST /message already does.
 widgetRouter.get('/:conversationId/messages', asyncHandler(async (req, res) => {
+  const { widgetKey } = historyQuerySchema.parse(req.query);
+  const chatbot = await prisma.chatbot.findUnique({ where: { widgetKey } });
+
+  if (!chatbot) {
+    throw new ApiError(404, 'Unknown widget');
+  }
+
+  const conversation = await prisma.conversation.findFirst({
+    where: { id: req.params.conversationId, accountId: chatbot.accountId, channel: 'WIDGET' }
+  });
+
+  if (!conversation) {
+    throw new ApiError(404, 'Conversation not found');
+  }
+
   const messages = await prisma.message.findMany({
-    where: { conversationId: req.params.conversationId },
+    where: { conversationId: conversation.id },
     orderBy: { createdAt: 'asc' }
   });
 

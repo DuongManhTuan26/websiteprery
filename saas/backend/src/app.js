@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import { env } from './config/env.js';
 import { authRouter } from './routes/auth.routes.js';
@@ -22,6 +23,18 @@ import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
 export function createApp() {
   const app = express();
+
+  // contentSecurityPolicy is meant for HTML-serving apps — this is a pure
+  // JSON API + uploaded-asset host, so it's disabled rather than fighting
+  // it. crossOriginResourcePolicy is explicitly relaxed: the default
+  // 'same-origin' would silently block real Facebook Messenger servers
+  // and third-party sites embedding the widget from ever loading
+  // /uploads/* images — the exact class of cross-origin access this app
+  // deliberately supports (see the widget CORS comment below).
+  app.use(helmet({
+    contentSecurityPolicy: false,
+    crossOriginResourcePolicy: { policy: 'cross-origin' }
+  }));
 
   // The embeddable widget (see widget.routes.js, public/widget.js) is
   // designed to run on arbitrary third-party sites, not just this app's

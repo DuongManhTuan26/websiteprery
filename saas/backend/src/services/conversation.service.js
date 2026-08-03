@@ -152,5 +152,12 @@ export async function maybeGenerateBotReply({ conversation, chatbot, incomingMes
     }
   }
 
-  return botMessage;
+  // Callers that only care about the text reply (the Facebook webhook
+  // doesn't use the return value at all) can keep destructuring `.text`;
+  // widget.routes.js needs both so a product-image reply reaches the
+  // widget's own HTTP response — the widget has no Socket.io connection
+  // (see public/widget.js), so the `message:new` socket event above is
+  // invisible to it, and without this it would only ever see an image
+  // reply after reloading (loadHistory() picks up anything it missed).
+  return { text: botMessage, image: productImageMessage };
 }

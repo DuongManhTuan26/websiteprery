@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import rateLimit from 'express-rate-limit';
 import { z } from 'zod';
 import { prisma } from '../lib/prisma.js';
 import { hashPassword, verifyPassword } from '../lib/password.js';
@@ -9,6 +10,24 @@ import { env } from '../config/env.js';
 import { createDefaultSubscription } from '../services/plan.service.js';
 
 export const authRouter = Router();
+
+// Real brute-force protection on the two endpoints that check a password.
+// Keyed by IP only (no email/account concept exists before a request
+// succeeds) — generous enough not to lock out a real user mistyping their
+// password a few times, tight enough to make credential-stuffing slow.
+const loginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false
+});
+
+const registerLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false
+});
 
 const REFRESH_COOKIE = 'refresh_token';
 const refreshCookieOptions = {
@@ -37,7 +56,7 @@ const registerSchema = z.object({
   password: z.string().min(8).max(200)
 });
 
-authRouter.post('/register', asyncHandler(async (req, res) => {
+authRouter.post('/register', registerLimiter, asyncHandler(async (req, res) => {
   const body = registerSchema.parse(req.body);
 
   const existing = await prisma.user.findUnique({ where: { email: body.email } });
@@ -75,7 +94,7 @@ const loginSchema = z.object({
   password: z.string().min(1)
 });
 
-authRouter.post('/login', asyncHandler(async (req, res) => {
+authRouter.post('/login', loginLimiter, asyncHandler(async (req, res) => {
   const body = loginSchema.parse(req.body);
   const user = await prisma.user.findUnique({ where: { email: body.email } });
 

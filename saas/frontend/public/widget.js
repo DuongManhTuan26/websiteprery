@@ -8,7 +8,15 @@
     return;
   }
 
+  var storageKey = 'preny-clone-widget-conversation:' + widgetKey;
   var conversationId = null;
+
+  try {
+    conversationId = window.localStorage.getItem(storageKey) || null;
+  } catch (e) {
+    // Private browsing / storage disabled — fall back to in-memory only,
+    // same as before this persistence was added.
+  }
 
   var launcher = document.createElement('button');
   launcher.textContent = '💬';
@@ -70,6 +78,26 @@
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
+  function addImageBubble(url, sender) {
+    var img = document.createElement('img');
+    img.src = url;
+    Object.assign(img.style, {
+      maxWidth: '70%', borderRadius: '8px',
+      alignSelf: sender === 'CUSTOMER' ? 'flex-end' : 'flex-start'
+    });
+    messagesEl.appendChild(img);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function persistConversationId(id) {
+    conversationId = id;
+    try {
+      window.localStorage.setItem(storageKey, id);
+    } catch (e) {
+      // Same private-browsing fallback as the initial read above.
+    }
+  }
+
   async function ensureConversation() {
     if (conversationId) return conversationId;
 
@@ -80,9 +108,51 @@
     });
 
     var data = await res.json();
-    conversationId = data.conversationId;
+    persistConversationId(data.conversationId);
     return conversationId;
   }
+
+  // A returning visitor (widget reloaded on the same page, or the same
+  // site visited again) keeps their conversation and its real history
+  // instead of silently starting a brand-new one every time.
+  async function loadHistory() {
+    if (!conversationId) return;
+
+    var res = await fetch(
+      apiBase + '/api/widget/' + conversationId + '/messages?widgetKey=' + encodeURIComponent(widgetKey)
+    );
+
+    if (!res.ok) {
+      // Stale/invalid conversationId (e.g. from an older widgetKey) —
+      // drop it and let the next message start a fresh conversation.
+      conversationId = null;
+      try { window.localStorage.removeItem(storageKey); } catch (e) {}
+      return;
+    }
+
+    var messages = await res.json();
+    messages.forEach(function (m) {
+      if (m.contentType === 'IMAGE' && m.imageUrl) {
+        addImageBubble(m.imageUrl.startsWith('/') ? apiBase + m.imageUrl : m.imageUrl, m.senderType);
+      } else if (m.content) {
+        addBubble(m.content, m.senderType);
+      }
+    });
+  }
+
+  function renderBotReply(data) {
+    if (data.botReply) {
+      addBubble(data.botReply.content, 'BOT');
+    }
+    if (data.botImageReply) {
+      addImageBubble(
+        data.botImageReply.imageUrl.startsWith('/') ? apiBase + data.botImageReply.imageUrl : data.botImageReply.imageUrl,
+        'BOT'
+      );
+    }
+  }
+
+  loadHistory();
 
   formEl.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -101,10 +171,7 @@
     });
 
     var data = await res.json();
-
-    if (data.botReply) {
-      addBubble(data.botReply.content, 'BOT');
-    }
+    renderBotReply(data);
   });
 
   imageInput.addEventListener('change', async function () {
@@ -119,11 +186,7 @@
     var uploadRes = await fetch(apiBase + '/api/uploads/widget', { method: 'POST', body: formData });
     var uploadData = await uploadRes.json();
 
-    var img = document.createElement('img');
-    img.src = apiBase + uploadData.url;
-    Object.assign(img.style, { maxWidth: '70%', borderRadius: '8px', alignSelf: 'flex-end' });
-    messagesEl.appendChild(img);
-    messagesEl.scrollTop = messagesEl.scrollHeight;
+    addImageBubble(apiBase + uploadData.url, 'CUSTOMER');
 
     var res = await fetch(apiBase + '/api/widget/message', {
       method: 'POST',
@@ -132,10 +195,7 @@
     });
 
     var data = await res.json();
-
-    if (data.botReply) {
-      addBubble(data.botReply.content, 'BOT');
-    }
+    renderBotReply(data);
   });
 
   launcher.addEventListener('click', function () {
