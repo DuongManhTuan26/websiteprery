@@ -1,6 +1,7 @@
 import { prisma } from '../lib/prisma.js';
 import { generateChatbotReply } from './ai.service.js';
 import { sendMessengerMessage } from './facebook.service.js';
+import { enforceConversationLimit } from './plan.service.js';
 
 // Shared by both the Facebook webhook and the website widget endpoint —
 // "Tập trung toàn bộ hội thoại bán hàng... vào một giao diện duy nhất" means
@@ -38,6 +39,10 @@ export async function findOrCreateConversation({ accountId, customerId, channel,
   if (existing) {
     return existing;
   }
+
+  // Only metered on genuine creation — reopening/continuing an existing
+  // thread never counts against the monthly quota.
+  await enforceConversationLimit(accountId);
 
   return prisma.conversation.create({
     data: { accountId, customerId, channel, fanpageId, chatbotId, status: 'BOT' }
@@ -132,11 +137,12 @@ export async function maybeGenerateBotReply({ conversation, chatbot, incomingMes
       });
 
       if (reply.imageUrl && !reply.imageUrl.startsWith('/uploads/')) {
-        // A local "/uploads/..." path only resolves on this server, not on
-        // Facebook's — only forward genuinely public product image URLs.
-        // Product photos meant to reach real Messenger customers need to be
-        // uploaded somewhere public (S3, Cloudinary, etc.), not this
-        // server's local disk; see saas/README.md.
+        // A local "/uploads/..." path (storage.service.js's fallback when
+        // S3_BUCKET isn't configured) only resolves on this server, not on
+        // Facebook's — only forward genuinely public image URLs. Configure
+        // S3_BUCKET/S3_PUBLIC_BASE_URL (see .env.example) to make product
+        // images reach real Messenger customers; uploads then produce a
+        // public URL automatically and this check simply passes.
         await sendMessengerMessage({
           pageAccessToken: fanpage.accessToken,
           recipientPsid: customer.facebookPsid,

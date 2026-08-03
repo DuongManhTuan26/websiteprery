@@ -104,6 +104,14 @@ model User {
   passwordHash String
   name         String
   role         UserRole @default(OWNER)
+  // Separate from `role` on purpose: `role` (OWNER/ADMIN/AGENT) is scoped
+  // to this user's own Account. isPlatformAdmin identifies the preny-clone
+  // *operator* team — the only actors allowed to browse the Lead table
+  // (see admin.routes.js), which belongs to the platform, not any tenant.
+  // Never set through the public /api/auth/register flow — only via
+  // scripts/promote-admin.js, run manually against a trusted database
+  // connection.
+  isPlatformAdmin Boolean @default(false)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
 

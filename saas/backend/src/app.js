@@ -12,8 +12,10 @@ import { leadsRouter } from './routes/leads.routes.js';
 import { dashboardRouter } from './routes/dashboard.routes.js';
 import { widgetRouter } from './routes/widget.routes.js';
 import { webhooksRouter } from './routes/webhooks.routes.js';
-import { uploadsRouter, uploadsDir } from './routes/uploads.routes.js';
+import { uploadsRouter } from './routes/uploads.routes.js';
+import { uploadsDir } from './services/storage.service.js';
 import { productsRouter } from './routes/products.routes.js';
+import { adminRouter } from './routes/admin.routes.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
 export function createApp() {
@@ -44,6 +46,7 @@ export function createApp() {
   app.use('/api/widget', widgetRouter);
   app.use('/api/uploads', uploadsRouter);
   app.use('/api/products', productsRouter);
+  app.use('/api/admin', adminRouter);
 
   app.use(notFoundHandler);
   app.use(errorHandler);

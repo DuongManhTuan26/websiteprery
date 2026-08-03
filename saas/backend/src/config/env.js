@@ -22,5 +22,12 @@ export const env = {
   anthropicApiKey: process.env.ANTHROPIC_API_KEY || null,
   facebookAppId: process.env.FACEBOOK_APP_ID || null,
   facebookAppSecret: process.env.FACEBOOK_APP_SECRET || null,
-  facebookWebhookVerifyToken: process.env.FACEBOOK_WEBHOOK_VERIFY_TOKEN || null
+  facebookWebhookVerifyToken: process.env.FACEBOOK_WEBHOOK_VERIFY_TOKEN || null,
+  s3Bucket: process.env.S3_BUCKET || null,
+  s3Region: process.env.AWS_REGION || 'us-east-1',
+  // The public base URL customers' images are served from once uploaded to
+  // S3 — a CloudFront distribution or the bucket's public website endpoint.
+  // Required alongside S3_BUCKET; without it uploads would succeed but
+  // produce URLs nothing can actually load.
+  s3PublicBaseUrl: process.env.S3_PUBLIC_BASE_URL || null
 };

@@ -24,14 +24,23 @@ Everything below was extracted, verbatim or near-verbatim, from the real capture
 saas/
 ├── backend/    Node.js + Express + PostgreSQL (Prisma) + Socket.io
 │   ├── prisma/schema.prisma   — full data model
-│   ├── src/routes/            — REST API, one file per resource
+│   ├── src/routes/            — REST API, one file per resource (incl. admin.routes.js — platform-admin only)
 │   ├── src/services/          — ai.service.js (Claude), facebook.service.js (Graph API),
-│   │                              conversation.service.js (shared inbox/bot logic)
-│   └── scripts/dev-db.sh      — local Postgres bootstrap for development
-└── frontend/   React 18 + Vite + React Router
-    ├── src/pages/              — public marketing Home, Login, Register
-    ├── src/pages/dashboard/    — authenticated app (Overview, Inbox, CRM, Chatbots, Products, Fanpages, Orders)
-    └── public/widget.js        — vanilla-JS embeddable chat widget (no React dependency, for third-party sites)
+│   │                              conversation.service.js (shared inbox/bot logic),
+│   │                              plan.service.js (subscription/limit enforcement),
+│   │                              storage.service.js (local-disk / S3 upload abstraction)
+│   ├── src/**/*.test.js       — node --test suite (21 tests) against a real dedicated test DB
+│   ├── scripts/dev-db.sh      — local Postgres bootstrap for development
+│   ├── scripts/promote-admin.js — CLI-only platform-admin promotion (no self-service path)
+│   └── Dockerfile
+├── frontend/   React 18 + Vite + React Router
+│   ├── src/pages/              — public marketing Home, Login, Register
+│   ├── src/pages/dashboard/    — authenticated app (Overview, Inbox, CRM, Chatbots, Products, Fanpages, Orders)
+│   ├── src/pages/admin/        — AdminLeads.jsx, platform-operator only
+│   ├── public/widget.js        — vanilla-JS embeddable chat widget (no React dependency, for third-party sites)
+│   ├── Dockerfile               — Nginx static serve + /api,/uploads,/socket.io reverse proxy
+│   └── nginx.conf
+└── docker-compose.yml   Postgres + backend + frontend reference topology
 ```
 
 Auth: JWT access token (in-memory only on the frontend, never localStorage) + httpOnly rotating refresh-token cookie. Realtime: Socket.io, one room per account, used for the live inbox.
@@ -47,8 +56,8 @@ Auth: JWT access token (in-memory only on the frontend, never localStorage) + ht
 
 - **No `ANTHROPIC_API_KEY` is bundled.** Without one, `/api/widget/message` and the Facebook webhook still create real Customer/Conversation/Message rows — the bot-reply step is skipped with a `bot:error` Socket.io event, never a fabricated canned reply. Verified: see `src/services/ai.service.js`'s `generateChatbotReply`.
 - **No real Facebook App is configured.** `/api/fanpages/connect/facebook` returns `501` and the webhook signature check returns `403` until real `FACEBOOK_APP_ID`/`FACEBOOK_APP_SECRET`/`FACEBOOK_WEBHOOK_VERIFY_TOKEN` are set — see `.env.example`. The integration code itself (OAuth exchange, Send API calls, HMAC signature verification) is real and complete, not stubbed.
-- **Uploaded images are local-disk only** (`saas/backend/uploads/`, served at `/uploads/*`). This works end-to-end for the dashboard and the Claude vision tool call (images are base64-inlined into the API request, so they never need to be publicly fetchable — see `buildImageSource` in `ai.service.js`). It does **not** work for sending a product image back through real Facebook Messenger, since Facebook's servers need a publicly reachable URL — `conversation.service.js` deliberately skips that specific send rather than pass Facebook an unreachable `localhost` path. Production deployments need real object storage (S3/Cloudinary/etc.) for that path to work.
-- **Lead visibility has no UI.** `POST /api/leads` (the public "Dùng thử miễn phí" form) is intentionally unauthenticated — a Lead belongs to the platform operator, not to any tenant Account, and this repo has no platform-admin role/UI yet. Leads are captured, not yet browsable.
+- **Uploaded images default to local disk** (`saas/backend/uploads/`, served at `/uploads/*`) — fine for the dashboard and the Claude vision tool call (images are base64-inlined into the API request, so they never need to be publicly fetchable — see `buildImageSource` in `ai.service.js`), but **not** reachable by real Facebook Messenger servers, which need a publicly reachable URL. Setting `S3_BUCKET`/`AWS_REGION`/`S3_PUBLIC_BASE_URL` (see `.env.example`) switches uploads to real S3 automatically — see `storage.service.js` — with no other code changes; `conversation.service.js` forwards a bot's image reply to Facebook only when the resulting URL isn't a local `/uploads/...` path, so this "just works" once S3 is configured and is silently, correctly skipped otherwise.
+- **Deployment config (`Dockerfile`s, `docker-compose.yml`, `nginx.conf`) is written but not build-tested.** This sandbox has no `docker`/`docker-compose` binary (`which docker docker-compose` → not found), so the images have never actually been built or run here. The configs follow standard, well-established Node.js/Nginx/Postgres Docker practice, but treat them as a reviewed starting point, not a verified artifact — run `docker compose up --build` yourself before a real deployment.
 - **Known, accepted `npm audit` findings** (see `frontend/package.json`): `esbuild` (dev-server-only, fixing requires a Vite major bump that conflicts with the current `@vitejs/plugin-react` version); a React Router "RSC Mode CSRF" advisory that only applies to React Server Components / framework mode, which this app does not use (plain client-side `BrowserRouter`/`Routes`/`Link` only).
 
 ## Running locally
@@ -68,15 +77,27 @@ npm run dev                    # http://localhost:4000
 # 3. Frontend (separate terminal)
 cd saas/frontend
 npm install
-npm run dev                    # http://localhost:5173 — proxies /api and /uploads to :4000
+npm run dev                    # http://localhost:5173 — proxies /api, /uploads and /socket.io to :4000
+
+# 4. Tests (backend) — runs against a separate preny_clone_test database,
+#    never the dev database, so it's safe to run repeatedly.
+cd saas/backend
+createdb preny_clone_test      # once, after dev-db.sh has started Postgres
+npx prisma migrate deploy      # DATABASE_URL=postgresql://localhost:5432/preny_clone_test
+npm test                       # 21 tests, node's built-in test runner
+
+# 5. Promote a real registered user to platform admin (to see /admin/leads)
+node scripts/promote-admin.js you@example.com
 ```
 
-Verified end-to-end on this machine: register → login (JWT + rotating refresh cookie) → create a chatbot → message it through the embeddable widget flow → real Customer/Conversation/Message rows in Postgres → dashboard Inbox shows the thread live. Screenshotted via a real Chrome instance (Playwright), not just curl.
+Verified end-to-end on this machine: register → login (JWT + rotating refresh cookie) → create a chatbot → message it through the embeddable widget flow → real Customer/Conversation/Message rows in Postgres → dashboard Inbox shows the thread live; plan-limit `402` enforced live when exceeding the Starter plan's fanpage/chatbot/conversation caps; a real lead submitted through the public form and viewed at `/admin/leads` after promotion. Screenshotted via a real Chrome instance (Playwright), not just curl.
+
+## Production deployment
+
+`Dockerfile`s for both `backend/` and `frontend/`, an `nginx.conf` (static serve + `/api`, `/uploads`, `/socket.io` reverse proxy — mirrors `vite.config.js`'s dev proxy rules), and a root `docker-compose.yml` (Postgres + backend + frontend, persistent volumes for `pgdata` and `uploads`) are provided. **These have not been build-tested in this environment** — no `docker` binary is available in this sandbox — so review them yourself and run `docker compose up --build` before a real deployment; see "Real limitations" above.
 
 ## What's next (real, not deferred as "won't do")
 
-- Stripe (or equivalent) billing wired to the `Subscription`/`Plan` models — currently seeded but not enforced anywhere (no plan-limit checks on fanpages/chatbots/conversations yet).
-- Platform-admin role + UI for browsing captured `Lead` rows.
-- Object storage (S3-compatible) for uploads, so Facebook image replies work in production.
-- Automated tests (none exist yet — verification so far is manual, end-to-end, against the real running stack).
-- Production deployment config (Dockerfile / process manager / managed Postgres connection string) — currently dev-only (`scripts/dev-db.sh` explicitly is not a production setup).
+- Stripe (or equivalent) payment processing wired to the `Subscription`/`Plan` models — plan *limits* are now enforced (`plan.service.js`, `402` on overage, tested), but there's no real payment collection or upgrade flow yet, only a 14-day trial and the seeded Starter/Growth/Business tiers.
+- Actually build/run/test the Docker images and compose stack against a Docker-capable environment (this sandbox can't).
+- Broader test coverage: the current 21 tests cover auth, plan enforcement, and the admin/platform-admin boundary; the AI tool-use loop, Facebook webhook signature/OAuth paths, and the realtime Socket.io inbox are still verified manually rather than by automated test (both require either a real `ANTHROPIC_API_KEY`/Facebook App or heavier mocking than this project has taken on).

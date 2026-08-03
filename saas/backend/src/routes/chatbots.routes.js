@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { prisma } from '../lib/prisma.js';
 import { requireAuth } from '../middleware/auth.js';
 import { asyncHandler, ApiError } from '../middleware/errorHandler.js';
+import { enforceResourceLimit } from '../services/plan.service.js';
 
 export const chatbotsRouter = Router();
 chatbotsRouter.use(requireAuth);
@@ -25,6 +26,8 @@ const chatbotSchema = z.object({
 
 chatbotsRouter.post('/', asyncHandler(async (req, res) => {
   const body = chatbotSchema.parse(req.body);
+
+  await enforceResourceLimit(req.user.accountId, 'chatbot');
 
   const chatbot = await prisma.chatbot.create({
     data: { ...body, accountId: req.user.accountId }

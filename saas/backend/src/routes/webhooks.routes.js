@@ -37,23 +37,31 @@ webhooksRouter.post('/facebook', raw({ type: '*/*' }), async (req, res) => {
   }
 
   // Acknowledge immediately — Facebook retries aggressively on non-2xx or
-  // slow responses; the actual AI reply happens after we've responded.
+  // slow responses; the actual AI reply happens after we've responded, so
+  // any error past this point (including a plan-limit ApiError from
+  // enforceConversationLimit) can no longer become an HTTP response — it
+  // must be caught and logged here instead of left as an unhandled
+  // rejection that would crash the process.
   res.sendStatus(200);
 
-  const payload = JSON.parse(req.body.toString('utf8'));
-  const io = req.app.get('io');
+  try {
+    const payload = JSON.parse(req.body.toString('utf8'));
+    const io = req.app.get('io');
 
-  for (const entry of payload.entry || []) {
-    const pageId = entry.id;
-    const fanpage = await prisma.fanpage.findUnique({ where: { pageId } });
+    for (const entry of payload.entry || []) {
+      const pageId = entry.id;
+      const fanpage = await prisma.fanpage.findUnique({ where: { pageId } });
 
-    if (!fanpage || fanpage.status !== 'CONNECTED') {
-      continue;
+      if (!fanpage || fanpage.status !== 'CONNECTED') {
+        continue;
+      }
+
+      for (const event of entry.messaging || []) {
+        await handleMessagingEvent(event, fanpage, io);
+      }
     }
-
-    for (const event of entry.messaging || []) {
-      await handleMessagingEvent(event, fanpage, io);
-    }
+  } catch (err) {
+    console.error('Facebook webhook processing failed:', err.message);
   }
 });
 

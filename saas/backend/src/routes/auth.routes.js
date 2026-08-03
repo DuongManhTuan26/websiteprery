@@ -6,6 +6,7 @@ import { signAccessToken, issueRefreshToken, rotateRefreshToken, revokeRefreshTo
 import { asyncHandler, ApiError } from '../middleware/errorHandler.js';
 import { requireAuth } from '../middleware/auth.js';
 import { env } from '../config/env.js';
+import { createDefaultSubscription } from '../services/plan.service.js';
 
 export const authRouter = Router();
 
@@ -17,6 +18,17 @@ const refreshCookieOptions = {
   maxAge: env.refreshTokenTtlDays * 24 * 60 * 60 * 1000,
   path: '/api/auth'
 };
+
+function toUserResponse(user) {
+  return {
+    id: user.id,
+    email: user.email,
+    name: user.name,
+    role: user.role,
+    accountId: user.accountId,
+    isPlatformAdmin: user.isPlatformAdmin
+  };
+}
 
 const registerSchema = z.object({
   businessName: z.string().min(1).max(200),
@@ -46,13 +58,15 @@ authRouter.post('/register', asyncHandler(async (req, res) => {
     }
   });
 
+  await createDefaultSubscription(user.accountId);
+
   const accessToken = signAccessToken({ id: user.id, accountId: user.accountId, role: user.role });
   const refreshToken = await issueRefreshToken(user.id);
 
   res.cookie(REFRESH_COOKIE, refreshToken, refreshCookieOptions);
   res.status(201).json({
     accessToken,
-    user: { id: user.id, email: user.email, name: user.name, role: user.role, accountId: user.accountId }
+    user: toUserResponse(user)
   });
 }));
 
@@ -75,7 +89,7 @@ authRouter.post('/login', asyncHandler(async (req, res) => {
   res.cookie(REFRESH_COOKIE, refreshToken, refreshCookieOptions);
   res.json({
     accessToken,
-    user: { id: user.id, email: user.email, name: user.name, role: user.role, accountId: user.accountId }
+    user: toUserResponse(user)
   });
 }));
 
@@ -123,5 +137,5 @@ authRouter.get('/me', requireAuth, asyncHandler(async (req, res) => {
     throw new ApiError(404, 'User not found');
   }
 
-  res.json({ id: user.id, email: user.email, name: user.name, role: user.role, accountId: user.accountId });
+  res.json(toUserResponse(user));
 }));

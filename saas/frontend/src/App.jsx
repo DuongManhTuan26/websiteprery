@@ -11,6 +11,7 @@ import { Chatbots } from './pages/dashboard/Chatbots.jsx';
 import { Fanpages } from './pages/dashboard/Fanpages.jsx';
 import { Orders } from './pages/dashboard/Orders.jsx';
 import { Products } from './pages/dashboard/Products.jsx';
+import { AdminLeads } from './pages/admin/AdminLeads.jsx';
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="orders" element={<Orders />} />
         <Route path="products" element={<Products />} />
       </Route>
+      <Route path="/admin/leads" element={<AdminLeads />} />
     </Routes>
   );
 }

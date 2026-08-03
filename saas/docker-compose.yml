@@ -1,0 +1,66 @@
+# Reference production topology: Postgres + backend + Nginx-fronted
+# frontend, wired together the same way as local dev (see backend/scripts/
+# dev-db.sh and frontend/vite.config.js's proxy rules) but as real
+# containers instead of two locally-run processes against a Homebrew
+# Postgres.
+#
+# NOT build/run-tested in this sandbox — no `docker`/`docker-compose`
+# binary is available here (verified via `which docker docker-compose`).
+# Review and test with `docker compose up --build` in an environment that
+# has Docker before relying on this for a real deployment. See
+# saas/README.md for the full list of what is and isn't verified.
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: preny_clone
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    # Runs pending migrations against the real schema (never `db push`,
+    # never fabricated data beyond the Plan rows seed.js already restricts
+    # itself to — see prisma/seed.js) before starting the server.
+    command: sh -c "npx prisma migrate deploy && node prisma/seed.js && node src/server.js"
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/preny_clone
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:?set a real random secret in .env}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:?set a real random secret in .env}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:8080}
+      # Left unset on purpose unless the real values are provided via the
+      # host .env — see backend/.env.example for what each one actually
+      # requires. No fabricated defaults.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      FACEBOOK_APP_ID: ${FACEBOOK_APP_ID:-}
+      FACEBOOK_APP_SECRET: ${FACEBOOK_APP_SECRET:-}
+      FACEBOOK_WEBHOOK_VERIFY_TOKEN: ${FACEBOOK_WEBHOOK_VERIFY_TOKEN:-}
+      S3_BUCKET: ${S3_BUCKET:-}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      S3_PUBLIC_BASE_URL: ${S3_PUBLIC_BASE_URL:-}
+    volumes:
+      - uploads:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  uploads:
